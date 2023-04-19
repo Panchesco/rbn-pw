@@ -51,13 +51,13 @@ gulp.task('vendor:build', function() {
 
 // Copy Bootstrap SCSS(SASS) from node_modules to /assets/scss/bootstrap
 gulp.task('bootstrap:scss', function() {
-  return gulp.src(['./node_modules/bootstrap/scss/**/*'])
+  return gulp.src(['./src/scss/bootstrap/**/*.scss'])
     .pipe(gulp.dest('./src/scss/bootstrap'));
 });
 
 // Compile SCSS(SASS) files
 gulp.task('scss', gulp.series('bootstrap:scss', function compileScss() {
-  return gulp.src(['./src/scss/*.scss'])
+  return gulp.src(['./src/scss/**/*.scss'])
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))

@@ -8,7 +8,6 @@ const app = {
        const cards = document.querySelectorAll('.rbn-card');
        const wH = window.innerHeight;
        const fadeInHeight = wH-42;
-
        cards.forEach( (card) => {
 		   if ( card.dataset.bg ) {
            let viewportOffset = card.getBoundingClientRect();
