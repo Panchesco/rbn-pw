@@ -1336,11 +1336,11 @@
 }
 
 .fs-1 {
-  font-size: calc(1.375rem + 1.5vw) !important;
+  font-size: calc(1.59166625rem + 4.099995vw) !important;
 }
 
 .fs-2 {
-  font-size: calc(1.325rem + 0.9vw) !important;
+  font-size: calc(1.432rem + 2.184vw) !important;
 }
 
 .fs-3 {
@@ -4205,10 +4205,10 @@
 }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 2.5rem !important;
+    font-size: 4.6666625rem !important;
   }
   .fs-2 {
-    font-size: 2rem !important;
+    font-size: 3.07rem !important;
   }
   .fs-3 {
     font-size: 1.75rem !important;

@@ -18,10 +18,20 @@
 					)
 				);
 			?>
-		<ul class="order-lg-1">
-			<li><a href="/">English</a></li>
-			<li><a href="/es">Español</a></li>
-		</ul>
+		<div class="order-lg-1">
+			<?php $array = trp_custom_language_switcher();  ?>
+			<!-- IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. -->
+			<ul id="language-switcher" data-no-translation class="d-flex justify-content-end">
+				<?php foreach ($array as $name => $item){ ?>
+						<li>
+							<a href="<?php echo $item['current_page_url']?>">
+								<span><?php echo $item['language_name']?>
+								</span>
+							</a>
+						</li>
+				<?php } ?>
+			</ul>
+		</div>
 			</div>
 	</div><!-- /.navbar-collapse -->
 	</nav>
