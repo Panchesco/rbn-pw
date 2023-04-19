@@ -1,0 +1,148 @@
+// Variables
+
+$serif: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+$sans-serif:"Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$monospace: system-ui,
+ -apple-system, BlinkMacSystemFont,
+ "Segoe UI",
+ "Roboto",
+ "Oxygen",
+ "Ubuntu",
+ "Cantarell",
+ "Fira Sans",
+ "Droid Sans",
+ "Helvetica Neue",
+ Arial, sans-serif;
+
+$raw-sienna: #B85E00;
+$mesa: #a95c42;
+$ivory-buff: #EBD999;
+$ivory: #F4EDE5;
+$deep-grayish-olive: #505427;
+$vizcaya-palm: #4a634e;
+$mineral-gray: #9FC2B2;
+$black: #222222;
+$dim-gray: #707070;
+$sixty-percent-black: #999999;
+$silver-medal: #d6d6d6;
+$white: #fffff;
+
+.has-raw-sienna-background-color {
+	background: $raw-sienna
+}
+
+.has-mesa-background-color {
+	background: $mesa;
+}
+
+.has-mesa-background-color {
+	background: $mesa;
+}
+
+.has-ivory-buff-background-color {
+	background: $ivory-buff;
+}
+
+.has-ivory-background-color {
+	background: $ivory;
+}
+
+.has-raw-sienna-background-color {
+	background: $raw-sienna;
+}
+
+.has-black-background-color {
+	background: $black;
+}
+
+.has-deep-grayish-olive-background-color {
+	background: $deep-grayish-olive;
+}
+
+.has-vizcaya-palm-background-color {
+	background: $vizcaya-palm;
+}
+
+.has-black-background-color {
+	background: $black;
+}
+.has-dim-gray-color {
+	background: $dim-gray;
+}
+
+.has-mineral-gray-background-color {
+	background: $mineral-gray;
+}
+
+.has-sixty-percent-black-background-color {
+	background: $sixty-percent-black;
+}
+.has-silver-medal-background-color {
+	background: $silver-medal;
+}
+
+.has-white-background-color {
+	background: $white;
+}
+
+.has-raw-sienna-color {
+	color: $raw-sienna;
+	border-color: $raw-sienna;
+}
+
+
+.has-mesa-color {
+	color: $mesa;
+	border-color: mesa
+}
+
+.has-ivory-buff-color {
+	color: $ivory-buff;
+	border-color: $ivory-buff;
+}
+
+.has-ivory-color {
+	color: $ivory;
+	border-color: $ivory;
+}
+
+.has-deep-grayish-olive-color {
+	color: $deep-grayish-olive;
+	border-color: $deep-grayish-olive;
+}
+
+.has-vizcaya-palm-color {
+	color: $vizcaya-palm;
+	border-color: $vizcaya-palm;
+}
+
+.has-mineral-gray-color {
+	color: $mineral-gray;
+	border-color: $mineral-gray;
+}
+
+.has-black-color {
+	color: $black;
+	border-color: $black;
+}
+.has-dim-gray-color {
+	color: $dim-gray;
+	border-color: $dim-gray;
+}
+
+.has-sixty-percent-black-color {
+	color: $sixty-percent-black;
+	border-color: $sixty-percent-black;
+}
+
+.has-silver-medal-color {
+	color: $silver-medal;
+	border-color: $silver-medal;
+}
+
+.has-white-color {
+	color: $white;
+	border-color: $white;
+}
+
+

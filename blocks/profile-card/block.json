@@ -1,0 +1,13 @@
+{
+    "name": "acf/profile-card",
+    "title": "Profile Card",
+    "description": "Formatted Profile Card",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": [""],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "profile-card.php"
+    },
+    "align": "full"
+}

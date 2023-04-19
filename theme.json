@@ -1,0 +1,104 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+        "background": true,
+        "custom": true,
+        "customDuotone": false,
+        "customGradient": false,
+        "defaultGradients": false,
+        "defaultPalette": false,
+        "duotone": [],
+        "gradients": [],
+        "link": true,
+        "palette": [
+    {
+            "name": "Raw Sienna",
+            "slug": "raw-sienna",
+            "color": "#B85E00"
+        },
+        {
+            "name": "Mesa",
+            "slug": "mesa",
+            "color": "#a95c42"
+        },
+        {
+            "name": "Ivory Buff",
+            "slug": "ivory-buff",
+            "color": "#EBD999"
+        },
+        {
+            "name": "Ivory",
+            "slug": "ivory",
+            "color": "#F4EDE5"
+        },
+        {
+            "name": "Deep Grayish Olive",
+            "slug": "deep-grayish-olive",
+            "color": "#505427"
+        },
+        {
+            "name": "Vizcaya Palm",
+            "slug": "vizcaya-palm",
+            "color": "#4a634e"
+        },
+        {
+            "name": "Mineral Gray",
+            "slug": "mineral-gray",
+            "color": "#9FC2B2"
+        },
+        {
+            "name": "Black",
+            "slug": "black",
+            "color": "#222222"
+        },
+        {
+            "name": "Dim Gray",
+            "slug": "dim-gray",
+            "color": "#707070"
+        },
+        {
+            "name": "60% Black",
+            "slug": "sixty-percent-black",
+            "color": "#999999"
+        },
+        {
+            "name": "Silver Medal",
+            "slug": "silver-medal",
+            "color": "#d6d6d6"
+        },
+        {
+            "name": "White",
+            "slug": "white",
+            "color": "#ffffff"
+        },
+        {
+            "name": "Transparent",
+            "slug": "transparent",
+            "color": "transparent"
+        }
+        ],
+        "text": true
+    },
+    "blocks": {
+      "core/button": {
+        "typography": {
+            "customFontSize":false,
+            "lineHeight": false,
+            "dropCap": false,
+            "fluid": false,
+            "fontStyle": false,
+            "fontWeight": false,
+            "letterSpacing": false,
+            "textDecoration": false,
+            "textTransform": false,
+            "fontSizes": [],
+            "fontFamilies": []
+        },
+        "border": {
+          "radius": false
+        }
+      }
+    }
+  }
+}

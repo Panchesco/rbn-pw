@@ -1,0 +1,222 @@
+
+// Bootstrap and its default variables
+@import "bootstrap/bootstrap";
+
+// Custom bootstrap variable overrides
+@import "bootstrap_variable_overrides";
+
+
+// Your style
+@import "variables";
+@import "mixins";
+@import "general";
+@import "layout";
+@import "module";
+
+@import "blocks/profile-card";
+
+/* CUSTOM STYLES
+-------------------------------------------------- */
+
+:root {
+  --serif: 'EB Garamond', Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L",  "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  --sans-serif:'Oswald', Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --black: #212121;
+  --ivory-buff: #EBD999;
+  --deep-grayish-olive: rgba(80, 84, 39, 1);
+  --deep-grayish-olive-hover: rgba(80, 84, 39, .9);
+  --raw-sienna: #B85E00;
+  --ivory: #F4EDE5;
+  --white: #ffffff;
+}
+
+//Smooth Scroll
+html {
+  scroll-behavior: smooth;
+}
+
+html,body {
+  font-family: var(--serif);
+  letter-spacing: .03rem;
+}
+
+h1,.h1 {
+	@include h1;
+}
+
+h2,.h2 {
+	@include h2;
+}
+
+h3,.h3 {
+	@include h3;
+}
+
+h4,.h4{
+	@include h4;
+}
+
+h5,.h5{
+	@include h5;
+}
+
+h6,.h6{
+	@include h5;
+}
+
+code {
+	@include code;
+}
+
+em,dfn {
+	@include italic;
+}
+
+div,p {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #222222;
+}
+
+ul,ol {
+	margin-left: 2.6rem;
+}
+
+/* Links */
+
+  a {
+  color: var(--raw-sienna);
+
+  }
+
+p a {
+  color: var(--raw-sienna);
+  text-decoration: none;
+  position: relative;
+}
+
+p a:hover {
+  color: var(--raw-sienna);
+}
+
+p a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--raw-sienna);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+p a:hover::before {
+  transform: scaleX(1);
+}
+
+.pullquote {
+	max-width: 25%;
+	display: inline-block;
+	float: left;
+	padding: 1.5rem 0rem;
+	transform: translateX(-6rem);
+	font-weight: 200;
+}
+
+
+
+/* RBN Card */
+
+.rbn-card {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: clip;
+    position: relative;
+    margin: 0 0 1.5rem 0;
+    opacity: 0;
+    transform: translateY(.8rem);
+    transform-origin: center center;
+    transition: all 300ms ease-in-out;
+    transform: scale(1.1);
+  }
+
+
+  .rbn-card:hover {
+    box-shadow: 3px 3px 10px rgba(0,0,0,.6);
+
+  }
+
+  .rbn-card.loading {
+    box-shadow: 3px 3px 10px rgba(0,0,0,.6);
+  }
+
+  .rbn-card.fade-in {
+    animation:fadeIn 400ms ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeIn{
+
+    0% {
+      opacity: 0;
+    }
+
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .rbn-card:after {
+    display: block;
+    padding-bottom: 100%;
+    content: "";
+    z-index: 1;
+    position: relative;
+  }
+
+  .rbn-card a {
+    display: block;
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+
+  .rbn-card label {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    background: var(--deep-grayish-olive);
+    color: var(--white);
+    font-family: var(--sans-serif);
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: .04em;
+    margin-right: 1rem;
+    text-shadow: 2px 2px 0 var(--black);
+    z-index:3;
+  }
+
+  .rbn-card video {
+    display: block;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index:2;
+    max-width: 100%;
+  }
+
+
+
+
+

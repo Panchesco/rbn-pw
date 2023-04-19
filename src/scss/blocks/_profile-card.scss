@@ -1,0 +1,22 @@
+
+.rbn-profile-card {
+
+	border: none;
+	border-radius: 0;
+	text-align: center;
+
+	.card-img-top {
+		position: relative;
+		display: block;
+		border-radius: 50%;
+		z-index: 1;
+		opacity: .4;
+		height: 100%;
+	}
+}
+
+
+.card-footer {
+	font-weight: light;
+	background: none;
+}
