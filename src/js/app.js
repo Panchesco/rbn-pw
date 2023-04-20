@@ -3,6 +3,7 @@ const app = {
   init: function() {
     app.fadeInCards();
     app.listenForScroll();
+	app.activeLinks();
   },
   fadeInCards: function() {
        const cards = document.querySelectorAll('.rbn-card');
@@ -29,6 +30,15 @@ const app = {
    },
   scrollTop: function() {
     window.scrollTo({top: 0, behavior: 'smooth'});
+  },
+  activeLinks: function() {
+	  const currHref = window.location.href.replace(window.location.origin,"");
+	  const navLinks = document.querySelectorAll("#menu-global-nav li a");
+	  navLinks.forEach( (item) => {
+		 if(currHref==item.href.replace(window.location.origin,"")){
+			  item.classList.add('active')
+		 };
+	  })
   }
 };
 

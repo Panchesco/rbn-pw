@@ -11126,7 +11126,28 @@ p a:hover::before {
   letter-spacing: 1px;
 }
 
+.spotlight {
+  box-sizing: border-box;
+  background-color: #EBD999;
+  background-image: url("/wp-content/themes/rbn-pw/dist/imgs/svg/open-quotes.svg"), url("/wp-content/themes/rbn-pw/dist/imgs/svg/close-quotes.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, right bottom;
+  background-size: 8rem;
+  padding: 1rem 0.35rem;
+  border: solid 1.5rem #EBD999;
+  border-width: 1.5rem 1.5rem 1.5rem 5rem;
+}
+
+html {
+  font-size: 12px;
+}
+
+.container {
+  padding: 0 1.5rem;
+}
+
 #global-header {
+  padding-top: 1.5rem;
   margin: 0 0 11.5625rem 0;
 }
 #global-header:after {
@@ -11135,13 +11156,20 @@ p a:hover::before {
   border: solid 0 #B85E00;
   border-width: 0 0 3.75rem 0;
 }
+#global-header h1 a, #global-header .h1 a {
+  color: #222222;
+  text-decoration: none;
+}
+#global-header p a:hover::before {
+  display: none;
+}
 
 #global-header .container {
   position: relative;
   z-index: 10;
 }
 #global-header .container:after {
-  opacity: 0;
+  opacity: 1;
   content: "";
   width: 117px;
   height: 100px;
@@ -11156,12 +11184,18 @@ p a:hover::before {
   animation-fill-mode: forwards;
 }
 #global-header .container .row {
-  padding: 6rem 0;
+  padding: 3rem 0;
   position: relative;
   z-index: 20;
 }
 
 @media all and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  .container {
+    padding: 0;
+  }
   #global-header {
     margin: 0 0 11.5625rem 0;
   }
@@ -11176,11 +11210,11 @@ p a:hover::before {
   }
   #global-header .container {
     position: relative;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     z-index: 10;
   }
   #global-header .container:after {
-    opacity: 0;
+    opacity: 1;
     content: "";
     width: 171px;
     height: 147px;
@@ -11188,14 +11222,10 @@ p a:hover::before {
     background-repeat: none;
     background-size: cover;
     background-position: center center;
-    position: absolute;
     bottom: -132px;
-    animation-name: butterfly;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
   }
   #global-header .container .row {
-    padding: 6rem 0;
+    padding: 3rem 0;
     position: relative;
     z-index: 20;
   }
@@ -11223,18 +11253,9 @@ p a:hover::before {
   border-width: 0 0 5px 0;
 }
 
-@keyframes butterfly {
-  from {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  to {
-    opacity: 100%;
-  }
-}
 #language-switcher {
+  margin: 0;
+  padding: 0;
   font-size: 1.5rem;
   list-style: none;
 }
@@ -11243,15 +11264,83 @@ p a:hover::before {
   border: solid 1px #222222;
   border-width: 0 1px 0 0;
 }
+#language-switcher li:first-child {
+  padding-left: 0;
+}
 #language-switcher li:last-child {
   border: none;
   padding-right: 0;
 }
 #language-switcher a {
+  position: relative;
+  z-index: 40;
   display: block;
   text-decoration: none;
   color: #505427;
 }
 #language-switcher a:hover {
   color: #222222;
+}
+
+.navbar-toggler {
+  border: none;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.menu {
+  padding-top: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s ease;
+  height: 25px;
+}
+.menu .bar {
+  width: 50px;
+  height: 5px;
+  background: #222222;
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+.menu .bar:not(:first-child) {
+  margin-top: 5px;
+}
+.menu:after {
+  content: "menu";
+  display: block;
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+#hi {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+#hi:checked + .menu {
+  transform: rotatey(180deg);
+}
+#hi:checked + .menu .bar {
+  transform: rotatey(180deg) rotatex(360deg);
+}
+#hi:checked + .menu .bar:first-child {
+  transform: rotate(-45deg);
+  margin-top: 10px;
+}
+#hi:checked + .menu .bar:nth-child(2) {
+  opacity: 0;
+}
+#hi:checked + .menu .bar:nth-child(3) {
+  margin-top: -15px;
+  transform: rotate(45deg);
+}
+#hi:checked + .menu:after {
+  content: "";
+  display: inline-block;
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
 }

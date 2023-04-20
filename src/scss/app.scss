@@ -217,6 +217,11 @@ p a:hover::before {
 	  letter-spacing: 1px;
   }
 
+ .spotlight {
+	 @include blockquote;
+  }
+
+
   @import "template-parts/global-header";
 
 

@@ -1,7 +1,14 @@
 
+html {
+	font-size: 12px;
+}
+
+.container {
+	padding: 0 1.5rem;
+}
 
 #global-header {
-
+	padding-top: 1.5rem;
 	margin: 0 0 11.5625rem 0;
 	&:after {
 		display: block;
@@ -11,17 +18,24 @@
 		border-width: 0 0 3.75rem 0;
 	}
 
+	h1 a,.h1 a {
+		color: $black;
+		text-decoration: none;
+	}
+
+	p a:hover::before {
+		display: none;
+	}
+
 }
 
 #global-header .container {
+
 	position: relative;
 	z-index: 10;
 	&:after {
-		opacity: 0;
+		opacity: 1;
 		content: "";
-		//width: 171px;
-		//height: 147px;
-
 		 width: 117px;
 		height:100px;
 		background: url("/wp-content/themes/rbn-pw/dist/imgs/svg/monarch-butterfly-path.svg");
@@ -36,15 +50,22 @@
 	}
 
 	.row {
-		padding: 6rem 0;
+		padding: 3rem 0;
 		position: relative;
 		z-index: 20;
 	}
-
 }
 
 
 @media all and (min-width: 768px) {
+	html {
+		font-size: 16px;
+	}
+
+	.container {
+		padding: 0;
+
+	}
 
 	#global-header {
 		margin: 0 0 11.5625rem 0;
@@ -63,10 +84,10 @@
 
 	#global-header .container {
 		position: relative;
-		padding: 2rem 0;
+		padding: 1.5rem 0;
 		z-index: 10;
 		&:after {
-			opacity: 0;
+			opacity: 1;
 			content: "";
 			width: 171px;
 			height: 147px;
@@ -74,15 +95,11 @@
 			background-repeat: none;
 			background-size: cover;
 			background-position: center center;
-			position: absolute;
 			bottom: -132px;
-			animation-name: butterfly;
-			animation-duration: 1s;
-			animation-fill-mode: forwards;
 		}
 
 		.row {
-			padding: 6rem 0;
+			padding: 3rem 0;
 			position: relative;
 			z-index: 20;
 		}
@@ -115,34 +132,26 @@
 			border-color: $raw-sienna;
 			border-width: 0 0 5px 0;
 		}
-
 	}
 }
 
-@keyframes butterfly {
-
-	from {
-		opacity: 0;
-	}
-
-	10% {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 100%;
-	}
-}
 
 #language-switcher {
 
+	margin: 0;
+	padding: 0;
 	font-size: $h4-font-size;
 	list-style: none;
 
+
 	li {
-		padding: 0 .6rem;
+		padding: 0 .6rem ;
 		border: solid 1px $black;
 		border-width: 0 1px 0 0;
+
+		&:first-child {
+			padding-left: 0;
+		}
 
 		&:last-child {
 			border: none;
@@ -151,6 +160,8 @@
 	}
 
 	a {
+		position: relative;
+		z-index: 40;
 		display: block;
 		text-decoration: none;
 		color: $deep-grayish-olive;
@@ -160,7 +171,78 @@
 
 		}
 	}
+}
+
+.navbar-toggler {
+	border: none;
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+
+
+.menu {
+  //transform: translate(-50%, -50%);
+  padding-top: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s ease;
+  height: 25px;
+  .bar {
+	width: 50px;
+	height: 5px;
+	background: $black;
+	border-radius: 2px;
+	transition: 0.4s ease;
+	&:not(:first-child) {
+	  margin-top: 5px;
+	}
+  }
+  &:after {
+	  content: "menu";
+	  display: block;
+	  font-family: $sans-serif;
+	  font-weight: 200;
+	  text-transform: uppercase;
+	  text-align: center;
+	  margin-top: .4rem;
+  }
+}
+#hi {
+
+position: absolute;
+top: -9999px;
+left: -9999px;
+
 
 }
+#hi:checked + .menu {
+  transform: rotatey(180deg);
+  .bar {
+	transform: rotatey(180deg) rotatex(360deg);
+	&:first-child {
+	  transform: rotate(-45deg);
+	  margin-top: 10px;
+	}
+	&:nth-child(2) {
+	  opacity: 0;
+	}
+	&:nth-child(3) {
+	  margin-top: -15px;
+	  transform: rotate(45deg);
+	}
+  }
+
+  &:after {
+		content: "";
+		display: inline-block;
+		font-family: $sans-serif;
+		font-weight: 200;
+	}
+}
+
+
+
+
+
 
 
