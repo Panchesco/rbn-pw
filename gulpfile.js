@@ -57,7 +57,7 @@ gulp.task('bootstrap:scss', function() {
 
 // Compile SCSS(SASS) files
 gulp.task('scss', gulp.series('bootstrap:scss', function compileScss() {
-  return gulp.src(['./src/scss/**/*.scss'])
+  return gulp.src(['./src/scss/*.scss'])
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))

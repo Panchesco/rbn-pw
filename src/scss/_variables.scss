@@ -25,7 +25,7 @@ $black: #222222;
 $dim-gray: #707070;
 $sixty-percent-black: #999999;
 $silver-medal: #d6d6d6;
-$white: #fffff;
+$white: #ffffff;
 
 
 .has-raw-sienna-background-color {
@@ -144,6 +144,14 @@ $white: #fffff;
 .has-white-color {
 	color: $white;
 	border-color: $white;
+}
+
+.sans-serif {
+	font-family: $sans-serif;
+}
+
+.serif {
+	font-family: $serif;
 }
 
 

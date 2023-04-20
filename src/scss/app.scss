@@ -72,7 +72,6 @@ em,dfn {
 div,p {
   font-size: 1.75rem;
   font-weight: 400;
-  color: #222222;
 }
 
 ul,ol {
@@ -223,6 +222,7 @@ p a:hover::before {
 
 
   @import "template-parts/global-header";
+  @import "template-parts/global-footer";
 
 
 

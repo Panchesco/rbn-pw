@@ -10824,7 +10824,7 @@ textarea.form-control-lg {
 }
 
 .has-white-background-color {
-  background: #fffff;
+  background: #ffffff;
 }
 
 .has-raw-sienna-color {
@@ -10883,8 +10883,16 @@ textarea.form-control-lg {
 }
 
 .has-white-color {
-  color: #fffff;
-  border-color: #fffff;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.sans-serif {
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.serif {
+  font-family: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
 
 .btn {
@@ -10894,7 +10902,7 @@ textarea.form-control-lg {
   letter-spacing: 1px;
   border: solid;
   border-radius: 0;
-  color: #fffff;
+  color: #ffffff;
 }
 .btn:hover {
   background: #222222;
@@ -10992,7 +11000,6 @@ em, dfn {
 div, p {
   font-size: 1.75rem;
   font-weight: 400;
-  color: #222222;
 }
 
 ul, ol {
@@ -11343,4 +11350,40 @@ html {
   display: inline-block;
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
+}
+
+footer#footer {
+  background-color: #222222;
+}
+footer#footer div, footer#footer p {
+  color: #ffffff;
+}
+footer#footer ul {
+  list-style: none;
+}
+footer#footer a {
+  color: #B85E00;
+}
+footer#footer a:hover {
+  text-decoration: underline;
+}
+footer#footer .menu-item .nav-link {
+  color: #B85E00;
+  padding: 0;
+  box-sizing: border-box;
+  border: solid 5px transparent;
+  border-width: 0 0 5px 0;
+  display: inline-block;
+  margin-bottom: 0.65rem;
+}
+footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.active {
+  text-decoration: none;
+  border-color: #B85E00;
+  border-width: 0 0 5px 0;
+}
+
+#global-header .container .row {
+  padding: 3rem 0;
+  position: relative;
+  z-index: 20;
 }
