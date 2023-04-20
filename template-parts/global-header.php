@@ -3,7 +3,6 @@
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'rbn-pw' ); ?>">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
 			<div id="navbar" class="collapse navbar-collapse">
 			<div class="d-flex ms-auto flex-column">
 			<?php
@@ -19,8 +18,8 @@
 				);
 			?>
 		<div class="order-lg-1">
-			<?php $array = trp_custom_language_switcher();  ?>
-			<!-- IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. -->
+			<?php $array = trp_custom_language_switcher();?>
+			<?php //IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. ?>
 			<ul id="language-switcher" data-no-translation class="d-flex justify-content-end">
 				<?php foreach ($array as $name => $item){ ?>
 						<li>
@@ -37,11 +36,17 @@
 	</nav>
 	<div class="container">
 		<div class="row align-items-end">
-			<div class="col-12 col-lg-6">
+			<div class="col-12 col-xl-6">
+				<?php global $post;  if( is_home() || is_front_page() ) : ?>
 				<h1><?php bloginfo('sitename');?></h1>
 				<p class="h2"><?php bloginfo('description');?></p>
+				<?php elseif( in_array($post->post_type,['news','events']) ) : ?>
+				<h1 class="h2"><?php echo get_post_type_object($post->post_type)->label;?></h1>
+				<p class="h1"><?php bloginfo('sitename');?></p>
+
+				<?php endif;?>
 			</div>
-			<div class="d-none d-lg-block col-lg-6">
+			<div class="d-lg-none d-xl-block col-xl-6">
 				[spotlight]
 			</div>
 		</div><!-- end .row -->

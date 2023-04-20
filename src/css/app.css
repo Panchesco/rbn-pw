@@ -11176,6 +11176,7 @@ p a:hover::before {
   }
   #global-header .container {
     position: relative;
+    padding: 2rem 0;
     z-index: 10;
   }
   #global-header .container:after {
@@ -11247,6 +11248,7 @@ p a:hover::before {
   padding-right: 0;
 }
 #language-switcher a {
+  display: block;
   text-decoration: none;
   color: #505427;
 }

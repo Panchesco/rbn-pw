@@ -1,2 +1,2 @@
-HELLO WORLD<?php $array = trp_custom_language_switcher();  ?>
+<?php $array = trp_custom_language_switcher();  ?>
 

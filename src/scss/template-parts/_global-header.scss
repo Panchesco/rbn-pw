@@ -63,6 +63,7 @@
 
 	#global-header .container {
 		position: relative;
+		padding: 2rem 0;
 		z-index: 10;
 		&:after {
 			opacity: 0;
@@ -150,10 +151,13 @@
 	}
 
 	a {
+		display: block;
 		text-decoration: none;
 		color: $deep-grayish-olive;
 		&:hover {
 			color: $black;
+
+
 		}
 	}
 

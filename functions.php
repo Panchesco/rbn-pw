@@ -533,10 +533,6 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/profile-card' );
 }
 
-
-
-
-
 add_theme_support( 'disable-custom-font-sizes' );
 add_theme_support( 'disable-custom-colors' );
 add_theme_support( 'disable-custom-gradients' );
@@ -546,4 +542,18 @@ add_theme_support( 'editor-gradient-presets', array() );
 add_action( 'enqueue_block_editor_assets', [$rbnpw,'block_editor_scripts'] );
 
 
-
+function rbn_pw_where() {
+	global $template;
+	$tfile = basename($template);
+	if( $tfile == 'front-page.php' ) {
+		return 'home';
+	}  elseif( $tfile == 'archive-events.php' ) {
+		return 'events';
+	} elseif( $tfile == 'archive-news.php' ) {
+		return 'news';
+	} elseif( $tfile == 'archive.php' ) {
+		return 'post';
+	} elseif( $tfile == 'page.php' ) {
+		return 'page';
+	}
+}
