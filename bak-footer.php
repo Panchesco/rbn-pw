@@ -7,8 +7,7 @@
 						<p><?php printf( esc_html__( '&copy; %1$s %2$s. All rights reserved.', 'rbn-pw' ), wp_date( 'Y' ), get_bloginfo( 'name', 'display' ) ); ?></p>
 					</div>
 
-					<?php
-						if ( has_nav_menu( 'footer-menu' ) ) : // See function register_nav_menus() in functions.php
+					<?php if ( has_nav_menu( 'footer-menu' ) ) : // See function register_nav_menus() in functions.php
 							/*
 								Loading WordPress Custom Menu (theme_location) ... remove <div> <ul> containers and show only <li> items!!!
 								Menu name taken from functions.php!!! ... register_nav_menu( 'footer-menu', 'Footer Menu' );

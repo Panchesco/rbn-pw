@@ -10,7 +10,7 @@
 					</label>
 				</div>
 			</div>
-			<div id="navbar" class="collapse navbar-collapse pt-4">
+			<div id="navbar" class="collapse navbar-collapse">
 			<div class="d-xl-flex ms-xl-auto flex-xl-column">
 			<?php
 				// Loading WordPress Custom Menu (theme_location).

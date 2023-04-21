@@ -4,18 +4,22 @@
   font-family: $sans-serif;
   font-size: $h1-font-size;
   font-weight: 400;
+  padding-bottom: $h1-font-size;
+  line-height: 1;
 }
 
 @mixin h2 {
   font-family: $sans-serif;
   font-size: $h2-font-size;
   font-weight: 200;
+  padding-bottom: $h2-font-size;
 }
 
 @mixin h3 {
   font-family: $sans-serif;
   font-size: $h3-font-size;
   font-weight: 200;
+  padding-bottom: $h2-font-size;
 }
 
 @mixin h4 {
@@ -24,18 +28,21 @@
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 1px;
+  padding-bottom: $h2-font-size;
 }
 
 @mixin h5 {
   font-family: $sans-serif;
   font-size: $h5-font-size;
   font-weight: 200;
+  padding-bottom: $h2-font-size;
 }
 
 @mixin h6 {
   font-family: $sans-serif;
   font-size: $h6-font-size;
   font-weight: 200;
+  padding-bottom: $h2-font-size;
 }
 
 

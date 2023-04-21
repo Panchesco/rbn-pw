@@ -81,7 +81,7 @@
         "text": true
     },
 "typography": {
-    "customFontSize": true,
+    "customFontSize": false,
     "dropCap": true,
     "fluid": false,
     "fontFamilies": [{
@@ -100,11 +100,37 @@
         "name": "Monospace"
       }
     ],
-    "fontSizes": [],
+    "fontSizes": [
+      {
+        "slug": "extra-small",
+        "size": "1.5rem",
+        "name": "Extra Small"
+      },
+      {
+        "slug": "small",
+        "size": "font-size: 1.75rem;",
+        "name": "small"
+      },
+      {
+        "slug": "medium",
+        "size": "1.75rem",
+        "name": "Medium"
+      },
+      {
+        "slug": "large",
+        "size": "3.07rem",
+        "name": "Large"
+      },
+      {
+        "slug": "extra-large",
+        "size": "4.6666625rem;",
+        "name": "Extra Large"
+      }
+    ],
     "fontStyle": true,
     "fontWeight": true,
     "letterSpacing": true,
-    "lineHeight": false,
+    "lineHeight": true,
     "textColumns": false,
     "textDecoration": true,
     "textTransform": true

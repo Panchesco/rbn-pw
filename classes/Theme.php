@@ -13,7 +13,7 @@ class Theme {
     function load_scripts() {
 
         //  Scripts.
-        wp_enqueue_script( 'bootstrap', get_theme_file_uri( 'dist/js/vendor/bootstrap.bundle.min.js' ), array(), filemtime( __DIR__ . '/../dist/js/bootstrap.bundle.min.js'), true );
+        wp_enqueue_script( 'bootstrap', get_theme_file_uri( '/dist/js/vendor/bootstrap.bundle.min.js' ), array(), filemtime( __DIR__ . '/../dist/js/bootstrap.bundle.min.js'), true );
 wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('bootstrap'), filemtime( __DIR__ . '/../dist/js/app.min.js'), true );
 
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -128,8 +128,6 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 
 
 	}
-
-
 	/**
 	 * Gutenberg scripts and styles
 	 * @link https://www.billerickson.net/wordpress-color-palette-button-styling-gutenberg
@@ -138,5 +136,33 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 		wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/dist/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
 	}
 
+	function sidebars() {
+		register_sidebar( array(
+			'name'          => __( 'Footer Area One', 'rbn-pw' ),
+			'id'            => 'footer-area-one',
+			'before_widget' => '<span id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</span>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+		register_sidebar( array(
+				'name'          => __( 'Footer Area Two', 'rbn-pw' ),
+				'id'            => 'footer-area-2',
+				'before_widget' => '<span id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</span>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			) );
+
+		register_sidebar( array(
+				'name'          => __( 'Footer Area Three', 'rbn-pw' ),
+				'id'            => 'footer-area-three',
+				'before_widget' => '<span id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</span>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			) );
+
+	}
 
 } //

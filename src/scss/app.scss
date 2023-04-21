@@ -112,6 +112,10 @@ p a:hover::before {
   transform: scaleX(1);
 }
 
+a.no-decoration:hover::before {
+	transform: scaleX(0);
+}
+
 .pullquote {
 	max-width: 25%;
 	display: inline-block;
@@ -214,6 +218,11 @@ p a:hover::before {
   .has-sans-serif-font-family.strtoupper {
 	  text-transform: uppercase;
 	  letter-spacing: 1px;
+  }
+
+  .is-style-wide {
+
+	  margin-bottom: $h2-font-size;
   }
 
  .spotlight {

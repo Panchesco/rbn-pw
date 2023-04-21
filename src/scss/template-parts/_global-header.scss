@@ -85,7 +85,6 @@ html {
 
 	#global-header .container {
 		position: relative;
-		padding: 1.5rem 0;
 		z-index: 10;
 		&:after {
 			opacity: 1;
@@ -240,6 +239,16 @@ left: -9999px;
 		font-weight: 200;
 	}
 }
+
+.dropdown-menu {
+	position: relative;
+	background: $ivory-buff;
+	border: none;
+	border-radius: 0;
+	box-shadow: 2px 2px 20px black;
+}
+
+
 
 
 

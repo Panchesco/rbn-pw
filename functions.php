@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
 /**
  * Include Theme Customizer.
  *
@@ -235,7 +239,7 @@ if ( ! function_exists( 'rbn_pw_content_nav' ) ) {
  *
  * @return void
  */
-function rbn_pw_widgets_init() {
+/*function rbn_pw_widgets_init() {
 	// Area 1.
 	register_sidebar(
 		array(
@@ -273,6 +277,7 @@ function rbn_pw_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'rbn_pw_widgets_init' );
+*/
 
 if ( ! function_exists( 'rbn_pw_article_posted_on' ) ) {
 	/**
@@ -502,7 +507,7 @@ if ( function_exists( 'register_nav_menus' ) ) {
 	register_nav_menus(
 		array(
 			'main-menu'   => 'Main Navigation Menu',
-			'footer-menu' => 'Footer Menu',
+			'footer-menu'   => 'Footer Menu',
 		)
 	);
 }
@@ -525,12 +530,14 @@ add_action( 'wp_enqueue_scripts', [$rbnpw,'load_scripts'],20 );
 add_action( 'wp_enqueue_scripts', [$rbnpw,'load_styles'],20 );
 add_action( 'wp_enqueue_scripts', [$rbnpw,'google_fonts'],10 );
 add_action('after_setup_theme',[$rbnpw,'image_sizes']);
+add_action( 'widgets_init', [$rbnpw,'sidebars'] );
 add_filter('image_size_names_choose',[$rbnpw,'custom_image_sizes']);
 
 
 add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/profile-card' );
+	register_block_type( __DIR__ . '/blocks/footer-menu' );
 }
 
 add_theme_support( 'disable-custom-font-sizes' );
@@ -540,6 +547,7 @@ add_theme_support( 'editor-gradient-presets', array() );
 
 
 add_action( 'enqueue_block_editor_assets', [$rbnpw,'block_editor_scripts'] );
+
 
 
 function rbn_pw_where() {
