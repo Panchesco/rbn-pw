@@ -1,6 +1,6 @@
 
 		</main><!-- /#main -->
-		<footer id="footer">
+		<footer id="footer" class="pb-5">
 			<div class="has-ivory-background-color mh-6">
 				<div class="container">
 					<div class="d-flex justify-content-end">

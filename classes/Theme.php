@@ -13,8 +13,8 @@ class Theme {
     function load_scripts() {
 
         //  Scripts.
-        wp_enqueue_script( 'bootstrap', get_theme_file_uri( '/dist/js/vendor/bootstrap.bundle.min.js' ), array(), filemtime( __DIR__ . '/../dist/js/bootstrap.bundle.min.js'), true );
-wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('bootstrap'), filemtime( __DIR__ . '/../dist/js/app.min.js'), true );
+        wp_enqueue_script( 'bootstrap', get_theme_file_uri( '/dist/js/vendor/bootstrap.bundle.min.js' ), array(), filemtime( plugin_dir_path(__DIR__) . 'dist/js/vendor/bootstrap.bundle.min.js'), true );
+wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('bootstrap'), filemtime( plugin_dir_path(__DIR__) . 'dist/js/app.min.js'), true );
 
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
