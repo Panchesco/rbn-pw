@@ -34,7 +34,7 @@ html {
 	position: relative;
 	z-index: 10;
 
-	&:after {
+	&#butterfly:after {
 		opacity: 1;
 		content: "";
 		 width: 117px;

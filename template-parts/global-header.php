@@ -41,7 +41,7 @@
 			</div>
 	</div><!-- /.navbar-collapse -->
 	</nav>
-	<div class="container">
+	<div id="butterfly" class="container">
 		<div class="row d-flex justify-content-between">
 			<div class="col-12 col-xl-6 d-flex flex-column">
 				<?php global $post;  if( is_home() || is_front_page() ) : ?>
