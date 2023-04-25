@@ -1,0 +1,32 @@
+  .wp-block-button__link {
+	text-transform: uppercase;
+	font-family: $sans-serif;
+	font-weight: 200;
+	border-radius: 0;
+	transition: all 0.3s ease;
+  }
+
+  .is-style-fill {
+	  .wp-block-button__link {
+		  background: $deep-grayish-olive;
+		  color: $white;
+		  border: none;
+
+		  &:hover {
+				background: darken($deep-grayish-olive,10%);
+			}
+	  }
+  }
+
+  .wp-block-button.is-style-outline {
+		.wp-block-button__link {
+			background: $transparent;
+			color: $black;
+			border: solid 2px $black;
+
+			&:hover {
+				  background: $black;
+				  color: $white;
+			  }
+		}
+	}

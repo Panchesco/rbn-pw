@@ -1,6 +1,11 @@
 {
   "version": 2,
   "settings": {
+
+      "layout": {
+        "contentSize": "977px",
+        "wideSize": "1120px"
+      },
     "color": {
         "background": true,
         "custom": true,
@@ -137,8 +142,29 @@
     },
     "blocks": {
       "core/button": {
-        "border": {
-          "radius": false
+      "border": {
+        "color": false,
+        "radius": false,
+        "style": false,
+        "width": false
+      },
+      "color":{
+        "text": false,
+        "background": false,
+        "customDuotone": false,
+        "customGradient": false,
+        "defaultDuotone": false,
+        "defaultGradients": false,
+        "duotone": [],
+        "gradients": [],
+        "palette": []
+      },
+        "url": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "a",
+          "attribute": "href",
+          "__experimentalRole": "content"
         }
       }
     }

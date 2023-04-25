@@ -4,6 +4,11 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<?php wp_head(); ?>
+	<script>
+		const newStyle = document.createElement('style');
+		newStyle.innerHTML = ".rbn-card {opacity:0;}";
+		document.querySelector('head').appendChild(newStyle)
+	</script>
 </head>
 <body <?php body_class(["d-flex flex-column h-100"]); ?>>
 <?php wp_body_open(); ?>

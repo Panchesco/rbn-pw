@@ -11267,25 +11267,6 @@ textarea.form-control-lg {
   background: #222222;
 }
 
-.rbn-profile-card {
-  border: none;
-  border-radius: 0;
-  text-align: center;
-}
-.rbn-profile-card .card-img-top {
-  position: relative;
-  display: block;
-  border-radius: 50%;
-  z-index: 1;
-  opacity: 0.4;
-  height: 100%;
-}
-
-.card-footer {
-  font-weight: light;
-  background: none;
-}
-
 /* CUSTOM STYLES
 -------------------------------------------------- */
 :root {
@@ -11304,9 +11285,10 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
+html, body, .wp-block-post-content {
   font-family: var(--serif);
   letter-spacing: 0.03rem;
+  background: #ffffff;
 }
 
 h1, .h1 {
@@ -11425,7 +11407,7 @@ a.no-decoration:hover::before {
   overflow: clip;
   position: relative;
   margin: 0 0 1.5rem 0;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(0.8rem);
   transform-origin: center center;
   transition: all 300ms ease-in-out;
@@ -11485,6 +11467,7 @@ a.no-decoration:hover::before {
   font-weight: 200;
   letter-spacing: 0.04em;
   margin-right: 1rem;
+  margin-left: 1rem;
   text-shadow: 2px 2px 0 var(--black);
   z-index: 3;
 }
@@ -11761,4 +11744,57 @@ footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.act
   text-decoration: none;
   border-color: #B85E00;
   border-width: 0 0 5px 0;
+}
+
+.wp-block-button__link {
+  text-transform: uppercase;
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.is-style-fill .wp-block-button__link {
+  background: #505427;
+  color: #ffffff;
+  border: none;
+}
+.is-style-fill .wp-block-button__link:hover {
+  background: #2f3117;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  background: transparent;
+  color: #222222;
+  border: solid 2px #222222;
+}
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+  background: #222222;
+  color: #ffffff;
+}
+
+main .wp-block-columns,
+main h2.wp-block-heading,
+main .wp-block-heading.h2 {
+  padding-bottom: 7.5rem;
+  margin-bottom: 0;
+}
+
+.rbn-profile-card {
+  border: none;
+  border-radius: 0;
+  text-align: center;
+}
+.rbn-profile-card .card-img-top {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.4;
+  height: 100%;
+}
+
+.card-footer {
+  font-weight: light;
+  background: none;
 }

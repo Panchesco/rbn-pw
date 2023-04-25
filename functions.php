@@ -76,8 +76,8 @@ if ( ! function_exists( 'rbn_pw_setup_theme' ) ) {
 	add_action( 'after_setup_theme', 'rbn_pw_setup_theme' );
 
 	// Disable Block Directory: https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/filters/editor-filters.md#block-directory
-	remove_action( 'enqueue_block_editor_assets', 'wp_enqueue_editor_block_directory_assets' );
-	remove_action( 'enqueue_block_editor_assets', 'gutenberg_enqueue_block_editor_assets_block_directory' );
+	//remove_action( 'enqueue_block_editor_assets', 'wp_enqueue_editor_block_directory_assets' );
+	//remove_action( 'enqueue_block_editor_assets', 'gutenberg_enqueue_block_editor_assets_block_directory' );
 }
 
 if ( ! function_exists( 'wp_body_open' ) ) {
@@ -537,13 +537,14 @@ add_filter('image_size_names_choose',[$rbnpw,'custom_image_sizes']);
 add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/profile-card' );
-	register_block_type( __DIR__ . '/blocks/footer-menu' );
+	//register_block_type( __DIR__ . '/blocks/footer-menu' );
+	register_block_type( __DIR__ . '/blocks/contributors-repeater' );
 }
 
-add_theme_support( 'disable-custom-font-sizes' );
-add_theme_support( 'disable-custom-colors' );
-add_theme_support( 'disable-custom-gradients' );
-add_theme_support( 'editor-gradient-presets', array() );
+//add_theme_support( 'disable-custom-font-sizes' );
+//add_theme_support( 'disable-custom-colors' );
+//add_theme_support( 'disable-custom-gradients' );
+//add_theme_support( 'editor-gradient-presets', array() );
 
 
 add_action( 'enqueue_block_editor_assets', [$rbnpw,'block_editor_scripts'] );
@@ -565,3 +566,13 @@ function rbn_pw_where() {
 		return 'page';
 	}
 }
+
+
+// Include theme and Bootstrap stylesheet on editor
+function alvand_setup()
+{
+	add_theme_support('wp-block-styles');
+	add_editor_style('./dist/css/app.min.css');
+	add_editor_style('style.css');
+}
+add_action('after_setup_theme', 'alvand_setup');

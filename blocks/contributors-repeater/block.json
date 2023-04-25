@@ -1,0 +1,13 @@
+{
+    "name": "acf/contributors-repeater",
+    "title": "Contributors Repeater",
+    "description": "List of Contributor Thumbnails",
+    "category": "formatting",
+    "icon": "dashicon-gallery",
+    "keywords": [""],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "contributors-repeater.php"
+    },
+    "align": "full"
+}

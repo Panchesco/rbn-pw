@@ -7,7 +7,6 @@ class Theme {
 
     function __construct() {
         $this->theme_version = wp_get_theme()->get( 'Version' );
-		//$this->pallette();
     }
 
     function load_scripts() {
