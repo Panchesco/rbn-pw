@@ -11772,6 +11772,16 @@ footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.act
   color: #ffffff;
 }
 
+.wp-block-button .has-vizcaya-palm-background-color {
+  background: #ffc107;
+  color: #ffffff;
+  border: solid 2px #4a634e;
+}
+.wp-block-button .has-vizcaya-palm-background-color:hover {
+  background-color: #344637 !important;
+  color: #ffffff;
+}
+
 main .wp-block-columns,
 main h2.wp-block-heading,
 main .wp-block-heading.h2 {
@@ -11779,6 +11789,18 @@ main .wp-block-heading.h2 {
   margin-bottom: 0;
 }
 
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+.event ul, .event ol {
+  padding: inherit;
+  margin: 0 0 3.07rem 0;
+}
+.event p {
+  padding-bottom: 3.07rem;
+}
 .event h2, .event .h2 {
   font-weight: var(--has-regular-font-weight);
   padding-bottom: 1rem;

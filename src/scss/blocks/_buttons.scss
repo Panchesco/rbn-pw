@@ -31,6 +31,19 @@
 		}
 	}
 
+	.wp-block-button{
+		.has-vizcaya-palm-background-color {
+			background: $yellow;
+			color: $white;
+			border: solid 2px $vizcaya-palm;
+
+			&:hover {
+				  background-color: darken($vizcaya-palm,10%)!important;
+				  color: $white;
+			  }
+		}
+	}
+
 
 
 

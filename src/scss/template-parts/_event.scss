@@ -1,6 +1,22 @@
+iframe {
+	display: block;
+	max-width: 100%;
+}
+
 .event {
+
+ul,ol{
+	padding: inherit;
+	margin: 0 0 3.07rem 0;
+}
+
+p {
+	padding-bottom: 3.07rem;
+}
+
  h2 {
 	font-weight: var(--has-regular-font-weight);
+
 	padding-bottom: 1rem;
 		&:after {
 			display: block;
@@ -30,6 +46,8 @@
 		aspect-ratio: 1 / 1;
 		overflow: clip;
 	}
+
+
 
 }
 
@@ -82,6 +100,8 @@
 
 
 			}
+
+
 
 	}
 

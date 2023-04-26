@@ -1,15 +1,28 @@
 <?php
 $fields = get_fields(get_the_ID(),true);
+
 ?>
 <div class="event container has-ivory-buff-background-color p-5 mb-6">
 	<div class="row">
 		<div class="col col-xl-6 p-xl-0">
-			<h3 class="h2"><?php the_title();?></h3>
+			<h2><?php the_title();?></h2>
 		</div>
 	</div><!-- /.row -->
 	<div class="row">
 		<div class="col-xl-6 pb-5 p-xl-0 pe-xl-4">
-			<?php echo $fields['intro']; ?>
+		<h3><?php echo $fields['date_time_heading']; ?></h3>
+		</div>
+	<div class="col-xl-6 pb-5 p-xl-0 pe-xl-4">
+	<?php if( isset( $fields['event_cta']['button_url'] ) && ! empty( $fields['event_cta']['button_url'] ) ) :?>
+		<div class="d-flex justify-content-center justify-content-lg-start text-center wp-block-button">
+			<a class="wp-block-button__link has-vizcaya-palm-background-color" target="_blank" href="<?php echo $fields['event_cta']['button_url'];?>"><?php echo $fields['event_cta']['button_text'];?></a>
+		</div>
+	<?php endif;?>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-xl-6 pb-5 p-xl-0 pe-xl-4">
+
 			<?php the_excerpt();?>
 
 			<div class="text-center wp-block-button is-style-outline py-4">
@@ -17,6 +30,7 @@ $fields = get_fields(get_the_ID(),true);
 			</div>
 		</div>
 		<div class="col-xl-6 groups">
+
 			<?php foreach($fields['groups'] as $group ) : ?>
 				<h4 class="pb-2"><?php echo $group['group_heading']; ?></h4>
 				<div class="row pb-4">
