@@ -31,12 +31,12 @@ $fields = get_fields(get_the_ID());
 				<?php foreach( $group['profile'] as $profile ) :?>
 				<?php // With copy block ?>
 				<?php if( $profile['copy_block'] != "" ) :?>
-				<div class="d-xl-flex pb-4">
+				<div class="d-xl-flex">
 					<figure class="col-xl-4 d-flex d-xl-block flex-column">
 						<div class="headshot">
 							<?php echo wp_get_attachment_image($profile['headshot'], 'rbn-card', false,['class' => 'img-fluid m-auto m-xl-0 has-raw-sienna-background-color']); ?>
 						</div>
-						<figcaption class="headshot-caption pt-2">
+						<figcaption class="headshot-caption pt-2 pb-5">
 							<?php echo $profile['headshot_caption'];?>
 						</figcaption>
 					</figure>
@@ -51,7 +51,7 @@ $fields = get_fields(get_the_ID());
 						<div class="headshot">
 						<?php echo wp_get_attachment_image($profile['headshot'], 'rbn-card', false,['class' => 'img-fluid m-auto m-xl-0 has-raw-sienna-background-color ']); ?>
 						</div>
-						<figcaption class="headshot-caption pt-2">
+						<figcaption class="headshot-caption pt-2 pb-5">
 							<?php echo $profile['headshot_caption'];?>
 						</figcaption>
 					</figure>

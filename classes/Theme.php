@@ -162,6 +162,24 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 				'after_title'   => '</h3>',
 			) );
 
+			register_sidebar( array(
+				'name'          => __( 'Events Page - Upcoming Events - Intro Copy', 'rbn-pw' ),
+				'id'            => 'upcoming-events-intro',
+				'before_widget' => '<span id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</span>',
+				'before_title'  => '',
+				'after_title'   => '',
+			) );
+
+			register_sidebar( array(
+				'name'          => __( 'Events Page - Past Events - Intro Copy', 'rbn-pw' ),
+				'id'            => 'past-events-intro',
+				'before_widget' => '<span id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</span>',
+				'before_title'  => '',
+				'after_title'   => '',
+			) );
+
 	}
 
 } //

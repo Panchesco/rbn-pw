@@ -11501,6 +11501,27 @@ a.no-decoration:hover::before {
   border-width: 1.5rem 1.5rem 1.5rem 5rem;
 }
 
+.pagination ul {
+  list-style: none;
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  padding: 0 0 6rem 0;
+}
+.pagination ul a {
+  text-decoration: none;
+  color: #222222;
+}
+.pagination ul li a, .pagination ul li span {
+  padding: 0.8rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  margin: 1rem;
+}
+.pagination ul li a.current, .pagination ul li a:hover, .pagination ul li span.current, .pagination ul li span:hover {
+  background: #B85E00;
+  color: #ffffff;
+}
+
 html {
   font-size: 12px;
 }

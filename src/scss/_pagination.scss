@@ -1,0 +1,25 @@
+
+
+.pagination ul {
+	list-style: none;
+	font-family: $sans-serif;
+	display: flex;
+	padding: 0 0 6rem 0;
+
+	a {
+		text-decoration: none;
+		color: $black;
+	}
+
+	li a,li span {
+		padding: .8rem 1.6rem;
+		width: 100%;
+		height: 100%;
+		margin: 1rem;
+		&.current,&:hover {
+			background: $raw-sienna;
+			color: $white;
+		}
+	}
+
+}

@@ -232,7 +232,7 @@ a.no-decoration:hover::before {
 	 @include blockquote;
   }
 
-
+  @import "pagination";
   @import "template-parts/global-header";
   @import "template-parts/global-footer";
   @import "blocks/buttons";
