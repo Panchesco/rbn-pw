@@ -11368,7 +11368,7 @@ p a:hover {
   color: var(--raw-sienna);
 }
 
-p a::before {
+p a:not(.returnto)::before {
   content: "";
   position: absolute;
   display: block;
@@ -11766,6 +11766,26 @@ footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.act
   border-width: 0 0 5px 0;
 }
 
+.wp-block-image {
+  margin-bottom: 0;
+}
+.wp-block-image img {
+  display: block;
+  margin: 0;
+}
+.wp-block-image figcaption {
+  font-size: 1.25rem;
+  text-align: left;
+  padding: 0.4rem 0;
+}
+.wp-block-image.alignleft {
+  margin-left: -6rem;
+  padding-right: 1.5rem;
+}
+.wp-block-image.align-right.size-medium {
+  margin-right: -6rem !important;
+}
+
 .wp-block-button__link {
   text-transform: uppercase;
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -11808,6 +11828,24 @@ main h2.wp-block-heading,
 main .wp-block-heading.h2 {
   padding-bottom: 7.5rem;
   margin-bottom: 0;
+}
+
+p a {
+  position: relative;
+}
+p a:after {
+  content: none;
+  animation: none;
+  width: 100%;
+}
+
+.left-arrow:before {
+  display: block;
+  content: "hello";
+  margin-right: 1.5rem;
+  width: 78px;
+  height: 8px;
+  background-color: pink;
 }
 
 iframe {
@@ -11863,22 +11901,22 @@ iframe {
     background: #B85E00;
     margin-top: 0.4rem;
   }
-  .event .groups figure {
+  .event .grouping figure {
     max-width: 185px;
   }
-  .event .groups figure p {
+  .event .grouping figure p {
     margin: 0 0 0.4rem 0;
   }
-  .event .groups .copy-block {
+  .event .grouping .copy-block {
     padding-left: 1.2rem;
   }
-  .event .groups p {
+  .event .grouping p {
     font-size: 1.375rem;
     padding: 0;
     line-height: 1.2;
     letter-spacing: 0;
   }
-  .event .groups h5, .event .groups .h5 {
+  .event .grouping h5, .event .grouping .h5 {
     font-size: 1rem;
     padding: 0;
     margin: 0;

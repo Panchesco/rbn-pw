@@ -1,6 +1,6 @@
 <div id="global-header" class="has-ivory-buff-background-color">
 	<nav id="header" class="navbar navbar-expand-md container">
-			<div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'rbn-pw' ); ?>">
+			<div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'rbn-pw' ); ?>">
 				<div>
 					<input type="checkbox" id="hi">
 				  	<label class="menu me-auto" for="hi">
@@ -56,13 +56,7 @@
 				<?php endif;?>
 			</div>
 			<div class="d-none d-xl-block col-xl-6">
-				<?php $spotlight = get_fields($post->ID); ?>
-				<?php if( $spotlight && ! empty( $spotlight['spotlight_copy']) ) :?>
-					<aside class="spotlight">
-						<p class="fst-italic"><?php echo $spotlight['spotlight_copy'];?></p>
-						<p class="text-end"><cite>&mdash; <?php echo $spotlight['spotlight_attribution'];?></cite></p>
-					</aside>
-				<?php endif;?>
+			<?php get_template_part('template-parts/header-spotlight','header-spotlight');?>
 			</div>
 		</div><!-- end .row -->
 	</div><!-- end .container -->

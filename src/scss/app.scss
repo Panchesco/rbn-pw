@@ -97,7 +97,7 @@ p a:hover {
   color: var(--raw-sienna);
 }
 
-p a::before {
+p a:not(.returnto)::before {
   content: "";
   position: absolute;
   display: block;
@@ -235,8 +235,10 @@ a.no-decoration:hover::before {
   @import "pagination";
   @import "template-parts/global-header";
   @import "template-parts/global-footer";
+  @import "blocks/block-image";
   @import "blocks/buttons";
   @import "blocks/columns";
+  @import "links";
   @import "template-parts/event";
   @import "blocks/profile-card";
 

@@ -1,0 +1,13 @@
+{
+    "name": "acf/selected-events",
+    "title": "Selected Events",
+    "description": "Selected Events",
+    "category": "formatting",
+    "icon": "calendar-alt",
+    "keywords": [""],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "selected-events.php"
+    },
+    "align": "full"
+}

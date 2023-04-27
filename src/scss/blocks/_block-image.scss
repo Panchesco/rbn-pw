@@ -1,0 +1,36 @@
+.wp-block-image {
+
+
+margin-bottom: 0;
+
+img {
+	 display: block;
+	 margin: 0;
+}
+
+		figcaption {
+			font-size: 1.25rem;
+			text-align: left;
+			padding: .4rem 0;
+		}
+
+		&.alignleft {
+
+		margin-left: -6rem;
+		padding-right: 1.5rem;
+
+		}
+
+		&.align-right.size-medium {
+
+			margin-right: -6rem!important;
+		}
+
+
+
+
+}
+
+
+
+

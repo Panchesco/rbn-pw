@@ -1,0 +1,13 @@
+{
+    "name": "acf/spotlight-widget",
+    "title": "Spotlight Widget",
+    "description": "Add fields for a spotlight block",
+    "category": "formatting",
+    "icon": "",
+    "keywords": [""],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "spotlight-widget.php"
+    },
+    "align": "full"
+}

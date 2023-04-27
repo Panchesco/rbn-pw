@@ -24,7 +24,7 @@ $fields = get_fields(get_the_ID());
 			<?php if(  isset($fields['event_card_columns']['column_one']) && ! empty($fields['event_card_columns']['column_one']) ) :?><div class="pb-5">
 			<?php echo $fields['event_card_columns']['column_one']; ?>
 			</div><?php endif;?>
-			<div class="groups">
+			<div class="grouping">
 			<?php foreach($fields['groups'] as $group ) : ?>
 				<h4 class="pb-2"><?php echo $group['group_heading']; ?></h4>
 				<div class="row pb-4">
@@ -60,7 +60,7 @@ $fields = get_fields(get_the_ID());
 				<?php endforeach;?>
 				</div>
 			<?php endforeach; ?>
-			</div><!-- /.groups -->
+			</div><!-- /.grouping-->
 		</div>
 		<div id="column-two" class="col-xl-6">
 			<?php echo $fields['event_card_columns']['column_two']; ?>

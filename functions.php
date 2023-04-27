@@ -562,15 +562,17 @@ add_filter('image_size_names_choose',[$rbnpw,'custom_image_sizes']);
 
 add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {
+
+	register_block_type( __DIR__ . '/blocks/contributors-repeater' );
+
 	register_block_type( __DIR__ . '/blocks/profile-card' );
 	//register_block_type( __DIR__ . '/blocks/footer-menu' );
-	register_block_type( __DIR__ . '/blocks/contributors-repeater' );
+
+	register_block_type( __DIR__ . '/blocks/selected-events' );
+	register_block_type( __DIR__ . '/blocks/spotlight-widget' );
+	register_block_type( __DIR__ . '/blocks/aside' );
 }
 
-//add_theme_support( 'disable-custom-font-sizes' );
-//add_theme_support( 'disable-custom-colors' );
-//add_theme_support( 'disable-custom-gradients' );
-//add_theme_support( 'editor-gradient-presets', array() );
 
 
 add_action( 'enqueue_block_editor_assets', [$rbnpw,'block_editor_scripts'] );
@@ -595,10 +597,47 @@ function rbn_pw_where() {
 
 
 // Include theme and Bootstrap stylesheet on editor
-function alvand_setup()
+function rbn_editor_bootstrap_setup()
 {
 	add_theme_support('wp-block-styles');
 	add_editor_style('./dist/css/app.min.css');
 	add_editor_style('style.css');
 }
-add_action('after_setup_theme', 'alvand_setup');
+add_action('after_setup_theme', 'rbn_editor_bootstrap_setup');
+
+
+function add_style_select_buttons( $buttons ) {
+	array_unshift( $buttons, 'styleselect' );
+	return $buttons;
+}
+// Register our callback to the appropriate filter
+add_filter( 'mce_buttons_2', 'add_style_select_buttons' );
+
+//add custom styles to the WordPress editor
+function my_custom_styles( $init_array ) {
+
+	$style_formats = array(
+		// These are the custom styles
+		array(
+			'title' => 'Float Left',
+			'block' => 'span',
+			'classes' => 'float-left',
+			'wrapper' => false,
+		),
+		array(
+			'title' => 'Float Right',
+			'block' => 'span',
+			'classes' => 'float-right',
+			'wrapper' => false,
+		),
+	);
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );
+
+	return $init_array;
+
+}
+// Attach callback to 'tiny_mce_before_init'
+add_filter( 'tiny_mce_before_init', 'my_custom_styles' );
+
+

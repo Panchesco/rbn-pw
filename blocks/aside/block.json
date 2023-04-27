@@ -1,0 +1,13 @@
+{
+    "name": "acf/aside",
+    "title": "Aside",
+    "description": "Left or Right Aside",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": [""],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "aside.php"
+    },
+    "align": "full"
+}
