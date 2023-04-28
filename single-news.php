@@ -21,7 +21,7 @@ if ( have_posts() ) :
 		<p><time datetime="<?php echo get_the_date("c");?>"><?php the_date();?></time></p>
 		<h1><?php the_title();?></h1>
 </div>
-<div class="row d-flex justify-content-around">
+<div class="row d-flex justify-content-center">
 		<div class="col-xl-8">
 		<?php the_content();?>
 	</div>
@@ -32,7 +32,7 @@ endif;
  ?>
  <div class="row d-flex justify-content-center pb-6">
 	 <div class="col col-xl-8 py-6">
-	 <p><a class="left-arrow returnto" href="/news"><?php _e('View all News Items','rbn-pw');?></a></p>
+	 <p><a class="left-arrow returnto" href="/news"><?php _e('View all News','rbn-pw');?></a></p>
 	 </div>
 </div>
 

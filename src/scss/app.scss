@@ -239,8 +239,9 @@ a.no-decoration:hover::before {
   @import "blocks/buttons";
   @import "blocks/columns";
   @import "links";
-  @import "template-parts/event";
+  @import "template-parts/_archive-news";
   @import "blocks/profile-card";
+  @import "template-parts/event";
 
 
 
