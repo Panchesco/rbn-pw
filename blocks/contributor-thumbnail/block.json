@@ -1,0 +1,13 @@
+{
+    "name": "acf/contributor-thumbnail",
+    "title": "Contributor Thumbnail",
+    "description": "Add a thumbnail",
+    "category": "formatting",
+    "icon": "",
+    "keywords": [""],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "contributor-thumbnail.php"
+    },
+    "align": "full"
+}

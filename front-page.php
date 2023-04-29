@@ -41,21 +41,20 @@
   }
 
  the_post();
+ the_content();
  ?>
- <div id="intro" class="container">
-	 <div class="row justify-content-sm-center">
-		 <div class="col col-sm-12 col-md-10">
+ <div id="intro">
+	 <div class="wp-block-columns">
+		 <div class="col col-lg-8">
 <?php
-	the_content();
-?>		</div>
+
+?>		</div
 	 </div><!-- end .row -->
  </div><!-- end #intro -->
- <div id="tiles" class="container">
-	  <div class="row justify-content-sm-center">
+ <div id="tiles">
  <?php foreach( $data as $key => $row ) { if( $row->acf['grantee_background_image'] ) { ?>
-
    <?php if( $row->acf['grantee_background_video'] ) { ?>
-  <div class="col col-12 col-sm-12 col-lg-4">
+  <div class="">
       <div class="rbn-card loading"  data-bg="<?php echo $row->acf['grantee_background_image'];?>">
         <a href="<?php echo get_the_permalink($row->ID);?>"></a>
         <label><?php echo $row->acf['grantee_organization'];?></label>
@@ -65,7 +64,7 @@
       </div>
     </div><!-- end .ratio -->
    <?php } else {?>
-  <div class="col col-12 col-sm-12 col-lg-4">
+  <div class="">
      <div class="rbn-card loading"  data-bg="<?php echo $row->acf['grantee_background_image'];?>">
        <a href="<?php echo get_the_permalink($row->ID);?>"></a>
        <label><?php echo $row->acf['grantee_organization'];?></label>
@@ -74,7 +73,6 @@
     <?php } ?>
 
 	 <?php } } ?>
-	  </div><!-- end .row -->
   </div><!-- end #tiles-->
   <?php wp_reset_postdata();?>
   <?php
@@ -85,10 +83,10 @@
   $query = new WP_Query($params); ?>
   <?php if( $query->have_posts() ) : ?>
 <div class="container">
-  <div class="row d-flex align-content-stretch flex-wrap pb-6">
+  <div class="">
   <?php while( $query->have_posts()) : $query->the_post(); ?>
-	  <div class="col-xl-6 p-4">
-		  <div class="has-ivory-background-color p-5 h-100"><?php get_template_part( 'template-parts/archive-news', 'archive-news', ['id' => get_the_ID()] );?></div>
+	  <div class="">
+		  <div class="has-ivory-background-color"><?php get_template_part( 'template-parts/archive-news', 'archive-news', ['id' => get_the_ID()] );?></div>
 	  </div>
  <?php endwhile;?>
   </div><!-- /.row -->

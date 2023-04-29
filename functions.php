@@ -232,52 +232,6 @@ if ( ! function_exists( 'rbn_pw_content_nav' ) ) {
 	add_filter( 'previous_posts_link_attributes', 'posts_link_attributes' );
 }
 
-/**
- * Init Widget areas in Sidebar.
- *
- * @since v1.0
- *
- * @return void
- */
-/*function rbn_pw_widgets_init() {
-	// Area 1.
-	register_sidebar(
-		array(
-			'name'          => 'Primary Widget Area (Sidebar)',
-			'id'            => 'primary_widget_area',
-			'before_widget' => '',
-			'after_widget'  => '',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		)
-	);
-
-	// Area 2.
-	register_sidebar(
-		array(
-			'name'          => 'Secondary Widget Area (Header Navigation)',
-			'id'            => 'secondary_widget_area',
-			'before_widget' => '',
-			'after_widget'  => '',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		)
-	);
-
-	// Area 3.
-	register_sidebar(
-		array(
-			'name'          => 'Third Widget Area (Footer)',
-			'id'            => 'third_widget_area',
-			'before_widget' => '',
-			'after_widget'  => '',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		)
-	);
-}
-add_action( 'widgets_init', 'rbn_pw_widgets_init' );
-*/
 
 if ( ! function_exists( 'rbn_pw_article_posted_on' ) ) {
 	/**
@@ -556,26 +510,13 @@ add_action( 'wp_enqueue_scripts', [$rbnpw,'load_scripts'],20 );
 add_action( 'wp_enqueue_scripts', [$rbnpw,'load_styles'],20 );
 add_action( 'wp_enqueue_scripts', [$rbnpw,'google_fonts'],10 );
 add_action('after_setup_theme',[$rbnpw,'image_sizes']);
+add_action( 'acf/init', [$rbnpw,'register_acf_blocks'] );
+add_action( 'enqueue_block_editor_assets', [$rbnpw,'block_editor_scripts'] );
 add_action( 'widgets_init', [$rbnpw,'sidebars'] );
 add_filter('image_size_names_choose',[$rbnpw,'custom_image_sizes']);
 
 
-add_action( 'init', 'register_acf_blocks' );
-function register_acf_blocks() {
 
-	register_block_type( __DIR__ . '/blocks/contributors-repeater' );
-
-	register_block_type( __DIR__ . '/blocks/profile-card' );
-	//register_block_type( __DIR__ . '/blocks/footer-menu' );
-
-	register_block_type( __DIR__ . '/blocks/selected-events' );
-	register_block_type( __DIR__ . '/blocks/spotlight-widget' );
-	register_block_type( __DIR__ . '/blocks/aside' );
-}
-
-
-
-add_action( 'enqueue_block_editor_assets', [$rbnpw,'block_editor_scripts'] );
 
 
 

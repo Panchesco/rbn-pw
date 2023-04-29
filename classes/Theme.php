@@ -4,9 +4,11 @@ namespace RbnPw;
 class Theme {
 
     public $theme_version;
+	private $theme_path;
 
     function __construct() {
         $this->theme_version = wp_get_theme()->get( 'Version' );
+		$this->theme_path = get_template_directory();
     }
 
     function load_scripts() {
@@ -135,6 +137,23 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 		wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/dist/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
 	}
 
+	function register_acf_blocks() {
+
+		if( function_exists('acf_register_block_type') ) {
+
+			register_block_type( $this->theme_path . '/blocks/contributors-repeater' );
+			register_block_type( $this->theme_path . '/blocks/contributor-thumbnail' );
+
+			register_block_type( $this->theme_path . '/blocks/profile-card' );
+			//register_block_type( $this->theme_path . '/blocks/footer-menu' );
+
+			register_block_type( $this->theme_path . '/blocks/selected-events' );
+			register_block_type( $this->theme_path . '/blocks/spotlight-widget' );
+			register_block_type( $this->theme_path . '/blocks/aside' );
+		}
+
+	}
+
 	function sidebars() {
 		register_sidebar( array(
 			'name'          => __( 'Footer Area One', 'rbn-pw' ),
@@ -210,3 +229,4 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 	}
 
 } //
+

@@ -11826,8 +11826,11 @@ footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.act
 main .wp-block-columns,
 main h2.wp-block-heading,
 main .wp-block-heading.h2 {
-  padding-bottom: 7.5rem;
   margin-bottom: 0;
+}
+
+.container {
+  background: pink !important;
 }
 
 p a {
@@ -11974,4 +11977,12 @@ iframe {
     padding: 0;
     margin: 0;
   }
+}
+.wp-block-columns {
+  max-width: 1320px;
+  margin: auto;
+}
+
+.container {
+  background: green;
 }

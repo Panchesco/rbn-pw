@@ -243,6 +243,15 @@ a.no-decoration:hover::before {
   @import "blocks/profile-card";
   @import "template-parts/event";
 
+  .wp-block-columns {
+    max-width: 1320px;
+    margin: auto;
+  }
+
+  .container {
+    background: green;
+  }
+
 
 
 

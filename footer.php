@@ -61,7 +61,6 @@
 			</div>
 			<?php endif;?>
 		</footer><!-- /#footer -->
-	</div><!-- /#wrapper -->
 	<?php
 		wp_footer();
 	?>

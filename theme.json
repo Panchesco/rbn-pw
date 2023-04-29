@@ -1,10 +1,12 @@
 {
   "version": 2,
   "settings": {
-
       "layout": {
-        "contentSize": "1120px",
-        "wideSize": "1120px"
+        "contentSize": "1320px",
+        "wideSize": "1320px"
+      },
+      "spacing": {
+        "blockGap": true,
       },
     "color": {
         "background": true,
