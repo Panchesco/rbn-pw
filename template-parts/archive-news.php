@@ -1,6 +1,6 @@
 <?php
 $id = ( isset(  $args['id'] ) ) ? $args['id'] : get_the_ID();
-$fields = get_fields(get_the_ID());
+$fields = get_fields( get_the_ID() );
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 extract($args);
 ?>

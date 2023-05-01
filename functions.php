@@ -587,5 +587,3 @@ function my_block_editor_assets() {
 
 add_action( 'enqueue_block_editor_assets','my_block_editor_assets');
 
-
-

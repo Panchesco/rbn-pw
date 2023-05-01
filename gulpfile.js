@@ -103,6 +103,7 @@ gulp.task('replaceHtmlBlock', function () {
 gulp.task('dev', function browserDev(done) {
   browserSync.init({
     proxy: "https://staging.rlw.digitalscholarship.library.arizona.dev",
+	https: true
   });
   gulp.watch(['src/scss/*.scss','src/scss/**/*.scss','!src/scss/bootstrap/**'], gulp.series('css:minify', function cssBrowserReload (done) {
     browserSync.reload();
