@@ -1,0 +1,13 @@
+{
+    "name": "acf/news-feed",
+    "title": "News Feed",
+    "description": "News Item Thumbnails",
+    "category": "formatting",
+    "icon": "",
+    "keywords": [""],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "news-feed.php"
+    },
+    "align": "full"
+}

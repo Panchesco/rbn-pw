@@ -1,7 +1,7 @@
 <?php
 $fields = get_fields(get_the_ID());
 ?>
-<div class="event columns container has-ivory-buff-background-color p p-xl-5 mb-6">
+<div class="archive-event columns has-ivory-buff-background-color p p-xl-5 mb-6">
 	<div class="row">
 		<div class="col col-xl-6 p-xl-0">
 			<h2><?php the_title();?></h2>
@@ -67,5 +67,5 @@ $fields = get_fields(get_the_ID());
 			<?php echo $fields['map'];?>
 		</div>
 	</div><!-- /.row -->
-</div><!-- /.container -->
+</div><!-- /.archive-event.columns -->
 

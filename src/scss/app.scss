@@ -31,6 +31,7 @@
 //Smooth Scroll
 html {
   scroll-behavior: smooth;
+  word-wrap: nowrap;
 }
 
 html,body,.wp-block-post-content {
@@ -118,7 +119,7 @@ a.no-decoration:hover::before {
 	transform: scaleX(0);
 }
 
-.pullquote {
+.offset-left {
 	max-width: 25%;
 	display: inline-block;
 	float: left;
@@ -127,96 +128,17 @@ a.no-decoration:hover::before {
 	font-weight: 200;
 }
 
+.offset-right {
+  max-width: 25%;
+  display: inline-block;
+  float: right;
+  padding: 1.5rem 0rem;
+  transform: translateX(6rem);
+  font-weight: 200;
+}
 
 
-/* RBN Card */
 
-.rbn-card {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    overflow: clip;
-    position: relative;
-    margin: 0 0 1.5rem 0;
-    opacity: 1;
-    transform: translateY(.8rem);
-    transform-origin: center center;
-    transition: all 300ms ease-in-out;
-    transform: scale(1.1);
-  }
-
-
-  .rbn-card:hover {
-    box-shadow: 3px 3px 10px rgba(0,0,0,.6);
-
-  }
-
-  .rbn-card.loading {
-    box-shadow: 3px 3px 10px rgba(0,0,0,.6);
-  }
-
-  .rbn-card.fade-in {
-    animation:fadeIn 400ms ease-in;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes fadeIn{
-
-    0% {
-      opacity: 0;
-    }
-
-
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .rbn-card:after {
-    display: block;
-    padding-bottom: 100%;
-    content: "";
-    z-index: 1;
-    position: relative;
-  }
-
-  .rbn-card a {
-    display: block;
-    z-index: 4;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-  }
-
-  .rbn-card label {
-    position: absolute;
-    right: 0;
-    bottom: 1rem;
-    background: var(--deep-grayish-olive);
-    color: var(--white);
-    font-family: var(--sans-serif);
-    padding: 1rem 1.5rem;
-    font-size: 1.5rem;
-    font-weight: 200;
-    letter-spacing: .04em;
-    margin-right: 1rem;
-	margin-left: 1rem;
-    text-shadow: 2px 2px 0 var(--black);
-    z-index:3;
-  }
-
-  .rbn-card video {
-    display: block;
-    position: absolute;
-    top: 0;
-    left:0;
-    z-index:2;
-    max-width: 100%;
-  }
 
   .has-sans-serif-font-family.strtoupper {
 	  text-transform: uppercase;
@@ -238,19 +160,35 @@ a.no-decoration:hover::before {
   @import "blocks/block-image";
   @import "blocks/buttons";
   @import "blocks/columns";
+  @import "blocks/contributor-grid-card";
   @import "links";
   @import "template-parts/_archive-news";
   @import "blocks/profile-card";
   @import "template-parts/event";
 
-  .wp-block-columns {
-    max-width: 1320px;
-    margin: auto;
-  }
 
-  .container {
-    background: green;
-  }
+
+.narrow {
+  max-width: 80%!important;
+  margin: auto!important;
+  align-self: flex-end!important;
+}
+
+body .is-layout-flow > * + * {
+  margin-block-start: revert;
+}
+
+.wp-block-columns,
+h1.wp-block-heading,
+h2.wp-block-heading{
+  padding-bottom: 5.25rem;
+}
+
+
+h3.wp-block-heading{
+  padding-bottom: 2rem;
+}
+
 
 
 

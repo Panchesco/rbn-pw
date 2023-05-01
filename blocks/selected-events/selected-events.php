@@ -7,7 +7,7 @@ if( $selected_events ){
 	foreach( $selected_events as $row ) {
 		foreach( $row as $events) {
 			foreach( $events as $event) {
-				get_template_part('template-parts/event-excerpt','event-excerpt',['id' => $event->ID]);
+				get_template_part('template-parts/archive-event','archive-event',['id' => $event->ID]);
 			}
 		}
 	}

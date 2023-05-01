@@ -1,0 +1,15 @@
+{
+    "name": "acf/contributors-grid",
+    "title": "Contributors Grid",
+    "description": "Displays a grid of contributor grid cards",
+    "category": "formatting",
+    "icon": "dashicon-gallery",
+    "editorScript": "contributors-grid",
+    "editorStyle": "file:./index.css",
+    "keywords": [""],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "contributors-grid.php"
+    },
+    "align": "full"
+}

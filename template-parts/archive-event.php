@@ -10,7 +10,7 @@
 
 
 ?>
-<div class="event container has-ivory-buff-background-color p-5 mb-6">
+<div class="archive-event has-ivory-buff-background-color p-5">
 	<div class="row">
 		<div class="col col-xl-6 p-xl-0">
 			<h2><?php echo get_the_title($id);?></h2>

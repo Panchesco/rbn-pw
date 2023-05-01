@@ -5,12 +5,6 @@
 
 get_header(); ?>
 
-
-
-<div class="container">
-
-
-
 <?php
 
 if ( have_posts() ) :
@@ -22,7 +16,7 @@ if ( have_posts() ) :
 		<h1><?php the_title();?></h1>
 </div>
 <div class="row d-flex justify-content-center">
-		<div class="col-xl-8">
+	<div class="col-xl-8">
 		<?php the_content();?>
 	</div>
 </div>
@@ -32,7 +26,7 @@ endif;
  ?>
  <div class="row d-flex justify-content-center pb-6">
 	 <div class="col col-xl-8 py-6">
-	 <p><a class="left-arrow returnto" href="/news"><?php _e('View all News','rbn-pw');?></a></p>
+	 <h3 class="left-arrow"><a class="returnto" href="/news"><?php _e('View all News','rbn-pw');?></a></h3>
 	 </div>
 </div>
 

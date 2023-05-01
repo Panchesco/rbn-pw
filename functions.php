@@ -581,4 +581,11 @@ function my_custom_styles( $init_array ) {
 // Attach callback to 'tiny_mce_before_init'
 add_filter( 'tiny_mce_before_init', 'my_custom_styles' );
 
+function my_block_editor_assets() {
+	wp_register_script( 'contributors-grid', get_template_directory_uri() . '/blocks/contributors-grid/index.js', [], null, true );
+}
+
+add_action( 'enqueue_block_editor_assets','my_block_editor_assets');
+
+
 

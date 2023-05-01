@@ -102,7 +102,7 @@ gulp.task('replaceHtmlBlock', function () {
 // Configure the browserSync task and watch file path for change
 gulp.task('dev', function browserDev(done) {
   browserSync.init({
-    proxy: "http://rbn.local",
+    proxy: "https://staging.rlw.digitalscholarship.library.arizona.dev",
   });
   gulp.watch(['src/scss/*.scss','src/scss/**/*.scss','!src/scss/bootstrap/**'], gulp.series('css:minify', function cssBrowserReload (done) {
     browserSync.reload();

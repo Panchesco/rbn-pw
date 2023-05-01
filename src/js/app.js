@@ -6,7 +6,7 @@ const app = {
 	app.activeLinks();
   },
   fadeInCards: function() {
-       const cards = document.querySelectorAll('.rbn-card');
+       const cards = document.querySelectorAll('.contributor-grid-card');
        const wH = window.innerHeight;
        const fadeInHeight = wH-42;
        cards.forEach( (card) => {
@@ -71,3 +71,8 @@ const app = {
         } );
     } );
 } )();
+
+console.log(window.location.href);
+
+
+

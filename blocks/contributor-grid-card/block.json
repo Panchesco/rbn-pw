@@ -1,0 +1,13 @@
+{
+    "name": "acf/contributor-grid-card",
+    "title": "Contributor Grid Card",
+    "description": "This is the info used on the Contributor's grid card.",
+    "category": "formatting",
+    "icon": "",
+    "keywords": [""],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "contributor-grid-card.php"
+    },
+    "align": "full"
+}
