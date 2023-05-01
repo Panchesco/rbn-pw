@@ -3,7 +3,9 @@
  * Selected Events Block Template.
  */
 $selected_events = get_field('selected_events');
-if( $selected_events ){
+if( $selected_events ){ ?>
+	<?php if( is_admin() ) : ?><div class="container"><?php endif;?>
+	<?php
 	foreach( $selected_events as $row ) {
 		foreach( $row as $events) {
 			foreach( $events as $event) {
@@ -19,5 +21,7 @@ if( $selected_events ){
 				get_template_part('template-parts/archive-event','archive-event',$args);
 			}
 		}
-	}
+	} ?>
+	<?php if( is_admin() ) : ?></div><?php endif;?>
+<?php
 }

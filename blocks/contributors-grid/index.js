@@ -4,12 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
         cards: [],
         init: function() {
             this.listenerInt()
+
+			console.log('contributors grid script')
         },
         listenerInt: function() {
             let intID = setInterval(() => {
             this.cards  = document.querySelectorAll('.contributor-grid-card')
             if( this.cards ) {
                if(this.cards.length != 0) {
+				   console.log(this.cards.length)
                 if(intID) {
                   clearInterval(intID)
                 }

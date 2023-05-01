@@ -141,6 +141,7 @@ a.no-decoration:hover::before {
 
 
   .has-sans-serif-font-family.strtoupper {
+	  font-family: $sans-serif;
 	  text-transform: uppercase;
 	  letter-spacing: 1px;
   }
@@ -168,11 +169,11 @@ a.no-decoration:hover::before {
 
 
 
-.narrow {
+/*.narrow {
   max-width: 80%!important;
   margin: auto!important;
   align-self: flex-end!important;
-}
+}*/
 
 body .is-layout-flow > * + * {
   margin-block-start: revert;
@@ -181,12 +182,12 @@ body .is-layout-flow > * + * {
 .wp-block-columns,
 h1.wp-block-heading,
 h2.wp-block-heading{
-  padding-bottom: 5.25rem;
+  //padding-bottom: 5.25rem;
 }
 
 
 h3.wp-block-heading{
-  padding-bottom: 2rem;
+  //padding-bottom: 2rem;
 }
 
 

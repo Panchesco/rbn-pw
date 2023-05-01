@@ -9,7 +9,8 @@ var gulp = require('gulp'),
   merge = require('merge-stream'),
   htmlreplace = require('gulp-html-replace'),
   autoprefixer = require('gulp-autoprefixer'),
-  browserSync = require('browser-sync').create();
+  browserSync = require('browser-sync').create(),
+  sourcemaps = require('gulp-sourcemaps');
 
 // Clean task
 gulp.task('clean', function() {

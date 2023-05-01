@@ -7,6 +7,7 @@ $params = [ 'post_type' => 'news',
 			'posts_per_page' => get_field('post_count')];
 $query = new WP_Query($params);
 if( $query->have_posts() ) : ?>
+<?php if( is_admin() ) : ?><div class="container"><?php endif;?>
 <div class="row d-flex align-content-stretch flex-wrap">
 <?php while( $query->have_posts() ) : $query->the_post(); ?>
 <?php
@@ -19,7 +20,7 @@ $args = [
 	'permalink' => get_the_permalink()
 ];
 ?>
-	<div class="col-xl-6 pb-4 news-post-wrapper">
+	<div class="col-xl-6 news-post-wrapper">
 	  <div class="has-ivory-background-color p-5 pb-2 h-100">
 	  <?php get_template_part('template-parts/archive-news', 'archive-news', $args);?>
 	  </div>
@@ -27,3 +28,4 @@ $args = [
 <?php endwhile; ?>
 </div>
 <?php wp_reset_postdata(); endif; ?>
+<?php if( is_admin() ) : ?></div><?php endif;?>

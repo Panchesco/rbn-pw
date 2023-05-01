@@ -11304,14 +11304,12 @@ h2, .h2 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 3.07rem;
   font-weight: 200;
-  padding-bottom: 3.07rem;
 }
 
 h3, .h3 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.75rem;
   font-weight: 200;
-  padding-bottom: 3.07rem;
 }
 
 h4, .h4 {
@@ -11320,21 +11318,18 @@ h4, .h4 {
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-bottom: 3.07rem;
 }
 
 h5, .h5 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
-  padding-bottom: 3.07rem;
 }
 
 h6, .h6 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
-  padding-bottom: 3.07rem;
 }
 
 code {
@@ -11410,6 +11405,7 @@ a.no-decoration:hover::before {
 }
 
 .has-sans-serif-font-family.strtoupper {
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -11765,7 +11761,6 @@ main .wp-block-heading.h2 {
   background-size: cover;
   overflow: clip;
   position: relative;
-  margin: 0 0 1.5rem 0;
   opacity: 0;
   transform: translateY(0.8rem);
   transform-origin: center center;
@@ -11985,10 +11980,6 @@ iframe {
 
 .archive-event ul, .archive-event ol {
   padding: inherit;
-  margin: 0 0 3.07rem 0;
-}
-.archive-event p {
-  padding-bottom: 3.07rem;
 }
 .archive-event h2, .archive-event .h2 {
   font-weight: var(--has-regular-font-weight);
@@ -12054,25 +12045,12 @@ iframe {
   font-size: 1.25rem;
 }
 
-.narrow {
-  max-width: 80% !important;
-  margin: auto !important;
-  align-self: flex-end !important;
-}
-
+/*.narrow {
+  max-width: 80%!important;
+  margin: auto!important;
+  align-self: flex-end!important;
+}*/
 body .is-layout-flow > * + * {
   -webkit-margin-before: revert;
           margin-block-start: revert;
-}
-
-.wp-block-columns,
-h1.wp-block-heading,
-.wp-block-heading.h1,
-h2.wp-block-heading,
-.wp-block-heading.h2 {
-  padding-bottom: 5.25rem;
-}
-
-h3.wp-block-heading, .wp-block-heading.h3 {
-  padding-bottom: 2rem;
 }
