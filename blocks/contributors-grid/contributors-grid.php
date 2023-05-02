@@ -27,7 +27,7 @@ $field = get_field('contributors_grid');
 
 ?>
 <?php if( is_admin() ) :?><div class="container"><?php endif;?>
-<div class="row d-flex justify-content-start gap-4 px-3 px-lg-0 py-0">
+<div class="contributors-grid row d-flex justify-content-start gap-4 px-3 px-lg-0 py-0">
 <?php
 // Set contributor rows and sub fields from Contributor post to grid array.
 foreach( $field as  $row ) {

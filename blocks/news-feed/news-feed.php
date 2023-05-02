@@ -8,7 +8,7 @@ $params = [ 'post_type' => 'news',
 $query = new WP_Query($params);
 if( $query->have_posts() ) : ?>
 <?php if( is_admin() ) : ?><div class="container"><?php endif;?>
-<div class="row d-flex align-content-stretch flex-wrap">
+<div class="row d-flex align-content-stretch flex-wrap gy-4">
 <?php while( $query->have_posts() ) : $query->the_post(); ?>
 <?php
 $args = [
@@ -27,5 +27,6 @@ $args = [
 	</div>
 <?php endwhile; ?>
 </div>
+<h3><a class="arrow-right href="<?php echo bloginfo('siteurl');?>/news"><?php _e("View all News");?></a></h3>
 <?php wp_reset_postdata(); endif; ?>
 <?php if( is_admin() ) : ?></div><?php endif;?>

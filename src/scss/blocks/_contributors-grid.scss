@@ -1,5 +1,10 @@
 /* Contributor Grid Card */
 
+.contributors-grid {
+  max-width: 1320px;
+  margin: auto;
+}
+
 .contributor-grid-card {
     background-repeat: no-repeat!important;
     background-position: center center;
@@ -93,9 +98,7 @@
   }
 
   @media all and (min-width:992px) {
-
       .contributor-grid-card {
-          max-width: 432px;
+          max-width: 424px;
       }
-
   }

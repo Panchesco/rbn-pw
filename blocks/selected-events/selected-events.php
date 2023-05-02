@@ -22,6 +22,7 @@ if( $selected_events ){ ?>
 			}
 		}
 	} ?>
+	<h3 class="wp-block-heading has-text-align-right right-arrow"><a href="/events">View all Events</a></h3>
 	<?php if( is_admin() ) : ?></div><?php endif;?>
 <?php
 }

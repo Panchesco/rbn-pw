@@ -11304,6 +11304,7 @@ h2, .h2 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 3.07rem;
   font-weight: 200;
+  padding-bottom: 9.21rem;
 }
 
 h3, .h3 {
@@ -11318,18 +11319,21 @@ h4, .h4 {
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 1px;
+  padding-bottom: 4.605rem;
 }
 
 h5, .h5 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
+  padding-bottom: 4.605rem;
 }
 
 h6, .h6 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
+  padding-bottom: 4.605rem;
 }
 
 code {
@@ -11717,6 +11721,7 @@ footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.act
   font-weight: 200;
   border-radius: 0;
   transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
 }
 
 .is-style-fill .wp-block-button__link {
@@ -11748,13 +11753,16 @@ footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.act
   color: #ffffff;
 }
 
-main .wp-block-columns,
-main h2.wp-block-heading,
-main .wp-block-heading.h2 {
-  margin-bottom: 0;
+main .wp-block-columns {
+  margin-bottom: 9.21rem;
 }
 
 /* Contributor Grid Card */
+.contributors-grid {
+  max-width: 1320px;
+  margin: auto;
+}
+
 .contributor-grid-card {
   background-repeat: no-repeat !important;
   background-position: center center;
@@ -11841,7 +11849,7 @@ main .wp-block-heading.h2 {
 
 @media all and (min-width: 992px) {
   .contributor-grid-card {
-    max-width: 432px;
+    max-width: 424px;
   }
 }
 p a {

@@ -1,7 +1,6 @@
 main {
-	.wp-block-columns,
-	h2.wp-block-heading {
-	margin-bottom: 0;
+	.wp-block-columns {
+	margin-bottom: calc($h2-font-size * 3);
 	}
 }
 

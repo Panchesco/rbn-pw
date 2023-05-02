@@ -9,7 +9,7 @@
 	$fields = get_fields( $id,true );
 	extract($args)
 ?>
-<div class="archive-event has-ivory-buff-background-color p-5 mb-6">
+<div class="archive-event has-ivory-buff-background-color p-5">
 	<h2><?php echo $title ?></h2>
 	<div class="row">
 		<div class="col-xl-6">
@@ -36,7 +36,6 @@
 				<h4><?php echo $group['group_heading'];?></h4>
 				<div class="d-xl-flex flex-wrap row gx-4">
 				<?php if( isset($group['profile']) && is_array( $group['profile']) ) : foreach( $group['profile'] as $profile ) : ?>
-
 					<?php
 						// There are two possible layouts for each profile
 						// 1. Profile with a copy block.
