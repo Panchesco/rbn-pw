@@ -1,7 +1,12 @@
 main {
-	.wp-block-columns {
-	margin-bottom: calc($h2-font-size * 3);
-	}
+ p,.wp-block-buttons,h2 {
+	 padding-bottom: $h2-font-size;
+ }
+}
+
+.narrow {
+	max-width: 960px;
+	margin: auto;
 }
 
 

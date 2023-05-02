@@ -1,13 +1,13 @@
 {
-    "name": "acf/profile-card",
-    "title": "Profile Card",
-    "description": "Formatted Profile Card",
+    "name": "acf/profile-grid",
+    "title": "Profile Grid",
+    "description": "Grid of profiles",
     "category": "formatting",
     "icon": "admin-comments",
     "keywords": [""],
     "acf": {
         "mode": "preview",
-        "renderTemplate": "profile-card.php"
+        "renderTemplate": "profile-grid.php"
     },
     "align": "full"
 }

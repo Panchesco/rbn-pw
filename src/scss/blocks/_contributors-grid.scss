@@ -3,6 +3,13 @@
 .contributors-grid {
   max-width: 1320px;
   margin: auto;
+
+  background: pink;
+  :after {
+	  content: "";
+	  display: block;
+
+  }
 }
 
 .contributor-grid-card {

@@ -1,6 +1,6 @@
 <?php
 /**
- * Profile Card Block Template.
+ * Profile Grid Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -27,17 +27,28 @@ if ( ! empty( $block['align'] ) ) {
 }
 
 // Load values and assign defaults.
-$profile_card             = get_field( 'profile_card' ) ?: ['name' => "" ,'title_affiliation' => "", 'footer' => ""];
-extract($profile_card);
+$grid = get_field( 'profiles' );
+
 ?>
-  <div class="card rbn-profile-card">
-	<?php if( ! empty( $headshot ) ) :?><?php echo wp_get_attachment_image( $headshot,'thumbnail',false,['class'=>'card-img-top'] );?><?php endif;?>
-	<div class="card-body">
-	  <h2 class="card-title"><?php echo $name;?></h2>
-	  <?php if( ! empty( $title_affiliation ) ) :?><p class="card-text"><?php echo $title_affiliation;?></p><?php endif;?>
-	</div><?php if( ! empty( $title_affiliation ) ) :?>
-	<div class="card-footer">
-	  <?php echo $footer;?>
-	</div><?php endif;?>
+<div class="row d-flex">
+<?php foreach( $grid as $row) : extract( $row );?>
+  <div class="col-xl-3  p-2 profile-card d-flex flex-column">
+		<figure class="headshot">
+			<?php
+			if( ! empty( $headshot ) ) :
+			$postmeta = get_post_meta($headshot, '_wp_attachment_image_alt', true);
+			?>
+			<img src="<?php echo wp_get_attachment_image_url( $headshot,'rbn-card',false,[] );?>" alt="<?php echo $postmeta;?>" />
+			<?php endif;?>
+		</figure>
+	<div class="card-body py-4 px-4">
+	  <header><h3 class="card-title pb-4"><?php echo $heading;?></h3></header>
+	  <?php if( ! empty( $body ) ) :?><div class="body"><?php echo $body; ?></div><?php endif;?>
+	</div>
+	<footer class="">
+	 <?php if( ! empty( $footer ) ) : echo $footer; endif; ?>
+	</footer>
   </div>
+  <?php endforeach;?>
+</div><!-- /.row -->
 

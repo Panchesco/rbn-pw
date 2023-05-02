@@ -27,6 +27,12 @@ $args = [
 	</div>
 <?php endwhile; ?>
 </div>
-<h3><a class="arrow-right href="<?php echo bloginfo('siteurl');?>/news"><?php _e("View all News");?></a></h3>
+<?php $footer = get_field('news_feed_footer'); if( ! empty( $footer ) ) :?>
+<div class="row">
+	<div>
+		<?php echo $footer;?>
+	</div>
+</div>
+<?php endif;?>
 <?php wp_reset_postdata(); endif; ?>
 <?php if( is_admin() ) : ?></div><?php endif;?>

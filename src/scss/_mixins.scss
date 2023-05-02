@@ -12,7 +12,7 @@
   font-family: $sans-serif;
   font-size: $h2-font-size;
   font-weight: 200;
-  padding-bottom: calc($h2-font-size * 3);
+  padding-bottom: calc($h2-font-size * 1);
 }
 
 @mixin h3 {

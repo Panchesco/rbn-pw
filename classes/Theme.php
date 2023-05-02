@@ -141,16 +141,13 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 
 		if( function_exists('acf_register_block_type') ) {
 
+
+			register_block_type( $this->theme_path . '/blocks/aside' );
 			register_block_type( $this->theme_path . '/blocks/contributors-grid' );
-			//register_block_type( $this->theme_path . '/blocks/contributor-thumbnail' );
 			register_block_type( $this->theme_path . '/blocks/news-feed' );
-
-			register_block_type( $this->theme_path . '/blocks/profile-card' );
-			//register_block_type( $this->theme_path . '/blocks/footer-menu' );
-
+			register_block_type( $this->theme_path . '/blocks/profile-grid' );
 			register_block_type( $this->theme_path . '/blocks/selected-events' );
 			register_block_type( $this->theme_path . '/blocks/spotlight-widget' );
-			register_block_type( $this->theme_path . '/blocks/aside' );
 		}
 
 	}

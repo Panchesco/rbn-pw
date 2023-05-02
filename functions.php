@@ -53,6 +53,8 @@ if ( ! function_exists( 'rbn_pw_setup_theme' ) ) {
 				'script',
 				'style',
 				'navigation-widgets',
+				'appearance-tools',
+				'custom-spacing'
 			)
 		);
 
@@ -559,24 +561,54 @@ function my_custom_styles( $init_array ) {
 
 	$style_formats = array(
 		// These are the custom styles
+		/*
+		* Each array child is a format with it's own settings
+		* Notice that each array has title, block, classes, and wrapper arguments
+		* Title is the label which will be visible in Formats menu
+		* Block defines whether it is a span, div, selector, or inline style
+		* Classes allows you to define CSS classes
+		* Wrapper whether or not to add a new block-level element around any selected elements
+		*/
 		array(
-			'title' => 'Float Left',
-			'block' => 'span',
-			'classes' => 'float-left',
-			'wrapper' => false,
+			'title' => 'Arrow Left',
+			'block' => 'div',
+			'classes' => 'arrow-left',
+			'wrapper' => true,
 		),
 		array(
-			'title' => 'Float Right',
-			'block' => 'span',
-			'classes' => 'float-right',
-			'wrapper' => false,
+			'title' => 'Arrow Right',
+			'block' => 'div',
+			'classes' => 'arrow-right',
+			'wrapper' => true,
+		),
+		array(
+			'title' => '.25 rem vertical padding',
+			'block' => 'div',
+			'classes' => 'py-1',
+			'wrapper' => true,
+		),
+		array(
+			'title' => '.5 rem vertical padding',
+			'block' => 'div',
+			'classes' => 'py-2',
+			'wrapper' => true,
+		),
+		array(
+			'title' => '.75 rem vertical padding',
+			'block' => 'div',
+			'classes' => 'py-3',
+			'wrapper' => true,
+		),
+		array(
+			'title' => '1 rem vertical padding',
+			'block' => 'div',
+			'classes' => 'py-4',
+			'wrapper' => true,
 		),
 	);
 	// Insert the array, JSON ENCODED, into 'style_formats'
 	$init_array['style_formats'] = json_encode( $style_formats );
-
 	return $init_array;
-
 }
 // Attach callback to 'tiny_mce_before_init'
 add_filter( 'tiny_mce_before_init', 'my_custom_styles' );
@@ -587,7 +619,4 @@ function rbnpw_block_editor_assets() {
 
 add_action( 'enqueue_block_editor_assets','rbnpw_block_editor_assets');
 
-// Allow for spacing in block editor
-add_theme_support( 'appearance-tools' );
-add_theme_support( 'custom-spacing' );
 

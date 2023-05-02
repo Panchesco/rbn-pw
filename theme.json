@@ -1,23 +1,15 @@
 {
   "version": 2,
   "settings": {
-    "appearanceTools": true,
       "layout": {
         "contentSize": "1200px",
         "wideSize": "1200px"
       },
       "spacing": {
         "blockGap": true,
+        "units": ["px","em","rem"],
         "margin": true,
-        "padding": true,
-        "units": [
-          "%",
-          "px",
-          "em",
-          "rem",
-          "vh",
-          "vw"
-        ]
+        "padding": true
       },
       "styles": {
         "spacing": {
@@ -156,7 +148,7 @@
     "lineHeight": true,
     "textColumns": false,
     "textDecoration": true,
-    "textTransform": true,
+    "textTransform": true
     },
     "blocks": {
       "core/button": {
@@ -165,12 +157,6 @@
         "radius": false,
         "style": false,
         "width": false
-      },
-      "spacing": {
-        "blockGap": true,
-        "units": ["px","em","rem"],
-        "margin": true,
-        "padding": true
       },
       "color":{
         "text": false,

@@ -137,9 +137,6 @@ a.no-decoration:hover::before {
   font-weight: 200;
 }
 
-
-
-
   .has-sans-serif-font-family.strtoupper {
 	  font-family: $sans-serif;
 	  text-transform: uppercase;
@@ -164,9 +161,8 @@ a.no-decoration:hover::before {
   @import "blocks/contributors-grid";
   @import "links";
   @import "template-parts/_archive-news";
-  @import "blocks/profile-card";
+  @import "blocks/profile-grid";
   @import "template-parts/event";
-
 
 
 /*.narrow {
@@ -189,6 +185,15 @@ h2.wp-block-heading{
 h3.wp-block-heading{
   //padding-bottom: 2rem;
 }
+
+p {
+	background: pink;
+}
+
+* {
+	margin: 0 inherit !important;
+}
+
 
 
 
