@@ -27,7 +27,7 @@ $field = get_field('contributors_grid');
 
 ?>
 <?php if( is_admin() ) :?><div class="container"><?php endif;?>
-<div class="row contributors-grid justify-content-start gap-4 px-3 px-lg-0 py-0">
+<div class="d-flex flex-wrap contributors-grid justify-content-start gap-4 px-3 px-lg-0">
 <?php
 // Set contributor rows and sub fields from Contributor post to grid array.
 foreach( $field as  $row ) {
@@ -47,7 +47,7 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 	 <video muted>
 		<source src="<?php echo $data['background_video'];?>" type="video/mp4">
 	  </video>
-	 <a href="<?php echo $data['links_to'];?><" class="sr" aria-label="<?php echo $data['label'];?>"></a>
+	 <a href="<?php echo $data['permalink'];?><" class="sr" aria-label="<?php echo $data['label'];?>"></a>
 	 <label><?php echo $data['label'];?></label>
    </div>
 <?php else: ?>
@@ -60,7 +60,7 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 	}
 }
 ?>
-</div><!-- /.row.d-flex -->
+</div><!-- /.row -->
 <?php if( is_admin() ) : ?></div><?php endif;?>
 
 

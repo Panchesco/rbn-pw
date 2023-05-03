@@ -48,11 +48,11 @@
 								<?php echo $profile['headshot_caption'];?>
 							</figcaption>
 						</figure>
-						<div class="col-xl col-xl-8 pl-4 pb-5 copy-block">
+						<div class="col-xl col-xl-8 pb-5 copy-block">
 								<?php echo $profile['copy_block'];?>
 						</div>
 					<?php
-					// 2. Profile with now copy block.
+					// 2. Profile withoutcopy block.
 					else: ?>
 						<figure class="col-xl col-xl-4">
 							<div class="headshot mb-2">

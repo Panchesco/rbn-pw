@@ -1,18 +1,13 @@
 /* Contributor Grid Card */
 
 .contributors-grid {
+  box-sizing: border-box;
   max-width: 1320px;
   margin: auto;
-
-  background: pink;
-  :after {
-	  content: "";
-	  display: block;
-
-  }
 }
 
 .contributor-grid-card {
+	box-sizing: border-box;
     background-repeat: no-repeat!important;
     background-position: center center;
     background-size: cover;
@@ -85,7 +80,7 @@
     background: var(--deep-grayish-olive);
     color: var(--white);
     font-family: var(--sans-serif);
-    padding: 1rem 1.5rem;
+    padding: 1rem $padding-normal;
     font-size: 1.5rem;
     font-weight: 200;
     letter-spacing: .04em;

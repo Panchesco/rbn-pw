@@ -1,9 +1,4 @@
 <?php
-
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-
 /**
  * Include Theme Customizer.
  *
@@ -13,7 +8,7 @@ error_reporting(E_ALL);
 
 $theme_customizer = __DIR__ . '/inc/customizer.php';
 if ( is_readable( $theme_customizer ) ) {
-	require_once $theme_customizer;
+	//require_once $theme_customizer;
 }
 
 if ( ! function_exists( 'rbn_pw_setup_theme' ) ) {
@@ -573,38 +568,14 @@ function my_custom_styles( $init_array ) {
 			'title' => 'Arrow Left',
 			'block' => 'div',
 			'classes' => 'arrow-left',
-			'wrapper' => true,
+			'wrapper' => false,
 		),
 		array(
 			'title' => 'Arrow Right',
 			'block' => 'div',
 			'classes' => 'arrow-right',
-			'wrapper' => true,
-		),
-		array(
-			'title' => '.25 rem vertical padding',
-			'block' => 'div',
-			'classes' => 'py-1',
-			'wrapper' => true,
-		),
-		array(
-			'title' => '.5 rem vertical padding',
-			'block' => 'div',
-			'classes' => 'py-2',
-			'wrapper' => true,
-		),
-		array(
-			'title' => '.75 rem vertical padding',
-			'block' => 'div',
-			'classes' => 'py-3',
-			'wrapper' => true,
-		),
-		array(
-			'title' => '1 rem vertical padding',
-			'block' => 'div',
-			'classes' => 'py-4',
-			'wrapper' => true,
-		),
+			'wrapper' => false,
+		)
 	);
 	// Insert the array, JSON ENCODED, into 'style_formats'
 	$init_array['style_formats'] = json_encode( $style_formats );

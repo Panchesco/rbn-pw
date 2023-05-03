@@ -77,6 +77,10 @@ div,p {
   font-weight: 400;
 }
 
+p {
+	padding-bottom:$padding-normal;;
+}
+
 ul,ol {
 	margin-left: 2.6rem;
 }
@@ -123,7 +127,7 @@ a.no-decoration:hover::before {
 	max-width: 25%;
 	display: inline-block;
 	float: left;
-	padding: 1.5rem 0rem;
+	padding: $padding-normal 0rem;
 	transform: translateX(-6rem);
 	font-weight: 200;
 }
@@ -132,7 +136,7 @@ a.no-decoration:hover::before {
   max-width: 25%;
   display: inline-block;
   float: right;
-  padding: 1.5rem 0rem;
+  padding: $padding-normal 0rem;
   transform: translateX(6rem);
   font-weight: 200;
 }
@@ -145,7 +149,7 @@ a.no-decoration:hover::before {
 
   .is-style-wide {
 
-	  margin-bottom: $h2-font-size;
+	 // margin-bottom: $h2-font-size;
   }
 
  .spotlight {
@@ -163,7 +167,7 @@ a.no-decoration:hover::before {
   @import "template-parts/_archive-news";
   @import "blocks/profile-grid";
   @import "template-parts/event";
-
+  @import "wp-overrides";
 
 /*.narrow {
   max-width: 80%!important;
@@ -178,21 +182,26 @@ body .is-layout-flow > * + * {
 .wp-block-columns,
 h1.wp-block-heading,
 h2.wp-block-heading{
-  //padding-bottom: 5.25rem;
+  padding-bottom: $padding-extra;
+}
+
+footer {
+	.wp-block-columns,
+	h1.wp-block-heading,
+	h2.wp-block-heading{
+	  padding-bottom: $padding-normal;
+	}
+	h3.wp-block-heading{
+	  padding-bottom: $padding-normal;
+	}
 }
 
 
 h3.wp-block-heading{
-  //padding-bottom: 2rem;
+  padding-bottom: $padding-extra;
 }
 
-p {
-	background: pink;
-}
 
-* {
-	margin: 0 inherit !important;
-}
 
 
 

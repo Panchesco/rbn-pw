@@ -28,11 +28,7 @@ $args = [
 <?php endwhile; ?>
 </div>
 <?php $footer = get_field('news_feed_footer'); if( ! empty( $footer ) ) :?>
-<div class="row">
-	<div>
 		<?php echo $footer;?>
-	</div>
-</div>
 <?php endif;?>
 <?php wp_reset_postdata(); endif; ?>
 <?php if( is_admin() ) : ?></div><?php endif;?>
