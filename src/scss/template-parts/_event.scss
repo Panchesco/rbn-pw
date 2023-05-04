@@ -10,9 +10,6 @@ ul,ol{
 	padding: inherit;
 }
 
-p {
-
-}
 
  h2 {
 	font-weight: var(--has-regular-font-weight);
@@ -92,8 +89,6 @@ p {
 					padding: 0;
 					margin: 0;
 				}
-
-
 			}
 
 	}
@@ -104,3 +99,8 @@ p {
 .grouping .copy-block p {
 	font-size: 1.25rem;
 }
+
+.last-card {
+	border: solid 10px red;
+}
+

@@ -16,7 +16,7 @@
 				// Loading WordPress Custom Menu (theme_location).
 				wp_nav_menu(
 					array(
-						'menu_class'     => 'navbar-nav ms-auto has-sans-serif-font-family strtoupper order-lg-2',
+						'menu_class'     => 'navbar-nav ms-auto  has-sans-serif-font-family strtoupper order-lg-2',
 						'container'      => '',
 						'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
 						'walker'         => new WP_Bootstrap_Navwalker(),

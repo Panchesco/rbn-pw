@@ -46,6 +46,8 @@ $past_params = array(
 );
 
 $future = new WP_Query($future_params);
+
+
 $past = new WP_Query($past_params);
 ?>
 <?php if( $paged == 1 ) : if( $future->have_posts() ) : ?>
@@ -53,7 +55,7 @@ $past = new WP_Query($past_params);
 	<div class="mb-4">
 		<?php dynamic_sidebar( 'upcoming-events-intro' );?>
 	</div>
-	<?php endif; while( $future->have_posts() ) : $future->the_post(); ?>
+	<?php endif; $i=1; while( $future->have_posts() ) : $future->the_post(); ?>
 	<?php $args = [	'id' => get_the_ID(),
 					'title' => get_the_title(),
 					'permalink' => get_the_permalink(),
@@ -61,17 +63,20 @@ $past = new WP_Query($past_params);
 					'excerpt' => get_the_excerpt(),
 					'event_cta' => get_field('event_cta'),
 					'cta_text' => get_field('cta_text'),
-					'groups' => get_field('groups')];?>
+					'groups' => get_field('groups'),
+					'total_rows' => $future->post_count,
+					'row_count' => $i];?>
 	<?php get_template_part( 'template-parts/archive-event', 'archive-event',$args );?>
-	<?php endwhile; endif; wp_reset_postdata();?>
+	<?php $i++; endwhile; endif; wp_reset_postdata();?>
 <?php endif;?>
 	<?php if( $past->have_posts() ) : ?>
-	<div class="mb-4">
+	<div class="mt-6">
 	<?php if ( is_active_sidebar( 'past-events-intro' ) ) : ?>
 	<?php dynamic_sidebar( 'past-events-intro' );?>
 	</div>
 	<?php endif;?>
-	<?php while( $past->have_posts() ) : $past->the_post(); ?>
+	<div class="mb-6">
+	<?php $i=1; while( $past->have_posts() ) : $past->the_post(); ?>
 	<?php $args = [	'id' => get_the_ID(),
 						'title' => get_the_title(),
 						'permalink' => get_the_permalink(),
@@ -79,9 +84,12 @@ $past = new WP_Query($past_params);
 						'excerpt' => get_the_excerpt(),
 						'event_cta' => get_field('event_cta'),
 						'cta_text' => get_field('cta_text'),
-						'groups' => get_field('groups')];?>
+						'groups' => get_field('groups'),
+						'total_rows' => $past->post_count,
+						'row_count' => $i];?>
 	<?php get_template_part( 'template-parts/archive-event', 'archive-event',$args );?>
-	<?php endwhile;?>
+	<?php $i++; endwhile;?>
+	</div><!-- /.mb-6 -->
 	<nav id="pagination" class="d-flex justify-content-center pagination"><?php pagination( $paged, $past->max_num_pages);?></nav>
 <?php  endif; wp_reset_postdata(); ?>
 <?php get_footer(); ?>

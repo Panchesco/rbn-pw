@@ -9,7 +9,7 @@
 				</div><!--/.container -->
 			</div><!-- e/.has-ivory-background-container -->
 			<div class="container">
-				<div class="row py-5 ">
+				<div class="row py-6 ">
 					<div class="col py-4 py-xl-0 col-xl-7">
 						<?php if ( is_active_sidebar( 'footer-area-one' ) ) : ?>
 							<?php dynamic_sidebar( 'footer-area-one' );?>

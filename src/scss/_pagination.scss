@@ -4,6 +4,8 @@
 	list-style: none;
 	font-family: $sans-serif;
 	display: flex;
+	justify-content: flex-start;
+	font-size: $h3-font-size;
 	padding: 0 0 6rem 0;
 
 	a {
@@ -13,6 +15,7 @@
 
 	li a,li span {
 		padding: .8rem 1.6rem;
+		margin: 0;
 		width: 100%;
 		height: 100%;
 		margin: 1rem;

@@ -156,16 +156,16 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 		register_sidebar( array(
 			'name'          => __( 'Footer Area One', 'rbn-pw' ),
 			'id'            => 'footer-area-one',
-			'before_widget' => '<span id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</span>',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		) );
 		register_sidebar( array(
 				'name'          => __( 'Footer Area Two', 'rbn-pw' ),
 				'id'            => 'footer-area-2',
-				'before_widget' => '<span id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</span>',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
 			) );
@@ -173,26 +173,36 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 		register_sidebar( array(
 				'name'          => __( 'Footer Area Three', 'rbn-pw' ),
 				'id'            => 'footer-area-three',
-				'before_widget' => '<span id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</span>',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
 			) );
 
 			register_sidebar( array(
-				'name'          => __( 'Events Page - Upcoming Events - Intro Copy', 'rbn-pw' ),
-				'id'            => 'upcoming-events-intro',
-				'before_widget' => '<span id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</span>',
+				'name'          => __( 'Contributors Archive Page', 'rbn-pw' ),
+				'id'            => 'contributors-archive-page',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
 				'before_title'  => '',
 				'after_title'   => '',
 			) );
 
 			register_sidebar( array(
+				'name'          => __( 'Events Page - Upcoming Events - Intro Copy', 'rbn-pw' ),
+				'id'            => 'upcoming-events-intro',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '',
+				'after_title'   => '',
+			) );
+
+
+			register_sidebar( array(
 				'name'          => __( 'Events Page - Past Events - Intro Copy', 'rbn-pw' ),
 				'id'            => 'past-events-intro',
-				'before_widget' => '<span id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</span>',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
 				'before_title'  => '',
 				'after_title'   => '',
 			) );
@@ -200,8 +210,8 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 			register_sidebar( array(
 				'name'          => __( 'Events Archive - Header - Spotlight', 'rbn-pw' ),
 				'id'            => 'events-header-spotlight',
-				'before_widget' => '<span id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</span>',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
 				'before_title'  => '',
 				'after_title'   => '',
 			) );
@@ -209,8 +219,8 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 			register_sidebar( array(
 				'name'          => __( 'News Archive - Header - Spotlight', 'rbn-pw' ),
 				'id'            => 'news-header-spotlight',
-				'before_widget' => '<span id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</span>',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
 				'before_title'  => '',
 				'after_title'   => '',
 			) );
@@ -218,8 +228,8 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 			register_sidebar( array(
 				'name'          => __( 'News Archive - Intro Copy', 'rbn-pw' ),
 				'id'            => 'news-archive-intro',
-				'before_widget' => '<span id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</span>',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
 				'before_title'  => '',
 				'after_title'   => '',
 			) );

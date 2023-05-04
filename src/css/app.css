@@ -11436,6 +11436,8 @@ a.no-decoration:hover::before {
   list-style: none;
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: flex;
+  justify-content: flex-start;
+  font-size: 1.75rem;
   padding: 0 0 6rem 0;
 }
 .pagination ul a {
@@ -11444,6 +11446,7 @@ a.no-decoration:hover::before {
 }
 .pagination ul li a, .pagination ul li span {
   padding: 0.8rem 1.6rem;
+  margin: 0;
   width: 100%;
   height: 100%;
   margin: 1rem;
@@ -11523,11 +11526,11 @@ html {
   #global-header .menu-item .nav-link {
     display: block;
   }
-  #global-header .container {
+  #global-header .container#butterfly {
     position: relative;
     z-index: 10;
   }
-  #global-header .container:after {
+  #global-header .container#butterfly:after {
     opacity: 1;
     content: "";
     width: 171px;
@@ -11538,7 +11541,7 @@ html {
     background-position: center center;
     bottom: -132px;
   }
-  #global-header .container .row {
+  #global-header .container#butterfly .row {
     padding: 3rem 0;
     position: relative;
     z-index: 20;
@@ -11761,6 +11764,12 @@ footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.act
 }
 
 /* Contributor Grid Card */
+@media (min-width: 992px) {
+  .editor-styles-wrapper .col-lg-4 {
+    flex: 0 0 auto;
+    width: 20.33333333%;
+  }
+}
 .contributors-grid {
   box-sizing: border-box;
   max-width: 1320px;
@@ -11854,7 +11863,7 @@ footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.act
 
 @media all and (min-width: 992px) {
   .contributor-grid-card {
-    max-width: 424px;
+    max-width: 26.5rem;
   }
 }
 p a {
@@ -12051,6 +12060,10 @@ iframe {
 .grouping figure p,
 .grouping .copy-block p {
   font-size: 1.25rem;
+}
+
+.last-card {
+  border: solid 10px red;
 }
 
 .wp-block-archives {

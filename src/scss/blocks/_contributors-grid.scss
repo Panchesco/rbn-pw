@@ -1,5 +1,15 @@
 /* Contributor Grid Card */
 
+@media (min-width: 992px){
+
+.editor-styles-wrapper .col-lg-4 {
+	flex: 0 0 auto;
+	width: 20.33333333%;
+}
+
+
+}
+
 .contributors-grid {
   box-sizing: border-box;
   max-width: 1320px;
@@ -101,6 +111,6 @@
 
   @media all and (min-width:992px) {
       .contributor-grid-card {
-          max-width: 424px;
+          max-width: 26.5rem;
       }
   }
