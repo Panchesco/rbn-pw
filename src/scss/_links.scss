@@ -18,6 +18,10 @@ p a {
 	padding-left: 6.25rem;
 	margin-top: $margin-normal;
 	@include h3;
+	text-decoration: none;
+	&:hover {
+		color: darken($raw-sienna,10%);
+	}
 }
 
 
@@ -33,6 +37,10 @@ p a {
 	padding-right: 6.25rem;
 	margin-top: $margin-normal;
 	@include h3;
+	text-decoration: none;
+	&:hover {
+		color: darken($raw-sienna,10%);
+	}
 
 }
 

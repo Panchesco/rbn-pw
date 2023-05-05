@@ -11928,6 +11928,11 @@ p a:after {
   font-size: 1.75rem;
   font-weight: 200;
   margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+*.arrow-left a:hover,
+*.left-arrow a:hover {
+  color: #854400;
 }
 
 *.arrow-right a,
@@ -11945,6 +11950,11 @@ p a:after {
   font-size: 1.75rem;
   font-weight: 200;
   margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+*.arrow-right a:hover,
+*.right-arrow a:hover {
+  color: #854400;
 }
 
 h1 a, .h1 a,

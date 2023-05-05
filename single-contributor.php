@@ -1,8 +1,5 @@
 <?php
 
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
 /**
  * The Template for displaying single Contributor posts.
  */
@@ -12,8 +9,7 @@ get_header(); ?>
 <?php
 
 if( have_posts() ) : while( have_posts() ) : the_post();
-$fields = get_fields();
-?>
+$fields = get_fields(); ?>
 <div class="container">
 	<div class="row">
 		<div class="col-xl-8">
@@ -30,7 +26,13 @@ $fields = get_fields();
 <?php if( isset( $fields['media_gallery'] )  && ! empty( $fields['media_gallery']) ) : // Begin #stage branch ?>
 <div id="stage" class="has-ivory-buff-background-color my-6 p-6">
 	<div class="container">
-		<div class="d-xl-flex justify-content-center gap-xl-6 mb-4">
+		<div class="row pb-4">
+			<h2 class="visually-hidden"><?php _e("Contributor Work","rbn-pw");?></h2>
+			<?php if( $fields['grantee_principal_link']) : ?><p class="text-center"><a class="btn outline has-raw-sienna-color">View Primary Link<a></p><?php endif;?>
+		</div>
+	</div>
+	<div class="container">
+		<div class="d-xl-flex justify-content-center gap-xl-6 pb-5">
 			<?php foreach( $fields['media_gallery'] as $item ) : ?>
 				<div class="d-flex col-lg-4 align-items-center">
 			<?php if( $item['type'] == 'embed' ) {
@@ -73,11 +75,11 @@ $next_title = get_field('grantee_organization',$next->ID);
 	<h2 class="visually-hidden"><?php _e('Contibutors Navigation','rbn-pw');?></h2>
 <?php if( $prev ) :?><div class="d-xl-flex flex-wrap col-xl-8 gap-6 pb-6">
 	<div class="col">
-		<p class="left-arrow"><a class="text-start" href="<?php echo $prev_permalink;?>"><?php echo $prev_title;?></a></p>
+		<div class="left-arrow"><a class="text-start" href="<?php echo $prev_permalink;?>"><?php echo $prev_title;?></a></div>
 	</div><?php endif;?>
 	<?php if( $next ) :?>
 	<div class="col">
-		<p class="right-arrow"><a class="text-end" href="<?php echo $next_permalink;?>"><?php echo $next_title;?></a></p>
+		<div class="right-arrow"><a class="text-end" href="<?php echo $next_permalink;?>"><?php echo $next_title;?></a></div>
 	</div>
 	<?php endif;?>
 	</div>
