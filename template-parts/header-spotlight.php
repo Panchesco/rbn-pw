@@ -11,18 +11,29 @@
    * If not, but a spotlight widget has been added for the Archive page, then that is used.
    * If none of the above exist, nothing is shown.
    */
-?>
-<?php global $template; $base = basename($template,'.php'); $spotlight = get_fields($post->ID); ?>
-<?php if( $spotlight && ! empty( $spotlight['spotlight_copy']) ) :?>
-	<aside class="spotlight">
-		<p class="fst-italic"><?php echo $spotlight['spotlight_copy'];?></p>
-		<p class="text-end"><cite>&mdash; <?php echo $spotlight['spotlight_attribution'];?></cite></p>
-	</aside>
-<?php elseif( in_array( $base, ['archive-events','single-events'] ) ) : if(is_active_sidebar( 'events-header-spotlight' ) ) :
-	dynamic_sidebar('events-header-spotlight');
- endif;?>
-<?php elseif( in_array( $base, ['archive-news','single-news'] ) ) : if(is_active_sidebar( 'events-header-spotlight' ) ) :
-		dynamic_sidebar('news-header-spotlight');endif;?>
-<?php elseif( in_array( $base, ['archive-contributor','single-contributor'] ) ) : if(is_active_sidebar( 'contributors-header-spotlight' ) ) :
-    dynamic_sidebar('contributors-header-spotlight');endif;?>
-<?php endif;?>
+
+global $template;
+$base = basename($template,'.php');
+$spotlight = get_fields($post->ID);
+
+$archives = ['archive-events','archive-news'];
+
+if( ! in_array( $base, $archives ) ) {
+  if( isset( $spotlight['show_spotlight'] ) && $spotlight['show_spotlight']  == 1 ) { ?>
+    <aside class="spotlight">
+      <p class="fst-italic"><?php echo $spotlight['spotlight_copy'];?></p>
+      <p class="text-end"><cite>&mdash; <?php echo $spotlight['spotlight_attribution'];?></cite></p>
+    </aside>
+  <?php }
+} else {
+  if( $base == 'archive-events' ) {
+    if( is_active_sidebar( 'events-header-spotlight' ) ) {
+      dynamic_sidebar( 'events-header-spotlight' );
+    }
+  } elseif( $base == 'archive-news' ) {
+    if( is_active_sidebar( 'news-header-spotlight' ) ) {
+    dynamic_sidebar( 'news-header-spotlight' );
+  }
+  }
+}?>
+
