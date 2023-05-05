@@ -3,7 +3,9 @@
  * The Template for displaying all single posts.
  */
 
-get_header();
+get_header();?>
+<main id="main" class="container">
+<?php
 
 if ( have_posts() ) :
 	while ( have_posts() ) :
@@ -53,6 +55,7 @@ if ( $count_posts->publish > '1' ) :
 		}
 	?>
 </div><!-- /.post-navigation -->
+</main>
 <?php
 endif;
 

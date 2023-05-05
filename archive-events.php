@@ -50,6 +50,7 @@ $future = new WP_Query($future_params);
 
 $past = new WP_Query($past_params);
 ?>
+<main id="main" class="container">
 <?php if( $paged == 1 ) : if( $future->have_posts() ) : ?>
 	<?php if ( is_active_sidebar( 'upcoming-events-intro' ) ) : ?>
 	<div class="mb-4">
@@ -92,4 +93,5 @@ $past = new WP_Query($past_params);
 	</div><!-- /.mb-6 -->
 	<nav id="pagination" class="d-flex justify-content-center pagination"><?php pagination( $paged, $past->max_num_pages);?></nav>
 <?php  endif; wp_reset_postdata(); ?>
+</main>
 <?php get_footer(); ?>

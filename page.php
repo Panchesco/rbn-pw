@@ -7,6 +7,7 @@
 
 get_header();
 ?>
+<main id="main" class="container">
 <div class="row d-flex justify-content-center">
 <?php if( have_posts() ) :
 		while( have_posts() ) :
@@ -14,5 +15,6 @@ get_header();
 			the_content();
 	endwhile; endif; ?>
 </div><!-- /.row -->
+</main>
 <?php
 get_footer();

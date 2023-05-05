@@ -6,9 +6,9 @@
  */
 
 get_header();
-
 $search_enabled = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
 ?>
+<main id="main" class="container">
 <div id="post-0" class="content error404 not-found">
 	<h1 class="entry-title"><?php esc_html_e( 'Not found', 'rbn-pw' ); ?></h1>
 	<div class="entry-content">
@@ -22,5 +22,5 @@ $search_enabled = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-val
 		</div>
 	</div><!-- /.entry-content -->
 </div><!-- /#post-0 -->
-<?php
-get_footer();
+<main id="main" class="container">
+<?php get_footer();

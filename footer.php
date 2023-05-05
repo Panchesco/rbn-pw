@@ -1,5 +1,4 @@
 
-		</main><!-- /#main -->
 		<footer id="footer" class="pb-5">
 			<div class="has-ivory-background-color mh-6">
 				<div class="container">
@@ -52,8 +51,7 @@
 						dynamic_sidebar( 'footer-area-three' );
 						if ( current_user_can( 'manage_options' ) ) :
 					?>
-						<span class="edit-link"><a href="<?php echo esc_url( admin_url( 'widgets.php' ) ); ?>" class="badge bg-secondary"><?php esc_html_e( 'Edit', 'rbn-pw' ); ?></a></span><!-- Show Edit Widget link -->
-					<?php
+						<?php
 						endif;
 					?>
 					</div><!-- /.col -->

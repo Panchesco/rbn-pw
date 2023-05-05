@@ -72,6 +72,30 @@ em,dfn {
 	@include italic;
 }
 
+.fs-1 {
+	font-size: $h1-font-size;
+}
+
+.fs-2 {
+	font-size: $h2-font-size;
+}
+
+.fs-3 {
+	font-size: $h3-font-size;
+}
+
+.fs-4 {
+	font-size: $h4-font-size;
+}
+
+.fs-5 {
+	font-size: $h5-font-size;
+}
+
+.fs-6 {
+	font-size: $h6-font-size;
+}
+
 div,p {
   font-size: 1.75rem;
   font-weight: 400;
@@ -79,6 +103,10 @@ div,p {
 
 p {
 	padding-bottom:$padding-normal;;
+}
+
+figcaption p {
+	font-size: $h5-font-size;
 }
 
 ul,ol {
@@ -156,6 +184,7 @@ a.no-decoration:hover::before {
 	 @include blockquote;
   }
 
+  @import "contributor";
   @import "pagination";
   @import "template-parts/global-header";
   @import "template-parts/global-footer";

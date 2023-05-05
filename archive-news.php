@@ -13,7 +13,7 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 			];
 $query = new WP_Query($params);
 ?>
-
+<main id="main" class="container">
 <?php  if( $query->have_posts() ) : ?>
 <div class="row d-flex align-content-stretch flex-wrap pb-6">
 	<div class="px-4"><?php if ( $paged==1 && is_active_sidebar( 'news-archive-intro' ) ) : ?><?php dynamic_sidebar( 'news-archive-intro' );?><?php endif;?></div>
@@ -37,5 +37,5 @@ $query = new WP_Query($params);
 </div><!-- /.row -->
 
 <nav id="pagination" class="d-flex justify-content-center pagination"><?php pagination( $paged, $query->max_num_pages);?></nav>
-
+</main>
 <?php get_footer(); ?>

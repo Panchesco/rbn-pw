@@ -10,24 +10,30 @@ p a {
 
 *.arrow-left a,
 *.left-arrow a {
-	justify-content: flex-end;
+	justify-content: flex-start;
 	display: flex;
 	background-image: url('../imgs/svg/left-arrow.svg');
 	background-repeat: no-repeat;
-	background-position: center right;
-	padding-right: 6.25rem;
+	background-position: center left;
+	padding-left: 6.25rem;
+	margin-top: $margin-normal;
+	@include h3;
 }
 
 
 *.arrow-right a ,
 *.right-arrow a {
+	width: 100%;
 	justify-content: flex-end;
+	text-align: right;
 	display: flex;
 	background-image: url('../imgs/svg/right-arrow.svg');
 	background-repeat: no-repeat;
 	background-position: center right;
 	padding-right: 6.25rem;
 	margin-top: $margin-normal;
+	@include h3;
+
 }
 
 h1 a,

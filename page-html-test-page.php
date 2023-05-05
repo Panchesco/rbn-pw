@@ -7,7 +7,7 @@
 
 get_header();
 ?>
-
+<main id="main" class="container">
 <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 	<h1><?php the_title();?></h1>
@@ -111,6 +111,7 @@ get_header();
 
 	</div>
 </div>
+</main>
 <?php
 get_footer();
 

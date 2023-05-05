@@ -1,0 +1,12 @@
+.project-name {
+	font-family: $serif;
+}
+
+#stage {
+	box-shadow: inset 0px 6px 6px rgba(0,0,0,.2), inset 0px -6px 6px rgba(0,0,0,.2);
+
+}
+
+figure .media {
+	@include site-boxshadow;
+}

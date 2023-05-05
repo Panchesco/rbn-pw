@@ -11347,6 +11347,30 @@ em, dfn {
   text-transform: italic;
 }
 
+.fs-1 {
+  font-size: 4.6666625rem;
+}
+
+.fs-2 {
+  font-size: 3.07rem;
+}
+
+.fs-3 {
+  font-size: 1.75rem;
+}
+
+.fs-4 {
+  font-size: 1.5rem;
+}
+
+.fs-5 {
+  font-size: 1.25rem;
+}
+
+.fs-6 {
+  font-size: 1rem;
+}
+
 div, p {
   font-size: 1.75rem;
   font-weight: 400;
@@ -11354,6 +11378,10 @@ div, p {
 
 p {
   padding-bottom: 1.5rem;
+}
+
+figcaption p {
+  font-size: 1.25rem;
 }
 
 ul, ol {
@@ -11430,6 +11458,18 @@ a.no-decoration:hover::before {
   padding: 1rem 0.35rem;
   border: solid 1.5rem #EBD999;
   border-width: 1.5rem 1.5rem 1.5rem 5rem;
+}
+
+.project-name {
+  font-family: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+#stage {
+  box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.2), inset 0px -6px 6px rgba(0, 0, 0, 0.2);
+}
+
+figure .media {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 .pagination ul {
@@ -11877,23 +11917,34 @@ p a:after {
 
 *.arrow-left a,
 *.left-arrow a {
-  justify-content: flex-end;
+  justify-content: flex-start;
   display: flex;
   background-image: url("../imgs/svg/left-arrow.svg");
   background-repeat: no-repeat;
-  background-position: center right;
-  padding-right: 6.25rem;
+  background-position: center left;
+  padding-left: 6.25rem;
+  margin-top: 1.5rem;
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
 }
 
 *.arrow-right a,
 *.right-arrow a {
+  width: 100%;
   justify-content: flex-end;
+  text-align: right;
   display: flex;
   background-image: url("../imgs/svg/right-arrow.svg");
   background-repeat: no-repeat;
   background-position: center right;
   padding-right: 6.25rem;
   margin-top: 1.5rem;
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
 }
 
 h1 a, .h1 a,

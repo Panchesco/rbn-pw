@@ -3,8 +3,9 @@
  * The Template for displaying single events.
  */
 
-get_header();
-
+get_header(); ?>
+<main id="main" class="container">
+<?php
 if ( have_posts() ) :
 	while ( have_posts() ) :
 		the_post();
@@ -14,6 +15,7 @@ if ( have_posts() ) :
 	endwhile;
 endif;
 ?>
+</main>
 <script>
 const navItems = document.querySelectorAll('.nav-item a');
 navItems.forEach( (item) => {
@@ -22,5 +24,4 @@ navItems.forEach( (item) => {
 	}
 })
 </script>
-<?php
-get_footer();
+<?php get_footer(); ?>

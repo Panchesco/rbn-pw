@@ -4,7 +4,7 @@
  */
 
 get_header(); ?>
-
+<main id="main" class="container">
 <?php
 
 if ( have_posts() ) :
@@ -29,7 +29,7 @@ endif;
 	 <h3 class="left-arrow"><a class="returnto" href="/news"><?php _e('View all News','rbn-pw');?></a></h3>
 	 </div>
 </div>
-
+</main>
 <script>
 const navItems = document.querySelectorAll('.nav-item a');
 navItems.forEach( (item) => {

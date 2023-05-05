@@ -53,12 +53,12 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 	 <video muted>
 		<source src="<?php echo $data['background_video'];?>" type="video/mp4">
 	  </video>
-	 <a href="<?php echo $data['permalink'];?><" class="sr" aria-label="<?php echo $data['label'];?>"></a>
+	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
 	 <label><?php echo $data['label'];?></label>
    </div>
 <?php else: ?>
  <div class="contributor-grid-card loading col-lg-4" data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
-	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
+	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"><?php echo $post_id;?></a>
 	 <label><?php echo $data['label'];?></label>
    </div>
  <?php endif;?>
