@@ -3,6 +3,7 @@ const app = {
   init: function() {
     app.fadeInCards();
     app.listenForScroll();
+    app.scrollTop();
 	app.activeLinks();
   },
   fadeInCards: function() {
@@ -29,7 +30,11 @@ const app = {
        })
    },
   scrollTop: function() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    document.querySelector('[href="#header"]').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
   },
   activeLinks: function() {
 	  const currHref = window.location.href.replace(window.location.origin,"");

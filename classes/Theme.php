@@ -180,15 +180,6 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 			) );
 
 			register_sidebar( array(
-				'name'          => __( 'Contributors Archive Page', 'rbn-pw' ),
-				'id'            => 'contributors-archive-page',
-				'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</div>',
-				'before_title'  => '',
-				'after_title'   => '',
-			) );
-
-			register_sidebar( array(
 				'name'          => __( 'Events Page - Upcoming Events - Intro Copy', 'rbn-pw' ),
 				'id'            => 'upcoming-events-intro',
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',

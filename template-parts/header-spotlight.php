@@ -22,5 +22,7 @@
 	dynamic_sidebar('events-header-spotlight');
  endif;?>
 <?php elseif( in_array( $base, ['archive-news','single-news'] ) ) : if(is_active_sidebar( 'events-header-spotlight' ) ) :
-		dynamic_sidebar('news-header-spotlight');
-endif; endif;?>
+		dynamic_sidebar('news-header-spotlight');endif;?>
+<?php elseif( in_array( $base, ['archive-contributor','single-contributor'] ) ) : if(is_active_sidebar( 'contributors-header-spotlight' ) ) :
+    dynamic_sidebar('contributors-header-spotlight');endif;?>
+<?php endif;?>
