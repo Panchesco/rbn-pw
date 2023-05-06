@@ -29,24 +29,21 @@ $grid = [];
 $field = get_field('contributors_grid');
 
 ?>
-<?php if( is_admin() ) :?><div class="container"><?php endif;?>
 <div class="d-flex flex-wrap contributors-grid justify-content-start gap-4 px-3 px-lg-0">
 <?php
 // Set contributor rows and sub fields from Contributor post to grid array.
-foreach( $field as  $row ) {
-	foreach( $row as $key => $card ) {
+foreach( $field as  $row ) :
+	foreach( $row as $key => $card ) :
 	$post_id = $row['contributor']->ID;
-	$image_id = get_field('background_image',$post_id);
-	$video_id = get_field('background_video',$post_id);
+	$image = get_field('background_image',$post_id);
+	$video = get_field('background_video',$post_id);
 
 	$data = [	'post_id' => $post_id,
 				'permalink' => get_the_permalink($post_id),
 					'label' => get_field('label',$post_id),
-					'background_image' => wp_get_attachment_image_url($image_id,'rbn-card'),
-					'background_video' => wp_get_attachment_url($video_id),
+					'background_image' => $image['sizes']['rbn-card'],
+					'background_video' => $video,
 				];
-?>
-<?php
 // Display contributor grid card
 if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  ) : ?>
  <div class="contributor-grid-card loading has-background-video col-lg-4" data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
@@ -58,16 +55,16 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
    </div>
 <?php else: ?>
  <div class="contributor-grid-card loading col-lg-4" data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
-	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"><?php echo $post_id;?></a>
+	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
 	 <label><?php echo $data['label'];?></label>
    </div>
  <?php endif;?>
 <?php
-	}
-}
+	endforeach;
+endforeach;
 ?>
 </div><!-- /.row -->
-<?php if( is_admin() ) : ?></div><?php endif;?>
+
 
 
 

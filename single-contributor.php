@@ -28,7 +28,15 @@ $fields = get_fields(); ?>
 	<div class="container">
 		<div class="row pb-4">
 			<h2 class="visually-hidden"><?php _e("Contributor Work","rbn-pw");?></h2>
-			<?php if( $fields['grantee_principal_link']) : ?><p class="text-center"><a class="btn outline has-raw-sienna-color">View Primary Link<a></p><?php endif;?>
+			<?php if( isset($fields['grantee_principal_link']['url']) ) :
+				$title = ( isset( $fields['grantee_principal_link']['title'])  ) ? $fields['grantee_principal_link']['title'] : "";
+				$url = ( isset( $fields['grantee_principal_link']['url'])  ) ? $fields['grantee_principal_link']['url'] : "";
+				$target = ( isset( $fields['grantee_principal_link']['target'])  ) ? $fields['grantee_principal_link']['target'] : "";
+				?>
+				<div class="wp-block-button is-style-outline text-center has-raw-sienna-color pb-5">
+					<a class="wp-block-button__link wp-element-button" href="<?php echo $url;?>" target="<?php echo $target;?>"><?php echo $title;?></a>
+				</div>
+			<?php endif;?>
 		</div>
 	</div>
 	<div class="container">
@@ -47,21 +55,25 @@ $fields = get_fields(); ?>
 		</div>
 	</div><!-- /.container -->
 </div><?php endif; // End #stage branch ?>
+<?php if( isset( $fields['grantee_bio'] ) && ! empty( $fields['grantee_bio'] )  ) : ?>
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="d-xl-flex flex-wrap col-xl-8 justify-content-around pb-6">
 			<h2 class="text-center pb-4 w-100"><?php _e('Contributor Profile','rbn-wp');?></h2>
+			<?php if( isset( $fields['grantee_headshot'] ) && ! empty( $fields['grantee_headshot'] ) ) : ?>
 			<figure class="contributor-photo d-inline-block mx-auto pb-4">
 			<?php echo wp_get_attachment_image($fields['grantee_headshot'],'rbn-card',['class' => 'mx-auto pb-6']);
 			$caption = wp_get_attachment_caption($fields['grantee_headshot']);
 			if( $caption ) :?><figcaption><p><?php echo $caption;?></p></figcaption><?php endif;?>
 			</figure>
+			<?php endif;?>
 			<div class="w-100">
 			<?php echo $fields['grantee_bio'] ;?>
 			</div>
 		</div><!-- /.d-flex -->
 	</div><!-- /.row -->
 </div><!-- /.container -->
+<?php endif; ?>
 <?php
 $prev = get_previous_post();
 $prev_permalink = get_the_permalink($prev->ID);

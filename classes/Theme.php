@@ -26,7 +26,7 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 
 		// Styles.
 		wp_enqueue_style( 'style', get_theme_file_uri( 'style.css' ), array(), $this->theme_version, 'all' );
-
+		wp_enqueue_style( 'dashicons' );
 		wp_enqueue_style( 'theme', get_theme_file_uri( '/dist/css/app.min.css' ), ['style'], filemtime(__DIR__ . '/../dist/css/app.min.css'), 'all' );
 
 		if ( is_rtl() ) {

@@ -11804,6 +11804,10 @@ footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.act
 }
 
 /* Contributor Grid Card */
+figcaption, figcaption p {
+  letter-spacing: 0px;
+}
+
 @media (min-width: 992px) {
   .editor-styles-wrapper .col-lg-4 {
     flex: 0 0 auto;
@@ -11983,6 +11987,25 @@ h5 a:hover,
 h6 a:hover,
 .h6 a:hover {
   color: #854400;
+}
+
+#stage .btn.outline:hover {
+  background-color: #B85E00;
+  color: #ffffff !important;
+}
+
+.wp-block-button.is-style-outline.has-raw-sienna-color a:hover {
+  background-color: #B85E00;
+  color: #fff;
+  border-color: #B85E00;
+}
+
+a[target=_blank]:after {
+  font-family: "dashicons";
+  display: inline-block;
+  content: "\f504";
+  padding-left: 1rem;
+  margin-bottom: -15px;
 }
 
 .archive-news-wrapper {

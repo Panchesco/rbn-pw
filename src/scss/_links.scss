@@ -56,3 +56,30 @@ h6 a {
 		color: darken($raw-sienna,10%);
 	}
 }
+
+#stage .btn.outline {
+	&:hover {
+		background-color: $raw-sienna;
+		color: $white!important;
+	}
+}
+
+.wp-block-button.is-style-outline.has-raw-sienna-color {
+	a {
+		&:hover {
+		background-color: $raw-sienna;
+		color: #fff;
+		border-color: $raw-sienna;
+		}
+	}
+}
+
+a[target="_blank"] {
+	&:after {
+		font-family: 'dashicons';
+		display: inline-block;
+		content: "\f504";
+		padding-left: 1rem;
+		margin-bottom: -15px;
+	}
+}
