@@ -4,13 +4,13 @@ const app = {
     app.fadeInCards();
     app.listenForScroll();
     app.scrollTop();
-	app.activeLinks();
+	  app.activeLinks();
   },
   fadeInCards: function() {
        const cards = document.querySelectorAll('.contributor-grid-card');
        const wH = window.innerHeight;
        const fadeInHeight = wH-42;
-       cards.forEach( (card) => {
+       cards.forEach( (card,i) => {
 		   if ( card.dataset.bg ) {
            let viewportOffset = card.getBoundingClientRect();
            if( viewportOffset.top <= fadeInHeight) {
@@ -19,6 +19,16 @@ const app = {
            img.addEventListener('load',() => {
                card.style.backgroundImage = "url(" + card.dataset.bg + ")";
                card.classList.add('fade-in');
+               if( card.classList.contains('has-background-video')) {
+                 const video = card.querySelector('video')
+                 video.play();
+                 card.addEventListener("mouseover",(e) => {
+                   video.play()
+                   e.target.addEventListener("mouseout",(e) => {
+                     video.pause()
+                   })
+                 } )
+               }
            });
            }
 	   	}
