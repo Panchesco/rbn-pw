@@ -18,7 +18,7 @@ $query = new WP_Query($params);
 <div class="row d-flex align-content-stretch flex-wrap pb-6">
 	<div class="px-4"><?php if ( $paged==1 && is_active_sidebar( 'news-archive-intro' ) ) : ?><?php dynamic_sidebar( 'news-archive-intro' );?><?php endif;?></div>
 	<?php while( $query->have_posts() ) : $query->the_post(); ?>
-	<div class="col-xl-6 p-4">
+	<div class="news-post-wrapper col-xl-6 p-4">
 		<div class="has-ivory-background-color p-5 h-100">
 
 		<?php

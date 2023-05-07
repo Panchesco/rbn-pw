@@ -11739,6 +11739,11 @@ footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.act
   border-color: #B85E00;
   border-width: 0 0 5px 0;
 }
+footer#footer .menu-item.current_page_item .nav-link,
+footer#footer .menu-item.current-menu-item .nav-link,
+footer#footer .menu-item.current-menu-item.active {
+  border-color: #B85E00;
+}
 
 .wp-block-image {
   margin-bottom: 0;
@@ -12032,6 +12037,13 @@ a[target=_blank]:after {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+.news-post-wrapper .has-ivory-background-color {
+  transition: all 150ms ease-in;
+}
+.news-post-wrapper .has-ivory-background-color:hover {
+  background-color: #efe6da !important;
 }
 
 figure.headshot {

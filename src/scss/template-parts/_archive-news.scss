@@ -4,8 +4,6 @@
 	display: flex;
 	flex-direction: column;
 
-
-
 	.readmore {
 		display: block;
 		bottom: 0;
@@ -30,5 +28,12 @@
 	}
 }
 .news-post-wrapper {
-
+	.has-ivory-background-color {
+		transition: all 150ms ease-in;
+		&:hover {
+			background-color: darken($ivory,3%)!important;
+		}
+	}
 }
+
+

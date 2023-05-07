@@ -30,6 +30,12 @@ footer#footer  {
 			border-width: 0 0 5px 0;
 		}
 	}
+
+	.menu-item.current_page_item .nav-link,
+	.menu-item.current-menu-item .nav-link,
+	.menu-item.current-menu-item.active {
+		border-color: $raw-sienna;
+	}
 }
 
 
