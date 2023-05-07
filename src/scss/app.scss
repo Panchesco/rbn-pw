@@ -18,7 +18,6 @@
 :root {
   --serif: 'EB Garamond', Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L",  "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   --sans-serif:'Oswald', Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
   --black: #212121;
   --ivory-buff: #EBD999;
   --deep-grayish-olive: rgba(80, 84, 39, 1);
@@ -197,6 +196,7 @@ a.no-decoration:hover::before {
   @import "blocks/profile-grid";
   @import "template-parts/event";
   @import "wp-overrides";
+  @import "formidable-forms";
 
 /*.narrow {
   max-width: 80%!important;
@@ -229,17 +229,5 @@ footer {
 h3.wp-block-heading{
   padding-bottom: $padding-extra;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 

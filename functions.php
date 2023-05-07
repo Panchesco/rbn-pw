@@ -504,9 +504,10 @@ include_once( __DIR__ . '/fields/spotlight.php');
 include_once( __DIR__ . '/classes/Theme.php');
 $rbnpw = new RbnPw\Theme();
 
+
+add_action( 'wp_enqueue_scripts', [$rbnpw,'google_fonts'],10 );
 add_action( 'wp_enqueue_scripts', [$rbnpw,'load_scripts'],20 );
 add_action( 'wp_enqueue_scripts', [$rbnpw,'load_styles'],20 );
-add_action( 'wp_enqueue_scripts', [$rbnpw,'google_fonts'],10 );
 add_action('after_setup_theme',[$rbnpw,'image_sizes']);
 add_action( 'acf/init', [$rbnpw,'register_acf_blocks'] );
 add_action( 'enqueue_block_editor_assets', [$rbnpw,'block_editor_scripts'] );

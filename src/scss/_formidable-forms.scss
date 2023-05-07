@@ -1,0 +1,37 @@
+.frm_forms {
+  font-family: $sans-serif;
+  font-weight: 200;
+  input {
+    max-width: 60%!important;
+  }
+
+  textarea {
+    max-width: 80%;
+  }
+  input,textarea {
+    color: $black;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: .6rem;
+  }
+
+  .frm_inside_container.frm_label_float_top > label  {
+
+    font-size: 1.2rem;
+  }
+
+  button[type=submit],
+  input[type=submit] {
+    font-size: inherit!important;
+    text-transform: uppercase;
+    padding: calc(0.667em + 2px) calc(1.333em + 2px);
+
+  }
+
+  label span {
+    font-weight: 200!important;
+    color: $raw-sienna;
+  }
+
+}

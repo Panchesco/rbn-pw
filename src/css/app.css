@@ -15761,6 +15761,37 @@ html :where(.is-position-sticky) {
     --wp-admin--admin-bar--position-offset:0px;
   }
 }
+.frm_forms {
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+.frm_forms input {
+  max-width: 60% !important;
+}
+.frm_forms textarea {
+  max-width: 80%;
+}
+.frm_forms input, .frm_forms textarea {
+  color: #222222;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 0.6rem;
+}
+.frm_forms .frm_inside_container.frm_label_float_top > label {
+  font-size: 1.2rem;
+}
+.frm_forms button[type=submit],
+.frm_forms input[type=submit] {
+  font-size: inherit !important;
+  text-transform: uppercase;
+  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+}
+.frm_forms label span {
+  font-weight: 200 !important;
+  color: #B85E00;
+}
+
 /*.narrow {
   max-width: 80%!important;
   margin: auto!important;
