@@ -1,9 +1,9 @@
 {
     "name": "acf/news-feed",
-    "title": "News Feed",
+    "title": "RBN News Feed",
     "description": "News Item Thumbnails",
     "category": "formatting",
-    "icon": "",
+    "icon": "dashicons-megaphone",
     "keywords": [""],
     "acf": {
         "mode": "preview",

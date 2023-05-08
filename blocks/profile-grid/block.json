@@ -1,9 +1,9 @@
 {
     "name": "acf/profile-grid",
-    "title": "Profile Grid",
+    "title": "RBN Profile Grid",
     "description": "Grid of profiles",
     "category": "formatting",
-    "icon": "admin-comments",
+    "icon": "dashicons-grid-view",
     "keywords": [""],
     "acf": {
         "mode": "preview",

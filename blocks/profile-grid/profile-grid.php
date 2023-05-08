@@ -16,7 +16,6 @@ $anchor = '';
 if ( ! empty( $block['anchor'] ) ) {
 	$anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
 }
-
 // Create class attribute allowing for custom "className" and "align" values.
 $class_name = '';
 if ( ! empty( $block['className'] ) ) {
@@ -25,14 +24,12 @@ if ( ! empty( $block['className'] ) ) {
 if ( ! empty( $block['align'] ) ) {
 	$class_name .= ' align' . $block['align'];
 }
-
 // Load values and assign defaults.
 $grid = get_field( 'profiles' );
-
 ?>
-<div class="row d-flex">
+<div class="row d-flex pb-6">
 <?php foreach( $grid as $row) : extract( $row );?>
-  <div class="col-xl-3  p-2 profile-card d-flex flex-column">
+  <div class="col-xl-4  p-2 profile-card d-flex flex-column">
 		<figure class="headshot">
 			<?php
 			if( ! empty( $headshot ) ) :

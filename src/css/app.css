@@ -11371,7 +11371,7 @@ em, dfn {
   font-size: 1rem;
 }
 
-div, p {
+div, p, ul, ol, dl {
   font-size: 1.75rem;
   font-weight: 400;
 }
@@ -11803,6 +11803,12 @@ footer#footer .menu-item.current-menu-item.active {
   color: #ffffff;
 }
 
+.is-style-outline .wp-block-button__link.wp-element-button:hover {
+  background: #222222 !important;
+  color: #ffffff !important;
+  border-color: #222222;
+}
+
 .narrow {
   max-width: 960px;
   margin: auto;
@@ -12007,9 +12013,8 @@ h6 a:hover,
 
 a[target=_blank]:after {
   font-family: "dashicons";
-  display: inline-block;
   content: "\f504";
-  padding-left: 1rem;
+  padding-left: 0.4rem;
   margin-bottom: -15px;
 }
 
@@ -12087,7 +12092,7 @@ figure.headshot img {
   padding: 1.5rem 0;
   border: solid 1px #B85E00;
   border-width: 0 0 1px 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5rem;
 }
 
 iframe {
@@ -15779,7 +15784,8 @@ html :where(.is-position-sticky) {
   margin-bottom: 0.6rem;
 }
 .frm_forms .frm_inside_container.frm_label_float_top > label {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin-top: -12px;
 }
 .frm_forms button[type=submit],
 .frm_forms input[type=submit] {
@@ -15808,6 +15814,16 @@ h1.wp-block-heading,
 h2.wp-block-heading,
 .wp-block-heading.h2 {
   padding-bottom: 5rem;
+}
+
+p + h1, p + .h1,
+p + h2,
+p + .h2 {
+  padding-top: 1.5rem;
+}
+
+p + h3, p + .h3 {
+  padding-top: 5rem;
 }
 
 footer .wp-block-columns,

@@ -45,6 +45,16 @@
 		}
 	}
 
+	.is-style-outline {
+		.wp-block-button__link.wp-element-button {
+		&:hover {
+			background: $black!important;
+			color: $white!important;
+			border-color: $black;
+		}
+	}
+}
+
 
 
 

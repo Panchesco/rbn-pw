@@ -148,22 +148,22 @@ acf_add_local_field_group(array(
 					'parent_repeater' => 'field_64553d4585c3d',
 				),
 				array(
-					'key' => 'field_6455416865749',
-					'label' => 'Image Caption',
-					'name' => 'image_caption',
-					'aria-label' => '',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
+				'key' => 'field_6455416865749',
+				'label' => 'Image Caption',
+				'name' => 'image_caption',
+				'aria-label' => '',
+				'type' => 'wysiwyg',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
 						array(
-							array(
-								'field' => 'field_64553dc885c3e',
-								'operator' => '==',
-								'value' => 'image',
-							),
+							'field' => 'field_64553dc885c3e',
+							'operator' => '==',
+							'value' => 'image',
 						),
 					),
+				),
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',

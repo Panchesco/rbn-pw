@@ -95,7 +95,7 @@ em,dfn {
 	font-size: $h6-font-size;
 }
 
-div,p {
+div,p,ul,ol,dl {
   font-size: 1.75rem;
   font-weight: 400;
 }
@@ -210,8 +210,17 @@ body .is-layout-flow > * + * {
 
 .wp-block-columns,
 h1.wp-block-heading,
-h2.wp-block-heading{
+h2.wp-block-heading {
   padding-bottom: $padding-extra;
+}
+
+p + h1,
+p + h2 {
+	padding-top: $padding-normal;
+}
+
+p + h3 {
+	padding-top: $padding-extra;
 }
 
 footer {

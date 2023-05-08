@@ -77,9 +77,8 @@ h6 a {
 a[target="_blank"] {
 	&:after {
 		font-family: 'dashicons';
-		display: inline-block;
 		content: "\f504";
-		padding-left: 1rem;
+		padding-left: .4rem;
 		margin-bottom: -15px;
 	}
 }

@@ -7,9 +7,12 @@
 get_header(); ?>
 <main id="main">
 <?php
-
 if( have_posts() ) : while( have_posts() ) : the_post();
-$fields = get_fields(); ?>
+$fields = get_fields();
+$media_row_count = count($fields['media_gallery']);
+$stage_cols = ( $media_row_count < 3 ) ? 6 : 4; // set bootstrap col size for stage
+$post_id = get_the_ID();
+?>
 <div class="container">
 	<div class="row">
 		<div class="col-xl-8">
@@ -42,7 +45,7 @@ $fields = get_fields(); ?>
 	<div class="container">
 		<div class="d-xl-flex justify-content-center gap-xl-6 pb-5">
 			<?php foreach( $fields['media_gallery'] as $item ) : ?>
-				<div class="d-flex col-lg-4 align-items-center">
+				<div class="d-flex col-lg-6 align-items-center">
 			<?php if( $item['type'] == 'embed' ) {
 				get_template_part('template-parts/embed','embed',$item);
 			} elseif( $item['type'] == 'image' ) {
@@ -59,7 +62,7 @@ $fields = get_fields(); ?>
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="d-xl-flex flex-wrap col-xl-8 justify-content-around pb-6">
-			<h2 class="text-center pb-4 w-100"><?php _e('Contributor Profile','rbn-wp');?></h2>
+			<h2 class="text-center pb-<?php echo $stage_cols;?> w-100"><?php _e('Contributor Profile','rbn-wp');?></h2>
 			<?php if( isset( $fields['grantee_headshot'] ) && ! empty( $fields['grantee_headshot'] ) ) : ?>
 			<figure class="contributor-photo d-inline-block mx-auto pb-4">
 			<?php echo wp_get_attachment_image($fields['grantee_headshot'],'rbn-card',['class' => 'mx-auto pb-6']);

@@ -3,6 +3,6 @@
 }
 .left-arrow:before {
   display: inline-block;
-  content: "hello";
+  content: "";
   margin-right: 1.5rem;
 }
