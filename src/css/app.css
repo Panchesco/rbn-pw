@@ -11283,7 +11283,6 @@ textarea.form-control-lg {
 
 html {
   scroll-behavior: smooth;
-  word-wrap: nowrap;
 }
 
 html, body, .wp-block-post-content {
@@ -11385,7 +11384,10 @@ figcaption p {
 }
 
 ul, ol {
-  margin-left: 2.6rem;
+  margin-left: 2rem;
+}
+ul li, ol li {
+  margin-bottom: 0.4rem;
 }
 
 /* Links */
@@ -12103,17 +12105,21 @@ iframe {
 .archive-event ul, .archive-event ol {
   padding: inherit;
 }
-.archive-event h2, .archive-event .h2 {
-  font-weight: var(--has-regular-font-weight);
-  padding-bottom: 1rem;
+.archive-event .event-title h1, .archive-event .event-title .h1 {
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 4.6666625rem;
+  font-weight: 400;
+  padding-bottom: 4.6666625rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
 }
-.archive-event h2:after, .archive-event .h2:after {
+.archive-event .event-title h1:after, .archive-event .event-title .h1:after {
   display: block;
   content: "";
   width: 8.3125rem;
   height: 0.325rem;
   background: #B85E00;
-  margin-top: 0.4rem;
+  margin-top: 0.6rem;
 }
 .archive-event figcaption p {
   padding: 0;
@@ -12124,23 +12130,90 @@ iframe {
   margin: 0;
 }
 .archive-event .headshot {
+  overflow: clip;
+}
+
+.grouping figure p,
+.grouping .copy-block p,
+#col-2 ul, #col-2 p {
+  font-size: 1.5rem;
+}
+
+.grouping figure {
+  max-width: 185px;
+}
+.grouping figure p {
+  margin: 0 0 0.4rem 0;
+}
+.grouping p {
+  padding: 0;
+  letter-spacing: 0;
+}
+.grouping h5, .grouping .h5 {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.single-events .archive-event .grouping figure, .post-type-archive-events .archive-event .grouping figure {
+  max-width: 100%;
+}
+.single-events .archive-event .grouping figure .headshot, .post-type-archive-events .archive-event .grouping figure .headshot {
+  box-sizing: border-box;
+  overflow: clip;
+}
+.single-events .archive-event .grouping figure .headshot img, .post-type-archive-events .archive-event .grouping figure .headshot img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.single-events .archive-event .grouping figure figcaption, .post-type-archive-events .archive-event .grouping figure figcaption {
+  padding: 0 0 0.6rem 0;
+}
+.single-events .archive-event .grouping figure h1, .single-events .archive-event .grouping figure .h1, .single-events .archive-event .grouping figure h2, .single-events .archive-event .grouping figure .h2, .single-events .archive-event .grouping figure h3, .single-events .archive-event .grouping figure .h3, .post-type-archive-events .archive-event .grouping figure h1, .post-type-archive-events .archive-event .grouping figure .h1, .post-type-archive-events .archive-event .grouping figure h2, .post-type-archive-events .archive-event .grouping figure .h2, .post-type-archive-events .archive-event .grouping figure h3, .post-type-archive-events .archive-event .grouping figure .h3 {
+  font-size: 1.5rem;
+  font-family: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  margin-bottom: 0.4rem;
+}
+.single-events .archive-event .grouping figure h4, .single-events .archive-event .grouping figure .h4, .post-type-archive-events .archive-event .grouping figure h4, .post-type-archive-events .archive-event .grouping figure .h4 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+.single-events .archive-event .grouping figure h5, .single-events .archive-event .grouping figure .h5, .post-type-archive-events .archive-event .grouping figure h5, .post-type-archive-events .archive-event .grouping figure .h5 {
+  font-size: 1.25rem;
+}
+
+.one-one {
   aspect-ratio: 1/1;
   overflow: clip;
-  background-color: #B85E00;
+}
+.one-one img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
+  margin: 0;
 }
 
 @media all and (min-width: 768px) {
-  .archive-event h2, .archive-event .h2 {
-    font-weight: var(--has-regular-font-weight);
-    padding-bottom: 1rem;
+  .archive-event .event-title h1, .archive-event .event-title .h1 {
+    font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 4.6666625rem;
+    font-weight: 400;
+    padding-bottom: 4.6666625rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0 !important;
+    font-weight: 500;
   }
-  .archive-event h2:after, .archive-event .h2:after {
+  .archive-event .event-title h1:after, .archive-event .event-title .h1:after {
     display: block;
     content: "";
-    width: 8.3125rem;
+    width: 13.3125rem;
     height: 0.325rem;
     background: #B85E00;
-    margin-top: 0.4rem;
+    margin-top: 0.8rem;
   }
   .archive-event .grouping figure {
     max-width: 185px;
@@ -12157,16 +12230,39 @@ iframe {
     padding: 0;
     margin: 0;
   }
+  .grouping figure p,
+  .grouping .copy-block p,
+  #col-2 ul, #col-2 p {
+    font-size: 1.25rem;
+  }
+  .single-events .archive-event .grouping figure, .post-type-archive-events .archive-event .grouping figure {
+    max-width: 100%;
+  }
+  .single-events .archive-event .grouping figure .headshot, .post-type-archive-events .archive-event .grouping figure .headshot {
+    box-sizing: border-box;
+    overflow: clip;
+  }
+  .single-events .archive-event .grouping figure .headshot img, .post-type-archive-events .archive-event .grouping figure .headshot img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .single-events .archive-event .grouping figure figcaption, .post-type-archive-events .archive-event .grouping figure figcaption {
+    padding: 0 0 0.6rem 0;
+  }
+  .single-events .archive-event .grouping figure h1, .single-events .archive-event .grouping figure .h1, .single-events .archive-event .grouping figure h2, .single-events .archive-event .grouping figure .h2, .single-events .archive-event .grouping figure h3, .single-events .archive-event .grouping figure .h3, .post-type-archive-events .archive-event .grouping figure h1, .post-type-archive-events .archive-event .grouping figure .h1, .post-type-archive-events .archive-event .grouping figure h2, .post-type-archive-events .archive-event .grouping figure .h2, .post-type-archive-events .archive-event .grouping figure h3, .post-type-archive-events .archive-event .grouping figure .h3 {
+    font-size: 1.5rem;
+    font-family: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+    margin-bottom: 0.4rem;
+  }
+  .single-events .archive-event .grouping figure h4, .single-events .archive-event .grouping figure .h4, .post-type-archive-events .archive-event .grouping figure h4, .post-type-archive-events .archive-event .grouping figure .h4 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  .single-events .archive-event .grouping figure h5, .single-events .archive-event .grouping figure .h5, .post-type-archive-events .archive-event .grouping figure h5, .post-type-archive-events .archive-event .grouping figure .h5 {
+    font-size: 1.25rem;
+  }
 }
-.grouping figure p,
-.grouping .copy-block p {
-  font-size: 1.25rem;
-}
-
-.last-card {
-  border: solid 10px red;
-}
-
 .wp-block-archives {
   box-sizing: border-box;
 }
@@ -15823,7 +15919,7 @@ p + .h2 {
 }
 
 p + h3, p + .h3 {
-  padding-top: 5rem;
+  padding-top: 1.5rem;
 }
 
 footer .wp-block-columns,

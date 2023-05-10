@@ -1,68 +1,74 @@
 <?php
 $fields = get_fields(get_the_ID());
+
 ?>
-<div class="archive-event columns has-ivory-buff-background-color p p-xl-5 mb-6">
+<div class="archive-event columns has-ivory-buff-background-color mb-6 mx-auto justify-content-center p-4 p-xl-5 col-xl-10">
 	<div class="row">
-		<div class="col col-xl-6 p-xl-0">
-			<h2><?php the_title();?></h2>
+		<div class="event-title">
+			<h1><?php the_title();?></h1>
 		</div><!-- /.col -->
 	</div><!-- /.row -->
 	<div class="row">
-		<div class="col-xl-6 pb-5 p-xl-0 pe-xl-4">
-		<h3><?php echo $fields['date_time_heading']; ?></h3>
+		<div class="col-xl-7 ">
+			<?php echo $fields['date_time_heading']; ?>
 		</div>
-		<div class="col-xl-6 pb-5 p-xl-0 pe-xl-4">
-			<?php if( isset( $fields['event_cta']['button_url'] ) && ! empty( $fields['event_cta']['button_url'] ) ) :?>
-				<div class="d-flex justify-content-center justify-content-lg-start text-center wp-block-button">
-					<a class="wp-block-button__link has-vizcaya-palm-background-color" target="_blank" href="<?php echo $fields['event_cta']['button_url'];?>"><?php echo $fields['event_cta']['button_text'];?></a>
+		<div class="col-xl-5">
+		<?php if( isset( $fields['event_cta']['button_url'] ) && ! empty( $fields['event_cta']['button_url'] ) ) :?>
+				<div class="text-center wp-block-button pb-3">
+				<a class="wp-block-button__link has-vizcaya-palm-background-color w-100 fs-4" target="_blank" href="<?php echo $fields['event_cta']['button_url'];?>"><?php echo $fields['event_cta']['button_text'];?></a>
 				</div>
-			<?php endif;?>
-		</div>
-	</div>
-	<div class="row">
-		<div id="column-one" class="col-xl-6 p-5 p-xl-0 pe-xl-4">
-			<?php if(  isset($fields['event_card_columns']['column_one']) && ! empty($fields['event_card_columns']['column_one']) ) :?><div class="pb-5">
-			<?php echo $fields['event_card_columns']['column_one']; ?>
-			</div><?php endif;?>
-			<div class="grouping">
-			<?php foreach($fields['groups'] as $group ) : ?>
-				<h4 class="pb-2"><?php echo $group['group_heading']; ?></h4>
-				<div class="row pb-4">
-				<?php foreach( $group['profile'] as $profile ) :?>
-				<?php // With copy block ?>
-				<?php if( $profile['copy_block'] != "" ) :?>
-						<figure class="col-xl col-xl-4">
-						<div class="headshot mb-2">
-						<?php echo wp_get_attachment_image($profile['headshot'], 'rbn-card', false,['class' => 'img-fluid']); ?>
-						</div><!-- /.headshot -->
-					<figcaption class="headshot-caption pb-5">
-						<?php echo $profile['headshot_caption'];?>
-					</figcaption>
-				</figure>
-				<div class="col-xl col-xl-8 pb-5 row copy-block">
-						<?php echo $profile['copy_block'];?>
-				</div>
-				<?php else: ?>
-				<?php // Without copy block ?>
-					<figure class="d-xl-flex flex-column flex-wrap">
-						<div class="headshot mb-2">
-						<?php echo wp_get_attachment_image($profile['headshot'], 'rbn-card', false,['class' => 'img-fluid has-raw-sienna-background-color ']); ?>
-						</div>
-						<figcaption class="headshot-caption pt-2 pb-5">
-							<?php echo $profile['headshot_caption'];?>
-						</figcaption>
-					</figure>
-
-				<?php endif;?>
-				<?php endforeach;?>
-				</div>
-			<?php endforeach; ?>
-			</div><!-- /.grouping-->
-		</div>
-		<div id="column-two" class="col-xl-6">
+		<?php endif;?>
+			<div id="col-2" class="pb-4">
 			<?php echo $fields['event_card_columns']['column_two']; ?>
-			<?php echo $fields['map'];?>
+			</div>
+				<?php //echo $fields['map'];?>
 		</div>
 	</div><!-- /.row -->
-</div><!-- /.archive-event.columns -->
+	<div class="row">
+		<div>
+			<?php echo $fields['event_card_columns']['column_one'];?>
+		</div>
+	</div>
+<div class="row grouping">
+<?php foreach($fields['groups'] as $group ) : ?>
+	<h2 class="pb-2"><?php echo $group['group_heading']; ?></h2>
+	<div class="row m-0 p-0 pb-0">
+	<?php foreach( $group['profile'] as $profile ) :?>
+	<?php // With copy block ?>
+	<div class="headshot-wrapper col-xl-4 pb-xl-5">
+		<figure class="p-0 mb-2">
+		 <?php if( isset( $profile['headshot'] )  && ! empty( $profile['headshot'] )) :?>
+		 	<div class="headshot pb-2 pb-xl-4">
+			<?php echo wp_get_attachment_image($profile['headshot'], 'rbn-card', false,['class' => 'img-fluid']); ?>
+			</div><!-- /.headshot -->
+			<?php endif;?>
+		   <figcaption class="headshot-caption pb-xl-5">
+			<?php echo $profile['headshot_caption'];?>
+		   </figcaption>
+		</figure>
+	</div>
+	<div class="col-xl-8 pb-6 copy-block fs-1">
+			<?php echo $profile['copy_block'];?>
+	</div>
+
+	<?php endforeach;?>
+	</div>
+<?php endforeach; ?>
+</div><!-- /.row.grouping-->
+<hr class="p-0 m-0">
+<div class="row pt-5">
+
+	<div class="col-xl-7 pe-xl-5">
+		<?php echo $fields['event_footer']; ?>
+	</div>
+	<div class="col-xl-5">
+			<?php echo $fields['map_intro']; ?>
+			<div><?php echo $fields['map']; ?></div>
+	</div>
+</div>
+</div><!-- /.has-ivory-background-color -->
+
+
+
+
 

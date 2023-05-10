@@ -11,20 +11,19 @@ ul,ol{
 }
 
 
- h2 {
-	font-weight: var(--has-regular-font-weight);
-
-	padding-bottom: 1rem;
+	.event-title {
+		h1,.h1 {
+		@include h1;
 		&:after {
 			display: block;
 			content: "";
 			width: 8.3125rem;
 			height: .325rem;
 			background: $raw-sienna;
-			margin-top: .4rem;
+			margin-top: .6rem;
 		}
 	}
-
+}
 
 	figcaption {
 		p {
@@ -40,29 +39,116 @@ ul,ol{
 	}
 
 	.headshot {
-		aspect-ratio: 1 / 1;
 		overflow: clip;
-		background-color: $raw-sienna;
 	}
 }
 
+.grouping figure p,
+.grouping .copy-block p,
+#col-2 ul, #col-2 p {
+	font-size: 1.5rem;
+}
+
+			.grouping {
+
+			figure {
+				max-width: 185px;
+				p {
+					margin: 0 0 .4rem 0;
+				}
+			}
+
+			p {
+				//font-size: 1.375rem;
+				padding: 0;
+				letter-spacing: 0;
+
+			}
+
+			h5 {
+				font-size: 1rem;
+				padding: 0;
+				margin: 0;
+			}
+		}
+
+
+	.single-events,.post-type-archive-events {
+			.archive-event .grouping figure {
+
+				.headshot {
+					box-sizing: border-box;
+					overflow: clip;
+					img {
+						display: block;
+						max-width: 100%;
+						height: auto;
+					}
+				}
+
+				max-width: 100%;
+
+				figcaption {
+					padding: 0 0 .6rem 0;
+				}
+
+				h1,h2,h3 {
+					//@include h3;
+					font-size: 1.5rem;
+					font-family: $serif;
+					margin-bottom: .4rem;
+				}
+
+				h4 {
+					font-size: 1rem;
+					margin-bottom: .4rem;
+				}
+
+				h5 {
+					font-size: 1.25rem;
+				}
+
+
+			}
+		}
+
+
+
+	.one-one {
+			aspect-ratio: 1 / 1;
+			overflow: clip;
+			img {
+				object-fit: cover;
+				min-width: 100%;
+				min-height: 100%;
+				display: block;
+				margin: 0;
+			}
+		}
+
+
+
+
+
+
+
 @media all and (min-width:768px) {
-
-
 	.archive-event {
-	 //padding: 1.5rem;
-	 h2 {
-		font-weight: var(--has-regular-font-weight);
-		padding-bottom: 1rem;
+		.event-title {
+			h1,.h1 {
+				@include h1;
+			padding-bottom: 0!important;
+			font-weight: 500;
 			&:after {
 				display: block;
 				content: "";
-				width: 8.3125rem;
+				width: 13.3125rem;
 				height: .325rem;
 				background: $raw-sienna;
-				margin-top: .4rem;
+				margin-top: .8rem;
 			}
 		}
+	}
 
 			.grouping {
 
@@ -71,10 +157,6 @@ ul,ol{
 					p {
 						margin: 0 0 .4rem 0;
 					}
-				}
-
-				.copy-block {
-					//padding-left: $padding-small;
 				}
 
 				p {
@@ -93,14 +175,58 @@ ul,ol{
 
 	}
 
-}
+	.grouping figure p,
+	.grouping .copy-block p,
+	#col-2 ul, #col-2 p {
+		font-size: 1.25rem;
+	}
 
-.grouping figure p,
-.grouping .copy-block p {
-	font-size: 1.25rem;
-}
+	.single-events,.post-type-archive-events {
+		.archive-event .grouping figure {
 
-.last-card {
-	border: solid 10px red;
-}
+			.headshot {
+				box-sizing: border-box;
+				overflow: clip;
+				img {
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+
+			max-width: 100%;
+
+			figcaption {
+				padding: 0 0 .6rem 0;
+			}
+
+			h1,h2,h3 {
+				//@include h3;
+				font-size: 1.5rem;
+				font-family: $serif;
+				margin-bottom: .4rem;
+			}
+
+			h4 {
+				font-size: 1rem;
+				margin-bottom: .4rem;
+			}
+
+			h5 {
+				font-size: 1.25rem;
+			}
+
+
+		}
+	}
+
+
+
+} // End min-width 768px
+
+
+
+
+
+
 

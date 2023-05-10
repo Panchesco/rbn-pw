@@ -30,7 +30,6 @@
 //Smooth Scroll
 html {
   scroll-behavior: smooth;
-  word-wrap: nowrap;
 }
 
 html,body,.wp-block-post-content {
@@ -109,7 +108,10 @@ figcaption p {
 }
 
 ul,ol {
-	margin-left: 2.6rem;
+	margin-left: 2rem;
+	li {
+		margin-bottom: .4rem;
+	}
 }
 
 /* Links */
@@ -220,7 +222,7 @@ p + h2 {
 }
 
 p + h3 {
-	padding-top: $padding-extra;
+	padding-top: $padding-normal;
 }
 
 footer {

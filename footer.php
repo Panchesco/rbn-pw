@@ -1,5 +1,5 @@
 
-		<footer id="footer" class="mt-6 pb-5">
+		<footer id="footer" class="mt-xl-4 pb-5">
 			<div class="has-ivory-background-color mh-6">
 				<div class="container">
 					<div class="d-flex justify-content-end">
