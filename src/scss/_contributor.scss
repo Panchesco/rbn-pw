@@ -4,9 +4,41 @@
 
 #stage {
 	box-shadow: inset 0px 6px 6px rgba(0,0,0,.2), inset 0px -6px 6px rgba(0,0,0,.2);
-
+	overflow: hidden;
 }
 
 figure .media {
 	@include site-boxshadow;
 }
+
+#stage .items {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 0 72px;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+
+.rbn-w-100 {
+	width: 100%;
+}
+
+.rbn-w-50 {
+	width: 50%;
+}
+
+.rbn-w-25 {
+	width: 25%;
+}
+
+.rbn-w-33 {
+	width: 33%;
+}
+
+.rbn-w-0 {
+	width: 0%;
+}
+

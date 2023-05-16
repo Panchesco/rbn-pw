@@ -23,6 +23,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 	$fields['spotlight_copy'] = ( isset($fields['spotlight_copy']) && ! empty($fields['spotlight_copy']) ) ? $fields['spotlight_copy'] : "";
 	$fields['spotlight_attribution'] = ( isset($fields['spotlight_attribution']) && ! empty($fields['spotlight_attribution']) ) ? $fields['spotlight_attribution'] : "";
 	$fields['show_spotlight'] = ( isset($fields['show_spotlight']) && ! empty($fields['show_spotlight']) ) ? $fields['show_spotlight'] : 0;
+	$fields['column_widths'] = ( isset($fields['column_widths']) && ! empty($fields['column_widths']) ) ? explode("-",$fields['column_widths']) : ['33','33','33'];
 
 	$media_row_count = count($fields['media_gallery']);
 	$stage_cols = ( $media_row_count < 3 ) ? 6 : 4; // set bootstrap col size for stage
@@ -43,7 +44,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 </div><!-- /.container -->
 <?php if( isset( $fields['media_gallery'] )  && ! empty( $fields['media_gallery']) ) : // Begin #stage branch ?>
 <div id="stage" class="has-ivory-buff-background-color my-6 p-6">
-	<div class="container">
+	<div class="">
 		<div class="row pb-4">
 			<h2 class="visually-hidden"><?php _e("Contributor Work","rbn-pw");?></h2>
 			<?php if( isset($fields['grantee_principal_link']['url']) ) :
@@ -57,16 +58,16 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 			<?php endif;?>
 		</div>
 	</div>
-	<div class="container">
-		<div class="d-xl-flex justify-content-center gap-xl-6 pb-5">
-			<?php foreach( $fields['media_gallery'] as $item ) : ?>
-				<div class="d-flex col-lg-6 align-items-center">
+	<div class="">
+		<div class="pb-5 items">
+			<?php foreach( $fields['media_gallery'] as $key => $item ) : $item['width'] = $fields['column_widths'][$key]; ?>
+				<div class="rbn-w-<?php echo $fields['column_widths'][$key];?>">
 			<?php if( $item['type'] == 'embed' ) {
 				get_template_part('template-parts/embed','embed',$item);
-			} elseif( $item['type'] == 'image' ) {
-				get_template_part('template-parts/image','embed',$item);
-			} elseif( $item['type'] == 'oembed') {
-				get_template_part('template-parts/oembed','embed',$item);
+			} elseif( $item['type'] == 'oembed' ) {
+				get_template_part('template-parts/oembed','oembed',$item);
+			} elseif( $item['type'] == 'image') {
+				get_template_part('template-parts/image','image',$item);
 			}?>
 				</div>
 			<?php endforeach; ?>
@@ -80,7 +81,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 			<h2 class="text-center pb-<?php echo $stage_cols;?> w-100"><?php _e('Contributor Profile','rbn-wp');?></h2>
 			<?php if( isset( $fields['grantee_headshot'] ) && ! empty( $fields['grantee_headshot'] ) ) : ?>
 			<figure class="contributor-photo d-inline-block mx-auto pb-4">
-			<?php echo wp_get_attachment_image($fields['grantee_headshot'],'rbn-card',['class' => 'mx-auto pb-6']);
+			<?php echo wp_get_attachment_image($fields['grantee_headshot'],'large',['class' => 'mx-auto pb-6']);
 			$caption = wp_get_attachment_caption($fields['grantee_headshot']);
 			if( $caption ) :?><figcaption><p><?php echo $caption;?></p></figcaption><?php endif;?>
 			</figure>

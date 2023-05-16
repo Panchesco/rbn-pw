@@ -38,11 +38,11 @@ $fields = get_fields(get_the_ID());
 	<div class="headshot-wrapper col-xl-4 pb-xl-5">
 		<figure class="p-0 mb-2">
 		 <?php if( isset( $profile['headshot'] )  && ! empty( $profile['headshot'] )) :?>
-		 	<div class="headshot pb-2 pb-xl-4">
+		 	<div class="headshot pb-2 pb-xl-2">
 			<?php echo wp_get_attachment_image($profile['headshot'], 'rbn-card', false,['class' => 'img-fluid']); ?>
 			</div><!-- /.headshot -->
 			<?php endif;?>
-		   <figcaption class="headshot-caption pb-xl-5">
+		   <figcaption class="headshot-caption pb-xl-4">
 			<?php echo $profile['headshot_caption'];?>
 		   </figcaption>
 		</figure>

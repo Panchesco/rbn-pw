@@ -11468,10 +11468,39 @@ a.no-decoration:hover::before {
 
 #stage {
   box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.2), inset 0px -6px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 figure .media {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+#stage .items {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0 72px;
+  justify-content: center;
+  align-items: center;
+}
+
+.rbn-w-100 {
+  width: 100%;
+}
+
+.rbn-w-50 {
+  width: 50%;
+}
+
+.rbn-w-25 {
+  width: 25%;
+}
+
+.rbn-w-33 {
+  width: 33%;
+}
+
+.rbn-w-0 {
+  width: 0%;
 }
 
 .pagination ul {
@@ -12263,6 +12292,24 @@ iframe {
     font-size: 1.25rem;
   }
 }
+.aspect-16-9 {
+  width: auto;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.aspect-4-3 {
+  width: auto;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.aspect-1-1 {
+  width: auto;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
 .wp-block-archives {
   box-sizing: border-box;
 }

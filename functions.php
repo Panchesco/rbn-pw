@@ -499,8 +499,8 @@ if( ! function_exists('pagination') ) {
 	}
 }
 
-include_once( __DIR__ . '/fields/contributor.php');
-include_once( __DIR__ . '/fields/spotlight.php');
+//include_once( __DIR__ . '/fields/contributor.php');
+//include_once( __DIR__ . '/fields/spotlight.php');
 include_once( __DIR__ . '/classes/Theme.php');
 $rbnpw = new RbnPw\Theme();
 

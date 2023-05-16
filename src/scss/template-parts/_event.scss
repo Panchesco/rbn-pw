@@ -226,6 +226,23 @@ ul,ol{
 
 
 
+.aspect-16-9  {
+	width: auto;
+	aspect-ratio: 16/9;
+	overflow: hidden;
+}
+
+.aspect-4-3  {
+	width: auto;
+	aspect-ratio: 4/3;
+	overflow: hidden;
+}
+
+.aspect-1-1 {
+	width: auto;
+	aspect-ratio: 1/1;
+	overflow: hidden;
+}
 
 
 
