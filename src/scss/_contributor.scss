@@ -12,33 +12,96 @@ figure .media {
 }
 
 #stage .items {
+	display: block;
+
+}
+
+	.rbn-w-100 {
+		max-width: 100%;
+	}
+
+	.rbn-w-50 {
+		max-width: 100%;
+	}
+
+	.rbn-w-25 {
+		max-width: 100%;
+	}
+
+	.rbn-w-33 {
+		max-width: 100%;
+	}
+
+	.rbn-w-0 {
+		max-width: 100%;
+	}
+
+	.media img {
+		max-width: 100%;
+	}
+
+
+
+.contributor-photo img {
+		max-width: 100%;
+		height: auto;
+		margin: auto;
+		display: inline-block;
+	}
+
+
+@media all and (min-width:768px) {
+
+.media {
+	max-width: 800px;
+	margin: auto;
+}
+
+#stage .items {
 	display: flex;
 	flex-wrap: nowrap;
-	gap: 0 72px;
+	gap: 0 4rem;
 	justify-content: center;
 	align-items: center;
+}
 
+#stage .items figcaption {
+	text-align: left;
+	max-width: 800px;
+	margin: auto;
+}
+
+	.rbn-w-100 {
+		width: auto;
+	}
+
+.items-3 {
+	.rbn-w-50 {
+		width: 50%;
+	}
+}
+
+	.rbn-w-25 {
+		width: 25%;
+	}
+
+	.rbn-w-33 {
+		width: 33%;
+	}
+
+	.rbn-w-0 {
+		width: 0%;
+	}
+
+	.media img {
+		width: 100%;
+		height: auto;
+	}
 
 }
 
 
-.rbn-w-100 {
-	width: 100%;
-}
 
-.rbn-w-50 {
-	width: 50%;
-}
 
-.rbn-w-25 {
-	width: 25%;
-}
 
-.rbn-w-33 {
-	width: 33%;
-}
-
-.rbn-w-0 {
-	width: 0%;
-}
 

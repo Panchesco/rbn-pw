@@ -4,12 +4,12 @@ const app = {
     app.fadeInCards();
     app.listenForScroll();
     app.scrollTop();
-	  app.activeLinks();
+	app.activeLinks();
   },
   fadeInCards: function() {
        const cards = document.querySelectorAll('.contributor-grid-card');
        const wH = window.innerHeight;
-       const fadeInHeight = wH-42;
+       const fadeInHeight = wH-12;
        cards.forEach( (card,i) => {
 		   if ( card.dataset.bg ) {
            let viewportOffset = card.getBoundingClientRect();
@@ -50,9 +50,12 @@ const app = {
 	  const currHref = window.location.href.replace(window.location.origin,"");
 	  const navLinks = document.querySelectorAll("#menu-global-nav li a");
 	  navLinks.forEach( (item) => {
-		 if(currHref==item.href.replace(window.location.origin,"")){
+	  const activeHref = item.href.replace(window.location.origin,"");
+	if( currHref.indexOf(activeHref) ) {
+		 if( currHref.indexOf(activeHref) == 0 || activeHref == '/'){
 			  item.classList.add('active')
 		 };
+	 }
 	  })
   }
 };
@@ -61,15 +64,11 @@ const app = {
   // your page initialization code here
   // the DOM will be available here
   app.init();
-
-
-
 })();
 
 
 ( function () {
     'use strict';
-
     // Focus input if Searchform is empty
     [].forEach.call( document.querySelectorAll( '.search-form' ), ( el ) => {
         el.addEventListener( 'submit', function ( e ) {

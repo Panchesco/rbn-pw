@@ -11476,33 +11476,77 @@ figure .media {
 }
 
 #stage .items {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0 72px;
-  justify-content: center;
-  align-items: center;
+  display: block;
 }
 
 .rbn-w-100 {
-  width: 100%;
+  max-width: 100%;
 }
 
 .rbn-w-50 {
-  width: 50%;
+  max-width: 100%;
 }
 
 .rbn-w-25 {
-  width: 25%;
+  max-width: 100%;
 }
 
 .rbn-w-33 {
-  width: 33%;
+  max-width: 100%;
 }
 
 .rbn-w-0 {
-  width: 0%;
+  max-width: 100%;
 }
 
+.media img {
+  max-width: 100%;
+}
+
+.contributor-photo img {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: inline-block;
+}
+
+@media all and (min-width: 768px) {
+  .media {
+    max-width: 800px;
+    margin: auto;
+  }
+  #stage .items {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+  #stage .items figcaption {
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+  }
+  .rbn-w-100 {
+    width: auto;
+  }
+  .items-3 .rbn-w-50 {
+    width: 50%;
+  }
+  .rbn-w-25 {
+    width: 25%;
+  }
+  .rbn-w-33 {
+    width: 33%;
+  }
+  .rbn-w-0 {
+    width: 0%;
+  }
+  .media img {
+    width: 100%;
+    height: auto;
+  }
+}
 .pagination ul {
   list-style: none;
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -11923,7 +11967,7 @@ figcaption, figcaption p {
 
 .contributor-grid-card label {
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 1rem;
   background: var(--deep-grayish-olive);
   color: var(--white);
@@ -11968,7 +12012,7 @@ p a:after {
   background-image: url("../imgs/svg/left-arrow.svg");
   background-repeat: no-repeat;
   background-position: center left;
-  padding-left: 6.25rem;
+  padding-left: 8.25rem;
   margin-top: 1.5rem;
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.75rem;
@@ -11990,7 +12034,7 @@ p a:after {
   background-image: url("../imgs/svg/right-arrow.svg");
   background-repeat: no-repeat;
   background-position: center right;
-  padding-right: 6.25rem;
+  padding-right: 8.25rem;
   margin-top: 1.5rem;
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.75rem;
@@ -12003,6 +12047,15 @@ p a:after {
   color: #854400;
 }
 
+@media all and (min-width: 768px) {
+  *.left-arrow a {
+    padding-left: 6.25rem;
+  }
+  *.arrow-right a,
+  *.right-arrow a {
+    padding-right: 6.25rem;
+  }
+}
 h1 a, .h1 a,
 h2 a,
 .h2 a,
@@ -12037,7 +12090,7 @@ h6 a:hover,
 }
 
 .wp-block-button.is-style-outline.has-raw-sienna-color a:hover {
-  background-color: #B85E00;
+  background-color: #B85E00 !important;
   color: #fff;
   border-color: #B85E00;
 }

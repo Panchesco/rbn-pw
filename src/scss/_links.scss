@@ -15,7 +15,7 @@ p a {
 	background-image: url('../imgs/svg/left-arrow.svg');
 	background-repeat: no-repeat;
 	background-position: center left;
-	padding-left: 6.25rem;
+	padding-left: 8.25rem;
 	margin-top: $margin-normal;
 	@include h3;
 	text-decoration: none;
@@ -34,13 +34,34 @@ p a {
 	background-image: url('../imgs/svg/right-arrow.svg');
 	background-repeat: no-repeat;
 	background-position: center right;
-	padding-right: 6.25rem;
+	padding-right: 8.25rem;
 	margin-top: $margin-normal;
 	@include h3;
 	text-decoration: none;
 	&:hover {
 		color: darken($raw-sienna,10%);
 	}
+
+}
+
+@media all and (min-width:768px) {
+
+
+	*.left-arrow a {
+		padding-left: 6.25rem;
+	}
+
+
+	*.arrow-right a ,
+	*.right-arrow a {
+
+		padding-right: 6.25rem;
+
+	}
+
+
+
+
 
 }
 
@@ -67,7 +88,7 @@ h6 a {
 .wp-block-button.is-style-outline.has-raw-sienna-color {
 	a {
 		&:hover {
-		background-color: $raw-sienna;
+		background-color: $raw-sienna!important;
 		color: #fff;
 		border-color: $raw-sienna;
 		}

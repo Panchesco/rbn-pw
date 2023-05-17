@@ -26,9 +26,17 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 	$fields['column_widths'] = ( isset($fields['column_widths']) && ! empty($fields['column_widths']) ) ? explode("-",$fields['column_widths']) : ['33','33','33'];
 	$fields['embed_aspect_ratio'] = ( isset($fields['embed_aspect_ratio']) ) ? $fields['embed_aspect_ratio'] : '';
 	$fields['oembed_aspect_ratio'] = ( isset($fields['oembed_aspect_ratio']) ) ? $fields['oembed_aspect_ratio'] : '';
-
-
 	$media_row_count = count($fields['media_gallery']);
+
+	// Add an array to set some classes for stage column widths.
+	if( $media_row_count ==  1 ) {
+		$fields['column_widths'] = ['100'];
+	} elseif( $media_row_count ==  2 ) {
+		$fields['column_widths'] = ['50','50'];
+	} else {
+		$fields['column_widths'] = ['25', '50','25'];
+	}
+
 	$stage_cols = ( $media_row_count < 3 ) ? 6 : 4; // set bootstrap col size for stage
 	$post_id = get_the_ID();
 ?>
@@ -46,23 +54,23 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 	</div><!-- /.row -->
 </div><!-- /.container -->
 <?php if( isset( $fields['media_gallery'] )  && ! empty( $fields['media_gallery']) ) : // Begin #stage branch ?>
-<div id="stage" class="has-ivory-buff-background-color my-6 p-6">
-	<div class="">
-		<div class="row pb-4">
+<div id="stage" class="has-ivory-buff-background-color my-xl-6 px-4 px-xl-6">
+	<div>
+		<div class="row">
 			<h2 class="visually-hidden"><?php _e("Contributor Work","rbn-pw");?></h2>
 			<?php if( isset($fields['grantee_principal_link']['url']) ) :
 				$title = ( isset( $fields['grantee_principal_link']['title'])  ) ? $fields['grantee_principal_link']['title'] : "";
 				$url = ( isset( $fields['grantee_principal_link']['url'])  ) ? $fields['grantee_principal_link']['url'] : "";
 				$target = ( isset( $fields['grantee_principal_link']['target'])  ) ? $fields['grantee_principal_link']['target'] : "";
 				?>
-				<div class="wp-block-button is-style-outline text-center has-raw-sienna-color pb-5">
+				<div class="wp-block-button is-style-outline text-center has-raw-sienna-color py-4 pt-6">
 					<a class="wp-block-button__link wp-element-button" href="<?php echo $url;?>" target="<?php echo $target;?>"><?php echo $title;?></a>
 				</div>
 			<?php endif;?>
 		</div>
 	</div>
-	<div class="">
-		<div class="pb-5 items">
+	<div>
+		<div class="pb-5 items items-<?php echo $media_row_count;?> pt-6">
 			<?php foreach( $fields['media_gallery'] as $key => $item ) : $item['width'] = $fields['column_widths'][$key]; ?>
 				<div class="rbn-w-<?php echo $fields['column_widths'][$key];?>">
 			<?php if( $item['type'] == 'embed' ) {
@@ -83,10 +91,10 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 		<div class="d-xl-flex flex-wrap col-xl-8 justify-content-around pb-6">
 			<h2 class="text-center pb-<?php echo $stage_cols;?> w-100"><?php _e('Contributor Profile','rbn-wp');?></h2>
 			<?php if( isset( $fields['grantee_headshot'] ) && ! empty( $fields['grantee_headshot'] ) ) : ?>
-			<figure class="contributor-photo d-inline-block mx-auto pb-4">
-			<?php echo wp_get_attachment_image($fields['grantee_headshot'],'large',['class' => 'mx-auto pb-6']);
+			<figure class="d-block contributor-photo pb-4 w-100">
+				<div class="mx-auto px-xl-6"><?php echo wp_get_attachment_image($fields['grantee_headshot'],'large',['class' => 'img-fluid pb-6']);
 			$caption = wp_get_attachment_caption($fields['grantee_headshot']);
-			if( $caption ) :?><figcaption><p><?php echo $caption;?></p></figcaption><?php endif;?>
+			if( $caption ) :?></div><figcaption><p><?php echo $caption;?></p></figcaption><?php endif;?>
 			</figure>
 			<?php endif;?>
 			<div class="w-100">
@@ -105,17 +113,19 @@ $next_permalink = get_the_permalink($next->ID);
 $next_title = get_field('grantee_organization',$next->ID);
 ?>
 <nav class="container">
-	<div class="row justify-content-around">
+	<div class="row ">
+	<div class="col-xl-8 mx-auto">
 	<h2 class="visually-hidden"><?php _e('Contibutors Navigation','rbn-pw');?></h2>
-<?php if( $prev ) :?><div class="d-xl-flex flex-wrap col-xl-8 gap-6 pb-6">
+<?php if( $prev ) :?><div class="d-flex flex-wrap gap-4 pb-6 justify-content-between w-100">
 	<div class="col">
 		<div class="left-arrow"><a class="text-start" href="<?php echo $prev_permalink;?>"><?php echo $prev_title;?></a></div>
 	</div><?php endif;?>
 	<?php if( $next ) :?>
-	<div class="col">
+	<div class="col text-right">
 		<div class="right-arrow"><a class="text-end" href="<?php echo $next_permalink;?>"><?php echo $next_title;?></a></div>
 	</div>
 	<?php endif;?>
+	</div>
 	</div>
 </nav>
 <?php endwhile; endif; ?>
