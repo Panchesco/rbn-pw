@@ -11503,13 +11503,6 @@ figure .media {
   max-width: 100%;
 }
 
-.contributor-photo img {
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-  display: inline-block;
-}
-
 @media all and (min-width: 768px) {
   .media {
     max-width: 800px;

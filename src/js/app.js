@@ -48,7 +48,7 @@ const app = {
   },
   activeLinks: function() {
 	  const currHref = window.location.href.replace(window.location.origin,"");
-	  const navLinks = document.querySelectorAll("#menu-global-nav li a");
+	  const navLinks = document.querySelectorAll(".nav-link");
 	  navLinks.forEach( (item) => {
 	  const activeHref = item.href.replace(window.location.origin,"");
 	if( currHref.indexOf(activeHref) ) {

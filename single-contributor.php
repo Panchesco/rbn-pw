@@ -37,7 +37,6 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 		$fields['column_widths'] = ['25', '50','25'];
 	}
 
-	$stage_cols = ( $media_row_count < 3 ) ? 6 : 4; // set bootstrap col size for stage
 	$post_id = get_the_ID();
 ?>
 <div class="container">
@@ -70,7 +69,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 		</div>
 	</div>
 	<div>
-		<div class="pb-5 items items-<?php echo $media_row_count;?> pt-6">
+		<div class="items items-<?php echo $media_row_count;?> py-6">
 			<?php foreach( $fields['media_gallery'] as $key => $item ) : $item['width'] = $fields['column_widths'][$key]; ?>
 				<div class="rbn-w-<?php echo $fields['column_widths'][$key];?>">
 			<?php if( $item['type'] == 'embed' ) {
@@ -89,12 +88,12 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="d-xl-flex flex-wrap col-xl-8 justify-content-around pb-6">
-			<h2 class="text-center pb-<?php echo $stage_cols;?> w-100"><?php _e('Contributor Profile','rbn-wp');?></h2>
+			<h2 class="text-center w-100"><?php _e('Contributor Profile','rbn-wp');?></h2>
 			<?php if( isset( $fields['grantee_headshot'] ) && ! empty( $fields['grantee_headshot'] ) ) : ?>
-			<figure class="d-block contributor-photo pb-4 w-100">
-				<div class="mx-auto px-xl-6"><?php echo wp_get_attachment_image($fields['grantee_headshot'],'large',['class' => 'img-fluid pb-6']);
+			<figure class="d-block contributor-photo pb-5">
+				<div class="mx-auto"><?php echo wp_get_attachment_image($fields['grantee_headshot'],'large',['class' => 'img-fluid']);
 			$caption = wp_get_attachment_caption($fields['grantee_headshot']);
-			if( $caption ) :?></div><figcaption><p><?php echo $caption;?></p></figcaption><?php endif;?>
+			if( $caption ) :?></div><figcaption class="fs-5 fst-italic pt-2"><?php echo $caption;?></figcaption><?php endif;?>
 			</figure>
 			<?php endif;?>
 			<div class="w-100">
