@@ -24,6 +24,9 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 	$fields['spotlight_attribution'] = ( isset($fields['spotlight_attribution']) && ! empty($fields['spotlight_attribution']) ) ? $fields['spotlight_attribution'] : "";
 	$fields['show_spotlight'] = ( isset($fields['show_spotlight']) && ! empty($fields['show_spotlight']) ) ? $fields['show_spotlight'] : 0;
 	$fields['column_widths'] = ( isset($fields['column_widths']) && ! empty($fields['column_widths']) ) ? explode("-",$fields['column_widths']) : ['33','33','33'];
+	$fields['embed_aspect_ratio'] = ( isset($fields['embed_aspect_ratio']) ) ? $fields['embed_aspect_ratio'] : '';
+	$fields['oembed_aspect_ratio'] = ( isset($fields['oembed_aspect_ratio']) ) ? $fields['oembed_aspect_ratio'] : '';
+
 
 	$media_row_count = count($fields['media_gallery']);
 	$stage_cols = ( $media_row_count < 3 ) ? 6 : 4; // set bootstrap col size for stage
