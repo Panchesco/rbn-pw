@@ -47,7 +47,7 @@ foreach( $field as  $row ) :
 // Display contributor grid card
 if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  ) : ?>
  <div class="contributor-grid-card loading has-background-video col-lg-4" data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
-	 <video muted>
+	 <video class="pause" muted>
 		<source src="<?php echo $data['background_video'];?>" type="video/mp4">
 	  </video>
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>

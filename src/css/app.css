@@ -11540,6 +11540,42 @@ figure .media {
     height: auto;
   }
 }
+video.play {
+  display: none;
+  opacity: 0;
+  animation: playVideo 300ms ease-in;
+  animation-fill-mode: forwards;
+}
+
+video.pause {
+  display: block;
+  opacity: 1;
+  animation: pauseVideo 300ms ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes playVideo {
+  from {
+    display: block;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pauseVideo {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
 .pagination ul {
   list-style: none;
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
