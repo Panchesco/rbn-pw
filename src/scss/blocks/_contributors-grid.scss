@@ -32,9 +32,7 @@ figcaption,figcaption p  {
     transform-origin: center center;
     transition: all 300ms ease-in-out;
     transform: scale(1);
-  }
-  .contributor-grid-card.fade-in {
-
+	width: 100%;
   }
 
   .fade-in {

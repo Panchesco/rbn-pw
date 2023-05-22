@@ -46,7 +46,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 			<h2 class="project-name pb-4"><?php echo $fields['grantee_project_name'];?></h2>
 		</div><!-- /.col-lg-8 -->
 	</div>
-	<div class="row d-flex justify-content-center">
+	<div class="row d-flex justify-content-center pb-4">
 		<div class="col-xl-8">
 			<?php echo $fields['grantee_description'];?>
 		</div><!-- /.col-lg-8 -->
@@ -87,8 +87,8 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 <?php if( isset( $fields['grantee_bio'] ) && ! empty( $fields['grantee_bio'] )  ) : ?>
 <div class="container">
 	<div class="row justify-content-center">
-		<div class="d-xl-flex flex-wrap col-xl-8 justify-content-around pb-6">
-			<h2 class="text-center w-100"><?php _e('Contributor Profile','rbn-wp');?></h2>
+		<div class="d-xl-flex flex-wrap col-xl-8 justify-content-around pb-5">
+			<h2 class="text-center w-100 pb-6"><?php _e('Contributor Profile','rbn-wp');?></h2>
 			<?php if( isset( $fields['grantee_headshot'] ) && ! empty( $fields['grantee_headshot'] ) ) : ?>
 			<figure class="d-block contributor-photo pb-5">
 				<div class="mx-auto"><?php echo wp_get_attachment_image($fields['grantee_headshot'],'large',['class' => 'img-fluid']);

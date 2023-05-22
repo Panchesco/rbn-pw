@@ -3,11 +3,12 @@ const app = {
 cards: document.querySelectorAll('.contributor-grid-card'),
 videos: document.querySelectorAll('video'),
 timeouts: {playing: [], paused: []},
-reps: 3,
+reps: 1,
   init: function() {
     app.videosLoaded = Array(app.videos.length).fill(false);
 	app.timeouts.playing = Array(app.videos.length).fill(-1);
 	app.timeouts.paused = Array(app.videos.length).fill(1);
+	app.intervals = Array(app.videos.length).fill(null);
 	app.fadeInCards();
 	app.listenForScroll();
 	app.scrollTop();
@@ -30,6 +31,9 @@ reps: 3,
 			   card.style.backgroundImage = "url(" + card.dataset.bg + ")";
 			   card.classList.add('fade-in');
 		   		});
+				   if( card.classList.contains('has-background-video')) {
+					  app.playVideo(card.querySelector('video'),i)
+				   }
 		   	}
 		   }
 	   })
@@ -48,15 +52,32 @@ reps: 3,
 	   })
    },
    playVideo: function(v,i) {
-
 	   	  v.classList.remove('pause')
-		v.setAttribute("loop","loop")
 		  v.play()
-		setTimeout( () => {
-			  v.classList.add('pause')
-			  v.removeAttribute("loop")
-			  v.pause()
-		  } , (v.duration * this.reps) + 600)
+		  // If interval for video doesn't already exists,
+		  // create one to check if video still playing
+		  if( app.intervals[i] == null ) {
+			  app.intervals[i] = setInterval( () => {
+				  if( ! app.videoPlaying(v)) {
+					  // If it's not playing, set the "pause" class and clear the interval
+					  v.classList.add('pause')
+					  clearInterval(app.intervals[i])
+					  app.intervals[i] = null
+				  }
+			  }, (v.duration + 1000) )
+		  }
+   },
+   videoPlaying: function(v) {
+
+	   if( v.readyState > 2 ) {
+
+
+	   		if( v.currentTime > 0 &&  ! v.paused && ! v.ended ) {
+		   		return true;
+	   		}
+
+  		 }
+	   return false
    },
    pauseVideo: function(v,i) {
 

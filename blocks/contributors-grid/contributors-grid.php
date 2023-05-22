@@ -4,9 +4,6 @@
  *
 
  */
- error_reporting(E_ALL);
- error_reporting(-1);
- ini_set('error_reporting', E_ALL);
 // Support custom "anchor" values.
  $anchor = '';
  if ( ! empty( $block['anchor'] ) ) {
@@ -29,12 +26,16 @@ $grid = [];
 $field = get_field('contributors_grid');
 
 ?>
-<div class="d-flex flex-wrap contributors-grid justify-content-start gap-4 px-3 px-lg-0">
+<div class="d-flex flex-wrap contributors-grid justify-content-center justify-content-xl-start gap-4 px-3 px-lg-0">
 <?php
 // Set contributor rows and sub fields from Contributor post to grid array.
 foreach( $field as  $row ) :
+
 	foreach( $row as $key => $card ) :
+
+
 	$post_id = $row['contributor']->ID;
+	$post_status = $row['contributor']->post_status;
 	$image = get_field('background_image',$post_id);
 	$video = get_field('background_video',$post_id);
 
@@ -44,9 +45,11 @@ foreach( $field as  $row ) :
 					'background_image' => $image['sizes']['rbn-card'],
 					'background_video' => $video,
 				];
+
 // Display contributor grid card
+if( $post_status == 'publish') :
 if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  ) : ?>
- <div class="contributor-grid-card loading has-background-video col-lg-4" data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
+ <div class="contributor-grid-card loading col col-12 col-lg-6 col-xl-4 has-background-video" data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
 	 <video class="pause" muted>
 		<source src="<?php echo $data['background_video'];?>" type="video/mp4">
 	  </video>
@@ -58,7 +61,7 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
 	 <label><?php echo $data['label'];?></label>
    </div>
- <?php endif;?>
+ <?php endif; endif;?>
 <?php
 	endforeach;
 endforeach;
