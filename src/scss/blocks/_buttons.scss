@@ -3,16 +3,16 @@
 	font-family: $sans-serif;
 	font-weight: 200;
 	border-radius: 0;
+	border: solid 2px transparent;
 	transition: all 0.3s ease;
 	margin-bottom: 1.5rem;
+	box-sizing: border-box;
   }
 
   .is-style-fill {
 	  .wp-block-button__link {
 		  background: $deep-grayish-olive;
 		  color: $white;
-		  border: none;
-
 		  &:hover {
 				background: darken($deep-grayish-olive,10%);
 			}
@@ -23,8 +23,7 @@
 		.wp-block-button__link {
 			background: $transparent;
 			color: $black;
-			border: solid 2px $black;
-
+			border-color: $black;
 			&:hover {
 				  background: $black;
 				  color: $white;
@@ -34,9 +33,9 @@
 
 	.wp-block-button {
 		.has-vizcaya-palm-background-color {
+
 			background: $vizcaya-palm;
 			color: $white;
-			border: solid 2px $vizcaya-palm;
 
 			&:hover {
 				  background-color: darken($vizcaya-palm,10%)!important;
@@ -54,6 +53,37 @@
 		}
 	}
 }
+
+	.wp-block-button {
+	.has-deep-grayish-olive-background-color {
+		background: $deep-grayish-olive;
+		color: $white;
+		box-sizing: border-box!important;
+		border: solid 2px transparent;
+
+
+		&:hover {
+			  background-color: transparent!important;
+			  color: $deep-grayish-olive;
+			  border: solid 2px $deep-grayish-olive;
+		  }
+	}
+}
+
+
+
+.wp-block-button.is-style-outline.has-raw-sienna-color {
+	a {
+		&:hover {
+		background-color: $raw-sienna!important;
+		color: #fff;
+		border-color: $raw-sienna;
+		}
+	}
+}
+
+
+
 
 
 

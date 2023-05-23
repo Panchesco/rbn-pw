@@ -25,6 +25,7 @@
   --raw-sienna: #B85E00;
   --ivory: #F4EDE5;
   --white: #ffffff;
+  --bs-link-hover-color: inherit;
 }
 
 //Smooth Scroll
@@ -100,7 +101,11 @@ div,p,ul,ol,dl {
 }
 
 p {
-	padding-bottom:$padding-normal;;
+	padding-bottom:$padding-normal;
+}
+
+.spotlight p {
+	text-align: left;
 }
 
 figcaption p {
@@ -128,28 +133,7 @@ p a {
 }
 
 p a:hover {
-  color: var(--raw-sienna);
-}
-
-p a:not(.returnto)::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 3px;
-  bottom: -3px;
-  left: 0;
-  background-color: var(--raw-sienna);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-p a:hover::before {
-  transform: scaleX(1);
-}
-
-a.no-decoration:hover::before {
-	transform: scaleX(0);
+  color: darken($raw-sienna,10%);
 }
 
 .offset-left {
@@ -199,12 +183,13 @@ a.no-decoration:hover::before {
   @import "template-parts/event";
   @import "wp-overrides";
   @import "formidable-forms";
+  @import "blocks/logos-row";
 
-/*.narrow {
-  max-width: 80%!important;
+.narrow {
+
   margin: auto!important;
-  align-self: flex-end!important;
-}*/
+
+}
 
 body .is-layout-flow > * + * {
   margin-block-start: revert;
@@ -239,6 +224,14 @@ footer {
 
 h3.wp-block-heading{
   padding-bottom: $padding-extra;
+}
+
+main {
+	&:after {
+		display: block;
+		content: "";
+		padding-bottom: 11.5625rem;
+	}
 }
 
 

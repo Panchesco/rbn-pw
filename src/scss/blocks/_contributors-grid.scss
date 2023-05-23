@@ -33,6 +33,10 @@ figcaption,figcaption p  {
     transition: all 300ms ease-in-out;
     transform: scale(1);
 	width: 100%;
+	video {
+		display: block;
+		width: 100%;
+	}
   }
 
   .fade-in {
@@ -111,8 +115,23 @@ figcaption,figcaption p  {
     max-width: 100%;
   }
 
-  @media all and (min-width:992px) {
-      .contributor-grid-card {
-          max-width: 26.5rem;
-      }
-  }
+.contributor-grid-card {
+
+	   max-width: 100%;
+}
+
+@media all and (min-width:768px) {
+	.contributor-grid-card {
+		max-width: 26.5rem;
+		 max-width: 48%;
+	}
+}
+
+  @media all and (min-width:1400px) {
+		.contributor-grid-card {
+		   max-width: 26.5rem;
+		   max-width: 32%;
+		}
+	}
+
+

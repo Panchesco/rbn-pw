@@ -49,7 +49,8 @@ if ( ! function_exists( 'rbn_pw_setup_theme' ) ) {
 				'style',
 				'navigation-widgets',
 				'appearance-tools',
-				'custom-spacing'
+				'custom-spacing',
+				'buttons'
 			)
 		);
 

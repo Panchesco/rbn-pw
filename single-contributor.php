@@ -53,7 +53,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 	</div><!-- /.row -->
 </div><!-- /.container -->
 <?php if( isset( $fields['media_gallery'] )  && ! empty( $fields['media_gallery']) ) : // Begin #stage branch ?>
-<div id="stage" class="has-ivory-buff-background-color my-xl-6 px-4 px-xl-6">
+<div id="stage" class="has-ivory-buff-background-color my-6 px-4 px-xl-6">
 	<div>
 		<div class="row">
 			<h2 class="visually-hidden"><?php _e("Contributor Work","rbn-pw");?></h2>

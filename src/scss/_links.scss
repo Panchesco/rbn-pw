@@ -85,16 +85,6 @@ h6 a {
 	}
 }
 
-.wp-block-button.is-style-outline.has-raw-sienna-color {
-	a {
-		&:hover {
-		background-color: $raw-sienna!important;
-		color: #fff;
-		border-color: $raw-sienna;
-		}
-	}
-}
-
 a[target="_blank"] {
 	&:after {
 		font-family: 'dashicons';
@@ -103,3 +93,4 @@ a[target="_blank"] {
 		margin-bottom: -15px;
 	}
 }
+

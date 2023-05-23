@@ -1,0 +1,13 @@
+{
+    "name": "acf/logo",
+    "title": "RBN Logos Row Block",
+    "description": "Row of Logos",
+    "category": "formatting",
+    "icon": "",
+    "keywords": [""],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "logos-row.php"
+    },
+    "align": "full"
+}

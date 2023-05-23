@@ -1,0 +1,40 @@
+		.logo-row {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		flexwrap: no-wrap;
+		margin: 0;
+
+		div {
+			max-width: 100%;
+			padding: 2rem;
+			gap: 1rem;
+			padding-bottom: 3rem;
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+}
+
+
+@media all and (min-width:1240px) {
+		.logo-row {
+			display: flex;
+			flex-direction: row;
+			gap: 1rem;
+			justify-content: space-around;
+			align-items: center;
+			flexwrap: no-wrap;
+			div {
+				padding-bottom: 0;
+			}
+			margin:auto;
+	}
+
+	.col-md-8 {
+		.logo-row {
+			margin: 0 -164px;
+		}
+	}
+}

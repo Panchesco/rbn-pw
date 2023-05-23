@@ -26,7 +26,7 @@ $grid = [];
 $field = get_field('contributors_grid');
 
 ?>
-<div class="d-flex flex-wrap contributors-grid justify-content-center justify-content-xl-start gap-4 px-3 px-lg-0">
+<div class="d-flex flex-wrap contributors-grid justify-content-center justify-content-xl-start gap-4 px-3 px-lg-0 pb-4">
 <?php
 // Set contributor rows and sub fields from Contributor post to grid array.
 foreach( $field as  $row ) :
@@ -49,7 +49,7 @@ foreach( $field as  $row ) :
 // Display contributor grid card
 if( $post_status == 'publish') :
 if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  ) : ?>
- <div class="contributor-grid-card loading col col-12 col-lg-6 col-xl-4 has-background-video" data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
+ <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 has-background-video" data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
 	 <video class="pause" muted>
 		<source src="<?php echo $data['background_video'];?>" type="video/mp4">
 	  </video>
@@ -57,7 +57,7 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 	 <label><?php echo $data['label'];?></label>
    </div>
 <?php else: ?>
- <div class="contributor-grid-card loading col-lg-4" data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
+ <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 " data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
 	 <label><?php echo $data['label'];?></label>
    </div>
