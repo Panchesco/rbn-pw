@@ -133,7 +133,7 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
 	 * @link https://www.billerickson.net/wordpress-color-palette-button-styling-gutenberg
 	 */
 	function block_editor_scripts() {
-		wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/dist/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
+		wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/dist/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( $this->theme_path . '/dist/js/editor.js' ), true );
 	}
 
 	function register_acf_blocks() {

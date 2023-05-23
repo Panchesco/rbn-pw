@@ -42,7 +42,7 @@ foreach( $field as  $row ) :
 	$data = [	'post_id' => $post_id,
 				'permalink' => get_the_permalink($post_id),
 					'label' => get_field('label',$post_id),
-					'background_image' => $image['sizes']['rbn-card'],
+					'background_image' => ( isset( $image['sizes']['rbn-card']) && !empty( $image['sizes']['rbn-card']))  ? $image['sizes']['rbn-card'] : "",
 					'background_video' => $video,
 				];
 

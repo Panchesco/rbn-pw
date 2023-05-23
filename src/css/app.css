@@ -15998,6 +15998,10 @@ figure {
   margin: 0 0 1em;
 }
 
+.wp-element-caption {
+  font-style: italic;
+}
+
 html :where(.is-position-sticky) {
   --wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height, 0px);
 }

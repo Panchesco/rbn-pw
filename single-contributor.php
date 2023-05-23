@@ -115,7 +115,7 @@ $next_title = get_field('grantee_organization',$next->ID);
 	<div class="row ">
 	<div class="col-xl-8 mx-auto">
 	<h2 class="visually-hidden"><?php _e('Contibutors Navigation','rbn-pw');?></h2>
-<?php if( $prev ) :?><div class="d-flex flex-wrap gap-4 pb-6 justify-content-between w-100">
+<?php if( $prev ) :?><div class="d-flex flex-wrap gap-4 pb-6 justify-content-between">
 	<div class="col">
 		<div class="left-arrow"><a class="text-start" href="<?php echo $prev_permalink;?>"><?php echo $prev_title;?></a></div>
 	</div><?php endif;?>

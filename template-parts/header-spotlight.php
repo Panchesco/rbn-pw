@@ -14,6 +14,7 @@
 
 global $template;
 $base = basename($template,'.php');
+if( isset( $post->ID ) ) {
 $spotlight = get_fields($post->ID);
 
 $archives = ['archive-events','archive-news'];
@@ -37,5 +38,6 @@ if( ! in_array( $base, $archives ) ) {
     dynamic_sidebar( 'news-header-spotlight' );
   }
   }
+}
 }?>
 
