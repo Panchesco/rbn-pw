@@ -4,6 +4,7 @@
 				<div>
 					<input type="checkbox" id="hi">
 				  	<label class="menu me-auto" for="hi">
+						<span class="visually-hidden"><?php _e('Toggle Mobile Navigation','rnb-wp');?></span>
 				  		<div class="bar"></div>
 				  		<div class="bar"></div>
 				  		<div class="bar"></div>
@@ -46,15 +47,15 @@
 			<div class="col-12 col-xl-6 d-flex flex-column">
 				<?php global $post;  if( is_home() || is_front_page() ) : ?>
 				<h1><?php bloginfo('sitename');?></h1>
-				<p class="h2"><?php bloginfo('description');?></p>
+				<h2 class="h2"><?php bloginfo('description');?></h2>
 				<?php elseif( isset($post->post_type ) && in_array($post->post_type,['news','events','contributor']) ) : ?>
 				<h1 class="fw-lighter order-2"><?php echo get_post_type_object($post->post_type)->label;?></h1>
-				<p class="h1 order-1"><a href="<?php echo bloginfo('siteurl');?>"><?php bloginfo('sitename');?></a></p>
+				<h2 class="h1 order-1"><a href="<?php echo bloginfo('siteurl');?>"><?php bloginfo('sitename');?></a></h2>
 				<?php else: ?>
 				<?php if( isset( $post->post_type ) ) :?>
 				<h1 class="fw-lighter order-2"><?php echo $post->post_title; ?></h1>
 				<?php endif ;?>
-				<p class="h1 order-1"><a href="<?php echo bloginfo('siteurl');?>"><?php bloginfo('sitename');?></a></p>
+				<h2 class="h1 order-1"><a href="<?php echo bloginfo('siteurl');?>"><?php bloginfo('sitename');?></a></h2>
 				<?php endif;?>
 			</div>
 			<div class="d-none d-xl-block col-xl-6">

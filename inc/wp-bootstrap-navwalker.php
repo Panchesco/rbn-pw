@@ -96,7 +96,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 				} else {
 					$atts['title'] = $item->attr_title;
 				}
-
+				$atts['title'] = ( $atts['title'] == strip_tags( $item->title ) ) ? "" : $atts['title'];
 				$atts['target'] = ! empty( $item->target ) ? $item->target : '';
 				$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
 				// If item has_children add atts to a.
