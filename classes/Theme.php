@@ -43,9 +43,9 @@ wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/js/app.min.js' ), array('
         <?php
     }
 
-
     function image_sizes() {
         add_image_size('rbn-card','600','600',['center','center']);
+		add_image_size('rbn-large','690','690',[]);
     }
 
     function custom_image_sizes( $sizes ) {

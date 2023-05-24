@@ -116,6 +116,20 @@ reps: 1,
   // your page initialization code here
   // the DOM will be available here
   app.init();
+
+
+  const lazies = document.querySelectorAll('img[loading="lazy"]');
+
+console.log(lazies.length)
+
+lazies.forEach(( image ) => {
+	console.log( image.src )
+})
+
+
+
+
+
 })();
 
 

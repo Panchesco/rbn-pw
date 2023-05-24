@@ -40,14 +40,15 @@ foreach( $field as  $row ) :
 	$video = get_field('background_video',$post_id);
 	$audio_descriptions = get_field('audio_descriptions',$post_id);
 	$curr_lang = get_locale();
+	$aria_label = ( isset($image['ID']) ) ? get_post_meta($image['ID'], '_wp_attachment_image_alt', TRUE) : "";
 
 	$data = [	'post_id' => $post_id,
 				'permalink' => get_the_permalink($post_id),
 					'label' => get_field('label',$post_id),
 					'background_image' => ( isset( $image['sizes']['rbn-card']) && !empty( $image['sizes']['rbn-card']))  ? $image['sizes']['rbn-card'] : "",
-					'aria_label' => get_post_meta($image['ID'], '_wp_attachment_image_alt', TRUE),
+					'aria_label' => $aria_label,
 					'background_video' => $video,
-					'audio_descriptions' =>  $audio_descriptions,
+					'audio_descriptions' =>  (isset($audio_descriptions) && is_array($audio_descriptions)) ? $audio_descriptions : [],
 				];
 // Display contributor grid card
 if( $post_status == 'publish') :

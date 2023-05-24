@@ -593,3 +593,5 @@ function rbnpw_block_editor_assets() {
 
 add_action( 'enqueue_block_editor_assets','rbnpw_block_editor_assets');
 add_post_type_support( 'page', 'excerpt' );
+
+apply_filters( 'wp_lazy_loading_enabled', true, 'img' );

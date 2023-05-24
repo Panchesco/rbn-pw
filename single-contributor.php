@@ -38,6 +38,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 	}
 
 	$post_id = get_the_ID();
+
 ?>
 <div class="container">
 	<div class="row">
@@ -71,7 +72,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 	<div>
 		<div class="items items-<?php echo $media_row_count;?> py-6">
 			<?php foreach( $fields['media_gallery'] as $key => $item ) : $item['width'] = $fields['column_widths'][$key]; ?>
-				<div class="rbn-w-<?php echo $fields['column_widths'][$key];?>">
+				<div class="w-100 rbn-w-<?php echo $fields['column_widths'][$key];?>">
 			<?php if( $item['type'] == 'embed' ) {
 				get_template_part('template-parts/embed','embed',$item);
 			} elseif( $item['type'] == 'oembed' ) {
@@ -104,12 +105,20 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 </div><!-- /.container -->
 <?php endif; ?>
 <?php
+
 $prev = get_previous_post();
-$prev_permalink = get_the_permalink($prev->ID);
-$prev_title = get_field('grantee_organization',$prev->ID);
+
+if( $prev ) {
+	$prev_permalink = get_the_permalink($prev->ID);
+	$prev_title = get_field('grantee_organization',$prev->ID);
+}
+
 $next = get_next_post();
-$next_permalink = get_the_permalink($next->ID);
-$next_title = get_field('grantee_organization',$next->ID);
+
+if( $next ) {
+	$next_permalink = get_the_permalink($next->ID);
+	$next_title = get_field('grantee_organization',$next->ID);
+}
 ?>
 <nav class="container">
 	<div class="row ">

@@ -20,10 +20,13 @@
   }
 
   .wp-block-button.is-style-outline {
+
+
 		.wp-block-button__link {
 			background: $transparent;
 			color: $black;
 			border-color: $black;
+			padding: calc(0.667em + 2px) calc(1.333em + 2px)!important;
 			&:hover {
 				  background: $black;
 				  color: $white;
