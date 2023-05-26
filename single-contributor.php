@@ -91,7 +91,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 		<div class="d-xl-flex flex-wrap col-xl-8 justify-content-around pb-5">
 			<h2 class="text-center w-100 pb-6"><?php _e('Contributor Profile','rbn-wp');?></h2>
 			<?php if( isset( $fields['grantee_headshot'] ) && ! empty( $fields['grantee_headshot'] ) ) : ?>
-			<figure class="d-block contributor-photo pb-5">
+			<figure class="d-block contributor-photo pb-4 pb-xl-5">
 				<div class="mx-auto"><?php echo wp_get_attachment_image($fields['grantee_headshot'],'large',['class' => 'img-fluid']);
 			$caption = wp_get_attachment_caption($fields['grantee_headshot']);
 			if( $caption ) :?></div><figcaption class="fs-5 fst-italic pt-2"><?php echo $caption;?></figcaption><?php endif;?>

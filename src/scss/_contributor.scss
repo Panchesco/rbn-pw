@@ -135,10 +135,29 @@ video.pause {
 	}
 }
 
-.contributor-photo img {
-	max-width: 40rem;
-	height: auto;
+.contributor-photo {
+	margin: auto;
 }
+
+
+	.contributor-photo img,
+	.contributor-photo figcaption {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: auto;
+	}
+
+@media all and (min-width:768px) {
+	.contributor-photo img,
+	.contributor-photo figcaption
+	 {
+		max-width: 40rem;
+		height: auto;
+	}
+}
+
+
 
 
 
