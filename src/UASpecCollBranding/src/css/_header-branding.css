@@ -1,0 +1,81 @@
+/* Black bar on top */
+.ua-speccoll-branding {
+  background-color: var(--black);
+  font-size: 16px;
+  font-family: var(--font-family-serif);
+}
+
+.ua-speccoll-branding a {
+  border: none;
+}
+
+.ua-speccoll-branding button {
+  box-shadow: none;
+}
+
+/* Special Collections branding */
+.ua-speccoll-branding__trigger {
+  position: relative;
+  height: 55px;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+}
+
+.ua-speccoll-branding__trigger:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  display: block;
+  height: 6px;
+  width: 15px;
+  background-image: url("speccoll-branding-arrow.svg");
+  transform: translateY(-50%);
+}
+
+.ua-speccoll-branding__branding {
+  width: 240px;
+  height: 40px;
+}
+
+/* UNIVERSITY LIBRARIES logo */
+.ua-speccoll-branding__main-library {
+  display: none;
+}
+
+@media (--screen-sm) {
+  .ua-speccoll-branding__main-library {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+.ua-speccoll-branding__main-library-icon {
+  width: 107px;
+  height: 33px;
+}
+
+/* Flexbox grid-system */
+.ua-speccoll-branding__row {
+  position: relative;
+  display: flex;
+}
+
+.ua-speccoll-branding__row--top {
+  position: relative;
+  display: flex;
+  max-width: 1200px;
+  padding: 8px 12px;
+  margin: 0 auto;
+}
+
+.ua-speccoll-branding__col {
+  flex: 1;
+}
+
+/* Use this to right-align the content of a column */
+.ua-speccoll-branding__col--align-right {
+  flex: 1;
+  text-align: right;
+}

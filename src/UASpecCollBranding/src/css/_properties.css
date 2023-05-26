@@ -1,0 +1,17 @@
+:root {
+  --black: #212121;
+  --darker-black: #161616;
+  --white: #E2E2E2;
+  --screen-xs: 0;
+  --screen-sm: 576px;
+  --screen-md: 856px;
+  --screen-lg: 992px;
+  --screen-xl: 1200px;
+  --font-family-serif: "ff-meta-serif-web-pro", Cambria, Georgia, Times, "Times New Roman", serif;
+}
+
+@custom-media --screen-xs (min-width: 0);
+@custom-media --screen-sm (min-width: 576px);
+@custom-media --screen-md (min-width: 856px);
+@custom-media --screen-lg (min-width: 992px);
+@custom-media --screen-xl (min-width: 1200px);
