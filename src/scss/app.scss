@@ -29,6 +29,10 @@
   --bs-link-hover-color: inherit;
 }
 
+.border-deep-grayish-olive-color {
+	border-color: var(--deep-grayish-olive)!important;
+}
+
 //Smooth Scroll
 html {
   scroll-behavior: smooth;
@@ -185,6 +189,7 @@ p a:hover {
   @import "wp-overrides";
   @import "formidable-forms";
   @import "blocks/logos-row";
+  @import "blocks/event-profile";
 
 .narrow {
 
@@ -232,6 +237,17 @@ main {
 		display: block;
 		content: "";
 		padding-bottom: 11.5625rem;
+	}
+}
+
+@media all and (min-width:1200px) {
+
+	.w-xl-auto {
+		width:auto!important;
+	}
+
+	.w-lg-75 {
+		width:75%!important;
 	}
 }
 

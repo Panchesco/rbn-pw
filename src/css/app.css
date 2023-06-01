@@ -19119,6 +19119,10 @@ textarea.form-control-lg {
   --bs-link-hover-color: inherit;
 }
 
+.border-deep-grayish-olive-color {
+  border-color: var(--deep-grayish-olive) !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -23931,6 +23935,27 @@ html :where(.is-position-sticky) {
     margin: 0 -164px;
   }
 }
+.archive-event h5, .archive-event .h5 {
+  line-height: 1.4;
+}
+
+.grouping .headshot-caption h3, .grouping .headshot-caption .h3 {
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.4;
+}
+
+.archive-event-header ul {
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  padding: 0;
+}
+
+.accessibility-statement p {
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: lighter;
+}
+
 .narrow {
   margin: auto !important;
 }
@@ -23977,4 +24002,13 @@ main:after {
   display: block;
   content: "";
   padding-bottom: 11.5625rem;
+}
+
+@media all and (min-width: 1200px) {
+  .w-xl-auto {
+    width: auto !important;
+  }
+  .w-lg-75 {
+    width: 75% !important;
+  }
 }
