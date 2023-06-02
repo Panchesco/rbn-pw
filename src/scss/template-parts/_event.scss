@@ -1,3 +1,6 @@
+.event-metadata {
+	@include h4;
+}
 
 iframe {
 	display: block;
@@ -52,7 +55,7 @@ ul,ol{
 			.grouping {
 
 			figure {
-				max-width: 185px;
+				//max-width: 185px;
 				p {
 					margin: 0 0 .4rem 0;
 				}
@@ -153,7 +156,7 @@ ul,ol{
 			.grouping {
 
 				figure {
-					max-width: 185px;
+					//max-width: 185px;
 					p {
 						margin: 0 0 .4rem 0;
 					}

@@ -6,10 +6,26 @@
 }
 
 .grouping .headshot-caption {
-	h3 {
+
+	h2,.h2 {
+		font-family: $serif;
+		font-size: $h4-font-size;
+		font-weight: 200;
+		margin-bottom: .4rem;
+	}
+
+
+	h3,.h3 {
 		font-family: $sans-serif !important;
 		margin-bottom: 1rem!important;
-		line-height: 1.4;
+		font-size: 1.5rem;
+	}
+
+	h4,.h4 {
+		font-family: $sans-serif;
+		  font-size: 1rem;
+		  font-weight: 200;
+		  margin-bottom: $padding-normal;
 	}
 }
 
@@ -25,3 +41,6 @@
 		font-weight: lighter;
 	}
 }
+
+
+

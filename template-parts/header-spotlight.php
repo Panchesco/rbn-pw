@@ -24,7 +24,7 @@ if( ! in_array( $base, $archives ) ) {
 	  <?php if( isset( $spotlight['spotlight_copy'] ) && ! empty( $spotlight['spotlight_copy'] ))  : ?>
     <aside class="spotlight">
       <p class="fst-italic"><?php echo $spotlight['spotlight_copy'];?></p>
-      <?php if( isset( $spotlight['spotlight_attribution'] ) && ! empty($spotlight['spotlight_attribution']) ) :?><p class="text-end"><cite>&mdash; <?php echo $spotlight['spotlight_attribution'];?></cite></p><?php endif;?>
+      <?php if( isset( $spotlight['spotlight_attribution'] ) && ! empty($spotlight['spotlight_attribution']) ) :?><cite class="text-end">&mdash; <?php echo $spotlight['spotlight_attribution'];?></cite><?php endif;?>
     </aside>
 	<?php endif;?>
   <?php }

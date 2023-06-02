@@ -31,10 +31,10 @@
 			<div class="grouping">
 					<?php if( isset($groups) && is_array( $groups )  ) : foreach( $groups as $group ) : ?>
 					<?php if( isset( $group['group_heading'] ) && ! empty( $group['group_heading'] )) :?>
-						<h4><?php echo $group['group_heading'];?></h4>
+						<h2 class="h4"><?php echo $group['group_heading'];?></h2>
 						<div class="d-xl-flex flex-wrap row gx-4 mb-4 border-bottom border-deep-grayish-olive-color">
 						<?php if( isset($group['profile']) && is_array( $group['profile']) ) : foreach( $group['profile'] as $profile ) : ?>
-								<figure class="col-xl col-xl-4">
+								<figure class="col-xl-4">
 									<div class="headshot has-mineral-gray-background-color one-one">
 									<?php echo wp_get_attachment_image($profile['headshot'], 'rbn-card', false,['class' => 'img-fluid m-auto m-xl-0']); ?>
 									</div><!-- /.headshot -->

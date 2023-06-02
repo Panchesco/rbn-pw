@@ -48,7 +48,7 @@ $footer_col_count = ( ( isset($fields['map_intro']) && !empty($fields['map_intro
 		<div class="headshot-wrapper col-xl-4 pe-xl-4">
 			<figure>
 		 	<?php if( isset( $profile['headshot'] )  && ! empty( $profile['headshot'] )) :?>
-		 		<div class="headshot pt-2 pb-4">
+		 		<div class="headshot py-2">
 				<?php echo wp_get_attachment_image($profile['headshot'], 'rbn-card', false,['class' => 'img-fluid w-100']); ?>
 				</div><!-- /.headshot -->
 				<?php endif;?>

@@ -555,7 +555,7 @@ function add_style_select_buttons( $buttons ) {
 add_filter( 'mce_buttons_2', 'add_style_select_buttons' );
 
 //add custom styles to the WordPress editor
-function my_custom_styles( $init_array ) {
+function rbn_pw_block_custom_styles( $init_array ) {
 
 	$style_formats = array(
 		// These are the custom styles
@@ -578,6 +578,36 @@ function my_custom_styles( $init_array ) {
 			'block' => 'div',
 			'classes' => 'arrow-right',
 			'wrapper' => false,
+		),
+		array(
+			'title' => 'Event Metadata',
+			'block' => 'div',
+			'classes' => 'event-metadata',
+			'wrapper' => false,
+		),
+		array(
+			'title' => 'Sans-Serif Regular',
+			'block' => 'div',
+			'classes' => 'h5',
+			'wrapper' => false,
+		),
+		array(
+			'title' => 'Sans-Serif Large',
+			'block' => 'div',
+			'classes' => 'h3',
+			'wrapper' => false,
+		),
+		array(
+			'title' => 'Sans-Serif Extra Large UPPERCASE',
+			'block' => 'div',
+			'classes' => 'h4',
+			'wrapper' => false,
+		),
+		array(
+			'title' => 'Sans-Serif Extra Large',
+			'block' => 'div',
+			'classes' => 'h2',
+			'wrapper' => false,
 		)
 	);
 	// Insert the array, JSON ENCODED, into 'style_formats'
@@ -585,7 +615,7 @@ function my_custom_styles( $init_array ) {
 	return $init_array;
 }
 // Attach callback to 'tiny_mce_before_init'
-add_filter( 'tiny_mce_before_init', 'my_custom_styles' );
+add_filter( 'tiny_mce_before_init', 'rbn_pw_block_custom_styles' );
 
 function rbnpw_block_editor_assets() {
 	wp_register_script( 'contributors-grid', get_template_directory_uri() . '/blocks/contributors-grid/index.js', [], null, true );

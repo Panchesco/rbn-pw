@@ -31,6 +31,7 @@ if( $selected_events ){ ?>
 								'event_cta' => get_field('event_cta',$id),
 								'cta_text' => get_field('cta_text',$id),
 								'groups' => get_field('groups',$id),
+								'intro' => get_field('intro',$id),
 								'row_count' => $row->row_count,
 								'total_rows' => $row->total_rows];
 

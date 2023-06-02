@@ -19470,6 +19470,10 @@ html {
   display: none;
 }
 
+cite {
+  display: block;
+}
+
 #global-header .container {
   position: relative;
   z-index: 10;
@@ -20078,6 +20082,15 @@ figure.headshot img {
   margin-bottom: 5rem;
 }
 
+.event-metadata {
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
 iframe {
   display: block;
   max-width: 100%;
@@ -20120,9 +20133,6 @@ iframe {
   font-size: 1.5rem;
 }
 
-.grouping figure {
-  max-width: 185px;
-}
 .grouping figure p {
   margin: 0 0 0.4rem 0;
 }
@@ -20195,9 +20205,6 @@ iframe {
     height: 0.325rem;
     background: #B85E00;
     margin-top: 0.8rem;
-  }
-  .archive-event .grouping figure {
-    max-width: 185px;
   }
   .archive-event .grouping figure p {
     margin: 0 0 0.4rem 0;
@@ -23939,10 +23946,22 @@ html :where(.is-position-sticky) {
   line-height: 1.4;
 }
 
+.grouping .headshot-caption h2, .grouping .headshot-caption .h2 {
+  font-family: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-bottom: 0.4rem;
+}
 .grouping .headshot-caption h3, .grouping .headshot-caption .h3 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   margin-bottom: 1rem !important;
-  line-height: 1.4;
+  font-size: 1.5rem;
+}
+.grouping .headshot-caption h4, .grouping .headshot-caption .h4 {
+  font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
 }
 
 .archive-event-header ul {
@@ -23973,16 +23992,16 @@ h2.wp-block-heading,
   padding-bottom: 5rem;
 }
 
-p + h1, p + .h1,
-p + h2,
-p + .h2 {
-  padding-top: 1.5rem;
+/*
+p + h1,
+p + h2 {
+	padding-top: $padding-normal;
 }
 
-p + h3, p + .h3 {
-  padding-top: 1.5rem;
+p + h3 {
+	padding-top: $padding-normal;
 }
-
+*/
 footer .wp-block-columns,
 footer h1.wp-block-heading,
 footer .wp-block-heading.h1,
