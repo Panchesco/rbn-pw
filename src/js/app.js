@@ -117,19 +117,6 @@ reps: 1,
   // the DOM will be available here
   app.init();
 
-
-  const lazies = document.querySelectorAll('img[loading="lazy"]');
-
-console.log(lazies.length)
-
-lazies.forEach(( image ) => {
-	console.log( image.src )
-})
-
-
-
-
-
 })();
 
 
@@ -153,7 +140,24 @@ lazies.forEach(( image ) => {
 			trigger: 'focus',
 		} );
 	} );
-} )();
+
+	const navbar = document.querySelector("#navbar")
+	const toggleLabel = document.querySelector("#toggle-label");
+
+	document.querySelector('#hi').addEventListener("change",function(){
+		if( this.checked ) {
+			this.setAttribute('disabled',true)
+			navbar.classList.add('show')
+			setTimeout(() => {
+				this.removeAttribute('disabled')
+			},500)
+		} else {
+			this.removeAttribute('disabled')
+			navbar.classList.remove('show')
+		}
+	})
+
+ })();
 
 
 

@@ -1,23 +1,23 @@
 <div id="global-header" class="has-ivory-buff-background-color">
 	<nav id="header" class="navbar navbar-expand-md container">
-			<div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'rbn-pw' ); ?>">
-				<div>
-					<input type="checkbox" id="hi">
-				  	<label class="menu me-auto" for="hi">
-						<span class="visually-hidden"><?php _e('Toggle Mobile Navigation','rnb-wp');?></span>
+			<div class="navbar-toggler" data-bs-toggle="collapse" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'rbn-pw' ); ?>">
+				<div><input type="checkbox" class="visually-hidden" id="hi">
+				  	<label id="toggle-label" class="menu me-auto" for="hi"><span><?php echo _e('Toggle Mobile Navigation','rbn-pw');?></span>
+					  <div class="hamburger-wrapper">
 				  		<div class="bar"></div>
 				  		<div class="bar"></div>
 				  		<div class="bar"></div>
+					  </div>
 					</label>
 				</div>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
-			<div class="d-xl-flex ms-xl-auto flex-xl-column">
+				<div class="d-flex ms-xl-auto flex-column">
 			<?php
 				// Loading WordPress Custom Menu (theme_location).
 				wp_nav_menu(
 					array(
-						'menu_class'     => 'navbar-nav ms-auto  has-sans-serif-font-family strtoupper order-lg-2',
+						'menu_class'     => 'navbar-nav p-0 m-0 ms-md-auto has-sans-serif-font-family strtoupper order-2',
 						'container'      => '',
 						'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
 						'walker'         => new WP_Bootstrap_Navwalker(),
@@ -25,21 +25,21 @@
 					)
 				);
 			?>
-		<div class="d-flex order-1 ms-md-auto">
-			<?php $array = trp_custom_language_switcher();?>
-			<?php //IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. ?>
-			<ul id="language-switcher" data-no-translation class="d-flex py-4">
-				<?php foreach ($array as $name => $item){ ?>
-						<li>
-							<a href="<?php echo $item['current_page_url']?>">
-								<span><?php echo $item['language_name']?>
-								</span>
-							</a>
-						</li>
-				<?php } ?>
-			</ul>
+				<div class="order-1 d-flex justify-content-xl-end">
+				<?php $array = trp_custom_language_switcher();?>
+				<?php //IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. ?>
+				<ul id="language-switcher" data-no-translation class="d-inline-block py-4">
+					<?php foreach ($array as $name => $item){ ?>
+							<li class="d-inline-block">
+								<a href="<?php echo $item['current_page_url']?>">
+									<span><?php echo $item['language_name']?>
+									</span>
+								</a>
+							</li>
+					<?php } ?>
+				</ul>
+				</div>
 		</div>
-			</div>
 	</div><!-- /.navbar-collapse -->
 	</nav>
 	<div id="butterfly" class="container">

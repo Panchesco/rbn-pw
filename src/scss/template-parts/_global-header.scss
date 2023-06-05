@@ -45,14 +45,14 @@ cite {
 		content: "";
 		 width: 117px;
 		height:100px;
-		background: url("/wp-content/themes/rbn-pw/dist/imgs/svg/monarch-butterfly-path.svg");
+		background: url("../imgs/svg/monarch-butterfly-path.svg");
 		background-repeat: none;
 		background-size: cover;
 		background-position: center center;
 		position: absolute;
 		bottom: -88px;
 		animation-name: butterfly;
-		animation-duration: 1s;
+		animation-duration: 0;
 		animation-fill-mode: forwards;
 	}
 
@@ -97,7 +97,7 @@ cite {
 			content: "";
 			width: 171px;
 			height: 147px;
-			background: url("/wp-content/themes/rbn-pw/dist/imgs/svg/monarch-butterfly-path.svg");
+			background: url("../imgs/svg/monarch-butterfly-path.svg");
 			background-repeat: none;
 			background-size: cover;
 			background-position: center center;
@@ -191,14 +191,14 @@ cite {
   //transform: translate(-50%, -50%);
   padding-top: 1.5rem;
   cursor: pointer;
-  transition: 0.5s ease;
+  transition: .4 ease;
   height: 25px;
   .bar {
 	width: 50px;
 	height: 5px;
 	background: $black;
 	border-radius: 2px;
-	transition: 0.4s ease;
+	transition: 300ms ease;
 	&:not(:first-child) {
 	  margin-top: 5px;
 	}
@@ -214,12 +214,15 @@ cite {
   }
 }
 #hi {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
 
-position: absolute;
-top: -9999px;
-left: -9999px;
-
-
+.navbar-toggler label span {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
 }
 #hi:checked + .menu {
   transform: rotatey(180deg);
