@@ -32,7 +32,7 @@ reps: 1,
 			   card.classList.add('fade-in');
 		   		});
 				   if( card.classList.contains('has-background-video')) {
-					  app.playVideo(card.querySelector('video'),i)
+					  app.playVideo(card.querySelector('.video-thumb'),i)
 				   }
 		   	}
 		   }
@@ -156,6 +156,21 @@ reps: 1,
 			navbar.classList.remove('show')
 		}
 	})
+
+/**
+ * Compare current URL pathname against global nav items
+ * add class active if nav item matches current URL
+ * to insure menu highlighting.
+ */
+	const path = ( new URL(window.location.href) ).pathname
+	const nav = document.querySelectorAll('#menu-global-nav li a');
+	nav.forEach( (item) => {
+		const domain = (new URL(item.href))
+		if( domain.pathname == path ) {
+			item.classList.add('active')
+		}
+	})
+
 
  })();
 

@@ -26,6 +26,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 	$fields['column_widths'] = ( isset($fields['column_widths']) && ! empty($fields['column_widths']) ) ? explode("-",$fields['column_widths']) : ['33','33','33'];
 	$fields['embed_aspect_ratio'] = ( isset($fields['embed_aspect_ratio']) ) ? $fields['embed_aspect_ratio'] : '';
 	$fields['oembed_aspect_ratio'] = ( isset($fields['oembed_aspect_ratio']) ) ? $fields['oembed_aspect_ratio'] : '';
+	$fields['easy_video_player'] = ( isset($fields['easy_video_player']) ) ? $fields['easy_video_player'] : '';
 	$media_row_count = count($fields['media_gallery']);
 
 	// Add an array to set some classes for stage column widths.
@@ -79,6 +80,8 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 				get_template_part('template-parts/oembed','oembed',$item);
 			} elseif( $item['type'] == 'image') {
 				get_template_part('template-parts/image','image',$item);
+			} elseif( $item['type'] == 'easyvideo') {
+				get_template_part('template-parts/easyvideo','easyvideo',$item);
 			}?>
 				</div>
 			<?php endforeach; ?>

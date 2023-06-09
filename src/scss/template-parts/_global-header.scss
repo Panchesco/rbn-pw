@@ -151,17 +151,17 @@ cite {
 
 
 	li {
-		padding: 0 .6rem ;
+		padding: 0 .8rem!important;
 		border: solid 1px $black;
 		border-width: 0 1px 0 0;
 
 		&:first-child {
-			padding-left: 0;
+			padding-left: 0!important;
 		}
 
 		&:last-child {
 			border: none;
-			padding-right: 0;
+			padding-right:0!important;
 		}
 	}
 
@@ -170,11 +170,9 @@ cite {
 		z-index: 40;
 		display: block;
 		text-decoration: none;
-		color: $deep-grayish-olive;
+		color: $raw-sienna;
 		&:hover {
-			color: $black;
-
-
+			color: darken($raw-sienna,10%);
 		}
 	}
 }

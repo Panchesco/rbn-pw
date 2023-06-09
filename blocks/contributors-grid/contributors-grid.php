@@ -62,7 +62,7 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 	</span>
 	<?php endif; ?>
 	<?php endforeach;?>
-	 <video class="pause" muted>
+	 <video class="video-thumb pause" muted>
 		<source src="<?php echo $data['background_video'];?>" type="video/mp4">
 	  </video>
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
