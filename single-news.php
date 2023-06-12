@@ -24,6 +24,13 @@ if ( have_posts() ) :
 	endwhile;
 endif;
  ?>
+ <?php if( current_user_can( 'edit_posts' ) && !empty(get_the_excerpt())) :?>
+	 <div class="alert alert-info" role="alert">
+		 <h2><?php _e('News Item Excerpt Translation','rbn-pw');?></h2>
+		 <p><em><?php _e('Note: You are seeing this block because you are logged in and are able to edit news items. In the block below, please provide the translation for the news item excerpt. The excerpt is the summary that appears on the cards linking to the news item. Non-editors will not see this block when they visit the page.','rbn-pw');?></em></p>
+		 <?php the_excerpt();?>
+	 </div>
+ <?php endif;?>
  <div class="row d-flex justify-content-center pb-6">
 	 <div class="col col-xl-8 py-6">
 	 <h3 class="left-arrow"><a class="returnto" href="/news"><?php _e('View all News','rbn-pw');?></a></h3>
