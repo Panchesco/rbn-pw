@@ -20017,12 +20017,17 @@ a[target=_blank]:after {
   display: flex;
   flex-direction: column;
 }
+.archive-news-wrapper a {
+  color: #222222;
+  text-decoration: none;
+}
 .archive-news-wrapper .readmore {
   display: block;
   bottom: 0;
   left: 0;
   text-decoration: none;
   margin-top: auto;
+  color: #B85E00;
 }
 .archive-news-wrapper .readmore:hover {
   color: #854400;
