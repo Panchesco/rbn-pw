@@ -114,6 +114,10 @@ $prev = get_previous_post();
 if( $prev ) {
 	$prev_permalink = get_the_permalink($prev->ID);
 	$prev_title = get_field('grantee_organization',$prev->ID);
+} else {
+	$prev = true;
+	$prev_permalink = "/contributors";
+	$prev_title = __('View all Contributors','rbn-pw');
 }
 
 $next = get_next_post();
@@ -121,6 +125,10 @@ $next = get_next_post();
 if( $next ) {
 	$next_permalink = get_the_permalink($next->ID);
 	$next_title = get_field('grantee_organization',$next->ID);
+} else {
+	$next = true;
+	$next_permalink = "/contributors";
+	$next_title = __('View all Contributors','rbn-pw');
 }
 ?>
 <nav class="container">

@@ -20,8 +20,6 @@
   }
 
   .wp-block-button.is-style-outline {
-
-
 		.wp-block-button__link {
 			background: $transparent;
 			color: $black;
@@ -81,6 +79,24 @@
 		background-color: $raw-sienna!important;
 		color: #fff;
 		border-color: $raw-sienna;
+		}
+	}
+}
+
+@media all and (max-width:420px) {
+	.is-layout-flex {
+		.wp-block-buttons>.wp-block-button.wp-block-button__width-50 {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.event-title  {
+		white-space: wrap;
+		.h1 {
+			font-size: 4.25rem!important;
+			padding: 0!important;
+
 		}
 	}
 }

@@ -19783,6 +19783,19 @@ footer#footer .menu-item.current-menu-item.active {
   border-color: #B85E00;
 }
 
+@media all and (max-width: 420px) {
+  .is-layout-flex .wp-block-buttons > .wp-block-button.wp-block-button__width-50 {
+    display: block;
+    width: 100%;
+  }
+  .event-title {
+    white-space: wrap;
+  }
+  .event-title .h1 {
+    font-size: 4.25rem !important;
+    padding: 0 !important;
+  }
+}
 .narrow {
   max-width: 960px;
   margin: auto;
@@ -20315,7 +20328,6 @@ iframe {
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  word-break: break-word;
 }
 
 .wp-block-button__link.aligncenter {
@@ -24031,7 +24043,7 @@ h3.wp-block-heading, .wp-block-heading.h3 {
 main:after {
   display: block;
   content: "";
-  padding-bottom: 11.5625rem;
+  padding-bottom: 5.5625rem;
 }
 
 @media all and (min-width: 1200px) {
