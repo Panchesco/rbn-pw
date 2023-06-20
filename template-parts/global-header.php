@@ -1,6 +1,6 @@
 <div id="global-header" class="has-ivory-buff-background-color">
-	<nav id="header" class="navbar navbar-expand-md container">
-			<div class="navbar-toggler" data-bs-toggle="collapse" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'rbn-pw' ); ?>">
+	<nav id="header" class="navbar navbar-expand-md container" aria-label="Global Navigation">
+			<div class="navbar-toggler" data-bs-toggle="collapse" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle global navigation', 'rbn-pw' ); ?>">
 				<div><input type="checkbox" class="visually-hidden" id="hi">
 				  	<label id="toggle-label" class="menu me-auto" for="hi"><span><?php echo _e('Toggle Mobile Navigation','rbn-pw');?></span>
 					  <div class="hamburger-wrapper">

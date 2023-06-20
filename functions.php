@@ -672,3 +672,11 @@ add_action( 'enqueue_block_editor_assets','rbnpw_block_editor_assets');
 add_post_type_support( 'page', 'excerpt' );
 
 apply_filters( 'wp_lazy_loading_enabled', true, 'img' );
+
+add_action('wp_enqueue_scripts',function() {
+global $post;
+	if( isset($post->post_excerpt) && !empty($post->post_excerpt) ) {?>
+<meta name="description" content="<?php echo esc_attr($post->post_excerpt);?>">
+	<?php
+}
+});

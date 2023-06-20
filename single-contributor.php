@@ -44,8 +44,8 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 <div class="container">
 	<div class="row">
 		<div class="col-xl-8">
-			<h1 class="h2"><?php echo $fields['grantee_organization'];?></h1>
-			<h2 class="project-name pb-4"><?php echo $fields['grantee_project_name'];?></h2>
+			<h2 class="h2 pb-4"><?php echo $fields['grantee_organization'];?></h1>
+			<h3 class="h2 project-name pb-4"><?php echo $fields['grantee_project_name'];?></h2>
 		</div><!-- /.col-lg-8 -->
 	</div>
 	<div class="row d-flex justify-content-center pb-4">
