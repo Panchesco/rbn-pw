@@ -22,10 +22,10 @@ $archives = ['archive-events','archive-news'];
 if( ! in_array( $base, $archives ) ) {
   if( isset( $spotlight['show_spotlight'] ) && $spotlight['show_spotlight']  == 1 ) { ?>
 	  <?php if( isset( $spotlight['spotlight_copy'] ) && ! empty( $spotlight['spotlight_copy'] ))  : ?>
-    <aside class="spotlight">
+    <div class="spotlight">
       <p class="fst-italic"><?php echo $spotlight['spotlight_copy'];?></p>
       <?php if( isset( $spotlight['spotlight_attribution'] ) && ! empty($spotlight['spotlight_attribution']) ) :?><cite class="text-end">&mdash; <?php echo $spotlight['spotlight_attribution'];?></cite><?php endif;?>
-    </aside>
+    </div>
 	<?php endif;?>
   <?php }
 } else {

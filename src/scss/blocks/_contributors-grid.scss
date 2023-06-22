@@ -64,7 +64,8 @@ figcaption,figcaption p  {
     }
   }
 
- .fade-in:hover {
+ .fade-in:hover,
+ .fade-in:focus-within	{
     box-shadow: 5px 5px 14px rgba(0,0,0,.5);
     transform: scale(1.01);
   }
@@ -104,6 +105,11 @@ figcaption,figcaption p  {
     margin-left: 1rem;
     text-shadow: 2px 2px 0 var(--black);
     z-index:3;
+	border: solid .2rem $deep-grayish-olive;
+  }
+
+  .contributor-grid-card:focus-within .label {
+	  border: solid .2rem $white;
   }
 
   .contributor-grid-card video {

@@ -36,6 +36,6 @@ $query = new WP_Query($params);
 <?php endwhile; endif; wp_reset_postdata();?>
 </div><!-- /.row -->
 
-<nav id="pagination" class="d-flex justify-content-center pagination"><?php pagination( $paged, $query->max_num_pages);?></nav>
+<nav id="pagination" class="d-flex justify-content-center pagination" aria-label="<?php _e("News number links","rbn-pw");?>"><?php pagination( $paged, $query->max_num_pages);?></nav>
 </main>
 <?php get_footer(); ?>

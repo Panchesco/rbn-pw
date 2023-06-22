@@ -41,7 +41,7 @@
 						<?php endif;?>
 						<?php if( get_locale() == 'es_ES' ) : ?>
 							<p class="text-end">
-								<a class="no-decoration" href="#header" role="navigation" aria-label="Vuelva al comienzo de la pagina">
+								<a class="no-decoration" href="#header" aria-label="Vuelva al comienzo de la pagina">
 									<svg id="Group_199" data-name="Group 199" xmlns="http://www.w3.org/2000/svg" width="115.338" height="62" viewBox="0 0 115.338 62">
 						  			<text id="Arriba" transform="translate(19.338)" fill="#fff" font-size="42" font-family="Oswald-ExtraLight, Oswald" font-weight="200"><tspan x="0" y="50">Arriba</tspan></text>
 						  			<g id="Right_Arrow" data-name="Right Arrow" transform="translate(0 53.871) rotate(-90)">
@@ -52,7 +52,7 @@
 								</a>
 							</p>
 						<?php else : ?>
-							<p class="text-end"><a class="no-decoration" href="#header" role="navigation" aria-label="Scroll to top"><svg id="TOP" xmlns="http://www.w3.org/2000/svg" width="87.338" height="62" viewBox="0 0 87.338 62">
+							<p class="text-end"><a class="no-decoration" href="#header" aria-label="Scroll to top"><svg id="TOP" xmlns="http://www.w3.org/2000/svg" width="87.338" height="62" viewBox="0 0 87.338 62">
 							  <text id="Top-2" data-name="Top" transform="translate(19.338)" fill="#fff" font-size="42" font-family="Oswald-ExtraLight, Oswald" font-weight="200"><tspan x="0" y="50">Top</tspan></text>
 							  <g id="Right_Arrow" data-name="Right Arrow" transform="translate(0 53.871) rotate(-90)">
 								<rect id="Rectangle_21" data-name="Rectangle 21" width="38.204" height="0.889" transform="translate(0 3.395)" fill="#fff"/>
@@ -74,6 +74,7 @@
 						<?php
 						endif;
 					?>
+					<p class="h6"><a class="has-ivory-buff-color" href="https://lib.arizona.edu/policies/copyright-take-down-request"><?php _e('University of Arizona Libraries copyright take-down request policy','rbn-pw');?></a></p>
 					</div><!-- /.col -->
 				</div>
 			</div>

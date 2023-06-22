@@ -36,7 +36,8 @@
 						<?php if( isset($group['profile']) && is_array( $group['profile']) ) : foreach( $group['profile'] as $profile ) : ?>
 								<figure class="col-xl-4">
 									<div class="headshot has-mineral-gray-background-color one-one">
-									<?php echo wp_get_attachment_image($profile['headshot'], 'rbn-card', false,['class' => 'img-fluid m-auto m-xl-0']); ?>
+									<?php $img = rbn_get_attachment($profile['headshot'],'rbn-card'); ?>
+									<img class="img-fluid m-auto m-xl-0" src="<?php echo $img->url;?>" alt="<?php echo $img->alt_text;?>">
 									</div><!-- /.headshot -->
 									<figcaption class="headshot-caption pt-2 pb-5">
 										<?php echo $profile['headshot_caption'];?>

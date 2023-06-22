@@ -1,4 +1,4 @@
-<div id="global-header" class="has-ivory-buff-background-color">
+<header id="global-header" class="has-ivory-buff-background-color">
 	<nav id="header" class="navbar navbar-expand-md container" aria-label="Global Navigation">
 			<div class="navbar-toggler" data-bs-toggle="collapse" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle global navigation', 'rbn-pw' ); ?>">
 				<div><input type="checkbox" class="visually-hidden" id="hi">
@@ -21,18 +21,19 @@
 						'container'      => '',
 						'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
 						'walker'         => new WP_Bootstrap_Navwalker(),
-						'theme_location' => 'main-menu',
+						'theme_location' => 'main-menu'
 					)
 				);
 			?>
 			<div class="order-1 d-flex justify-content-xl-end">
+				<?php if( is_plugin_active('translatepress-multilingual/index.php') ) :?>
 				<?php $array = trp_custom_language_switcher(); ?>
 				<?php //IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. ?>
 				<ul id="language-switcher" data-no-translation class="d-flex py-5 py-lg-2">
 					<?php foreach ($array as $name => $item){ ?>
 							<li class="p-0">
 								<?php if( get_locale() != $item['language_code'] ) : ?>
-								<a href="<?php echo $item['current_page_url']?>"><?php echo trim( $item['language_name'] );?></a>
+								<a href="<?php echo $item['current_page_url']?>" tabindex="0"><?php echo trim( $item['language_name'] );?></a>
 								<?php else :?>
 								<?php echo trim( $item['language_name']); ?>
 							<?php endif;?>
@@ -40,6 +41,7 @@
 					<?php } ?>
 				</ul>
 			</div>
+			<?php endif;?>
 		</div>
 	</div><!-- /.navbar-collapse -->
 	</nav>
@@ -51,12 +53,12 @@
 				<h2 class="h2"><?php bloginfo('description');?></h2>
 				<?php elseif( isset($post->post_type ) && in_array($post->post_type,['news','events','contributor']) ) : ?>
 				<h1 class="fw-lighter order-2"><?php echo get_post_type_object($post->post_type)->label;?></h1>
-				<h2 class="h1 order-1"><a href="<?php echo bloginfo('siteurl');?>"><?php bloginfo('sitename');?></a></h2>
+				<h2 class="h1 order-1"><?php bloginfo('sitename');?></h2>
 				<?php else: ?>
 				<?php if( isset( $post->post_type ) ) :?>
 				<h1 class="fw-lighter order-2"><?php echo $post->post_title; ?></h1>
 				<?php endif ;?>
-				<h2 class="h1 order-1"><a href="<?php echo bloginfo('siteurl');?>"><?php bloginfo('sitename');?></a></h2>
+				<h2 class="h1 order-1"><?php bloginfo('sitename');?></h2>
 				<?php endif;?>
 			</div>
 			<div class="d-none d-xl-block col-xl-6">
@@ -64,4 +66,4 @@
 			</div>
 		</div><!-- end .row -->
 	</div><!-- end .container -->
-</div>
+</header>

@@ -5,7 +5,6 @@
  * @since v1.0
  */
 
-
 $theme_customizer = __DIR__ . '/inc/customizer.php';
 if ( is_readable( $theme_customizer ) ) {
 	//require_once $theme_customizer;
@@ -675,8 +674,25 @@ apply_filters( 'wp_lazy_loading_enabled', true, 'img' );
 
 add_action('wp_enqueue_scripts',function() {
 global $post;
-	if( isset($post->post_excerpt) && !empty($post->post_excerpt) ) {?>
-<meta name="description" content="<?php echo esc_attr($post->post_excerpt);?>">
+$excerpt = ( isset($post->post_excerpt) ) ? $post->post_excerpt : "" ;
+$excerpt = (strlen( $excerpt ) > 156 ) ? trim(substr($excerpt,0,156),'.') . '...' : $excerpt;
+
+?>
+<meta name="description" content="<?php echo esc_attr($excerpt);?>">
 	<?php
-}
 });
+
+/*
+ ** Return image object data along with Spanish alt text.
+ ** @param $post_id int;
+ ** @return obj
+ */
+ function rbn_get_attachment( $post_id,$size='large' ) {
+ 		$locale = get_locale();
+		$img = get_post($post_id);
+	 	$img->url = wp_get_attachment_image_url($img->ID,$size,['class' => 'img-fluid']);
+	 	$img->alt_text = ['en_US' => "",'es_ES' => ""];
+	 	$img->alt_text = ( $locale == 'es_ES' ) ? get_field('es_alt',$img->ID ) : get_post_meta($img->ID, '_wp_attachment_image_alt', TRUE);
+		 $img->alt_text = esc_attr( $img->alt_text);
+	return $img;
+ }

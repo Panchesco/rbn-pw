@@ -37,6 +37,7 @@ foreach( $field as  $row ) :
 	$post_id = $row['contributor']->ID;
 	$post_status = $row['contributor']->post_status;
 	$image = get_field('background_image',$post_id);
+	$img = rbn_get_attachment($image['ID'],'rbn-card');
 	$video = get_field('background_video',$post_id);
 	$audio_descriptions = get_field('audio_descriptions',$post_id);
 	$curr_lang = get_locale();
@@ -53,13 +54,10 @@ foreach( $field as  $row ) :
 // Display contributor grid card
 if( $post_status == 'publish') :
 if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  ) : ?>
- <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 has-background-video" data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
-	<span class="visually-hidden" role="img" aria-label="<?php echo $data['aria_label'];?>"></span>
+ <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 has-background-video" data-bg="<?php echo $img->url;?>" style="background-image: url('<?php echo $img->url;?>')">
+	<span class="visually-hidden" role="img" alt="<?php echo $img->alt_text;?>"></span>
 	<?php foreach( $data['audio_descriptions'] as $desc ) :?>
 	<?php if( isset($desc['language']) && $desc['language'] == $curr_lang )  :?>
-	<span class="visually-hidden">
-		<a href="<?php echo $desc['audio_file'];?>"><?php echo $desc['instructions'];?></a>
-	</span>
 	<?php endif; ?>
 	<?php endforeach;?>
 	 <video class="video-thumb pause" muted>
@@ -69,9 +67,9 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 	 <div class="label"><?php echo $data['label'];?></div>
    </div>
 <?php else: ?>
- <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 " data-bg="<?php echo $data['background_image'];?>" style="background-image: url('<?php echo $data['background_image'];?>')">
+ <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 " data-bg="<?php echo $img->url;?>" style="background-image: url('<?php echo $img->url;?>')">
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
-	 <span role="img" aria-label="<?php echo $data['aria_label'];?>"></span>
+	 <span role="img" alt="<?php echo $img->alt_text;?>"></span>
 	 <div class="label"><?php echo $data['label'];?></div>
    </div>
  <?php endif; endif;?>
