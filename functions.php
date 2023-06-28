@@ -502,8 +502,8 @@ if( ! function_exists('pagination') ) {
 //include_once( __DIR__ . '/fields/contributor.php');
 //include_once( __DIR__ . '/fields/spotlight.php');
 include_once( __DIR__ . '/classes/Theme.php');
+include_once( __DIR__ . '/classes/RbnContributorsGrid.php');
 $rbnpw = new RbnPw\Theme();
-
 
 add_action( 'wp_enqueue_scripts', [$rbnpw,'google_fonts'],10 );
 add_action( 'wp_enqueue_scripts', [$rbnpw,'load_scripts'],20 );
@@ -696,3 +696,5 @@ $excerpt = (strlen( $excerpt ) > 156 ) ? trim(substr($excerpt,0,156),'.') . '...
 		 $img->alt_text = esc_attr( $img->alt_text);
 	return $img;
  }
+
+

@@ -112,27 +112,30 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 <?php endif; ?>
 <?php
 
-$prev = get_previous_post();
+$grid = new RbnPw\RbnContributorsGrid(734,$post_id);
+$prev = $grid->prev;
 
-if( $prev ) {
-	$prev_permalink = get_the_permalink($prev->ID);
-	$prev_title = get_field('grantee_organization',$prev->ID);
+if( $prev !== false ) {
+	$prev_permalink = $prev['permalink'];
+	$prev_title = get_field('grantee_organization',$prev['ID']);
 } else {
 	$prev = true;
 	$prev_permalink = "/contributors";
 	$prev_title = __('View all Contributors','rbn-pw');
 }
 
-$next = get_next_post();
+$next = $grid->next;
 
-if( $next ) {
-	$next_permalink = get_the_permalink($next->ID);
-	$next_title = get_field('grantee_organization',$next->ID);
+if( $next !== false ) {
+	$next_permalink = $next['permalink'];
+	$next_title = get_field('grantee_organization',$next['ID']);
+
 } else {
 	$next = true;
 	$next_permalink = "/contributors";
 	$next_title = __('View all Contributors','rbn-pw');
 }
+
 ?>
 <nav class="container">
 	<div class="row ">
@@ -149,8 +152,15 @@ if( $next ) {
 	<?php endif;?>
 	</div>
 	</div>
+
 </nav>
+
+
+
+
 <?php endwhile; endif; ?>
+
+
 </main>
 <script>
 const navItems = document.querySelectorAll('.nav-item a');
@@ -161,4 +171,6 @@ navItems.forEach( (item) => {
 })
 </script>
 <?php
+
+
 get_footer();
