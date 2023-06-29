@@ -35,9 +35,13 @@ foreach( $field as  $row ) :
 
 
 	$post_id = $row['contributor']->ID;
+
 	$post_status = $row['contributor']->post_status;
+	$post_name = $row['contributor']->post_name;
 	$image = get_field('background_image',$post_id);
 	$img = rbn_get_attachment($image['ID'],'rbn-card');
+	$bg_color = get_field('background_color',$post_id);
+	$bg_color = ( !empty($bg_color) ) ? $bg_color : 'transparent';
 	$video = get_field('background_video',$post_id);
 	$audio_descriptions = get_field('audio_descriptions',$post_id);
 	$curr_lang = get_locale();
@@ -54,7 +58,7 @@ foreach( $field as  $row ) :
 // Display contributor grid card
 if( $post_status == 'publish') :
 if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  ) : ?>
- <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 has-background-video" data-bg="<?php echo $img->url;?>" style="background-image: url('<?php echo $img->url;?>')">
+ <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 has-background-video <?php echo $post_name;?>" data-bg="<?php echo $img->url;?>" style="background-color:<?php echo $bg_color;?>;background-image: url('<?php echo $img->url;?>')">
 	<span class="visually-hidden" role="img" alt="<?php echo $img->alt_text;?>"></span>
 	<?php foreach( $data['audio_descriptions'] as $desc ) :?>
 	<?php if( isset($desc['language']) && $desc['language'] == $curr_lang )  :?>
@@ -67,7 +71,7 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 	 <div class="label"><?php echo $data['label'];?></div>
    </div>
 <?php else: ?>
- <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 " data-bg="<?php echo $img->url;?>" style="background-image: url('<?php echo $img->url;?>')">
+ <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 <?php echo $post_name;?>" data-bg="<?php echo $img->url;?>" style="background-color:<?php echo $bg_color;?>;background-image:url('<?php echo $img->url;?>')">
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
 	 <span role="img" alt="<?php echo $img->alt_text;?>"></span>
 	 <div class="label"><?php echo $data['label'];?></div>
