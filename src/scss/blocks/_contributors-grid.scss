@@ -20,20 +20,30 @@ figcaption,figcaption p  {
   margin: auto;
 }
 
+.bg-img {
+	position:absolute;
+	opacity: 0;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background-image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+	background-repeat: no-repeat!important;
+	background-position: center center;
+	background-size: cover;
+}
+
 .contributor-grid-card {
+	background-color: #fc0;
 	box-sizing: border-box;
-    background-repeat: no-repeat!important;
-    background-position: center center;
-    background-size: cover;
     overflow: clip;
     position: relative;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(.8rem);
     transform-origin: center center;
     transition: all 300ms ease-in-out;
     transform: scale(1);
-	width: 100%;
-	video {
+	width: 100%;	video {
 		display: block;
 		width: 100%;
 	}

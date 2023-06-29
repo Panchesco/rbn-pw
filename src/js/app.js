@@ -1,6 +1,6 @@
 // An object literal
 const app = {
-cards: document.querySelectorAll('.contributor-grid-card'),
+cards: document.querySelectorAll('.bg-img'),
 videos: document.querySelectorAll('video'),
 timeouts: {playing: [], paused: []},
 reps: 1,

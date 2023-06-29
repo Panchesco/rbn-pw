@@ -58,7 +58,7 @@ foreach( $field as  $row ) :
 // Display contributor grid card
 if( $post_status == 'publish') :
 if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  ) : ?>
- <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 has-background-video <?php echo $post_name;?>" data-bg="<?php echo $img->url;?>" style="background-color:<?php echo $bg_color;?>;background-image: url('<?php echo $img->url;?>')">
+ <div class="contributor-grid-card col col-12 col-md-6 col-xl-3 has-background-video <?php echo $post_name;?>" style="background-color:<?php echo $bg_color;?>;">
 	<span class="visually-hidden" role="img" alt="<?php echo $img->alt_text;?>"></span>
 	<?php foreach( $data['audio_descriptions'] as $desc ) :?>
 	<?php if( isset($desc['language']) && $desc['language'] == $curr_lang )  :?>
@@ -68,12 +68,14 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 		<source src="<?php echo $data['background_video'];?>" type="video/mp4">
 	  </video>
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
+	 <div class="bg-img loading" data-bg="<?php echo $img->url;?>"></div>
 	 <div class="label"><?php echo $data['label'];?></div>
    </div>
 <?php else: ?>
- <div class="contributor-grid-card loading col col-12 col-md-6 col-xl-3 <?php echo $post_name;?>" data-bg="<?php echo $img->url;?>" style="background-color:<?php echo $bg_color;?>;background-image:url('<?php echo $img->url;?>')">
+ <div class="contributor-grid-card col col-12 col-md-6 col-xl-3 <?php echo $post_name;?>" data-bg="<?php echo $img->url;?>" style="background-color:<?php echo $bg_color;?>;">
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
 	 <span role="img" alt="<?php echo $img->alt_text;?>"></span>
+	 <div class="bg-img loading" data-bg="<?php echo $img->url;?>"></div>
 	 <div class="label"><?php echo $data['label'];?></div>
    </div>
  <?php endif; endif;?>

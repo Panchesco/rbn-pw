@@ -19818,14 +19818,25 @@ figcaption, figcaption p {
   margin: auto;
 }
 
-.contributor-grid-card {
-  box-sizing: border-box;
+.bg-img {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
   background-repeat: no-repeat !important;
   background-position: center center;
   background-size: cover;
+}
+
+.contributor-grid-card {
+  background-color: #fc0;
+  box-sizing: border-box;
   overflow: clip;
   position: relative;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(0.8rem);
   transform-origin: center center;
   transition: all 300ms ease-in-out;
