@@ -68,14 +68,28 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 		<source src="<?php echo $data['background_video'];?>" type="video/mp4">
 	  </video>
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
-	 <div class="bg-img loading" data-bg="<?php echo $img->url;?>"></div>
+	 <div role="status" class="rb-loader" style="background-color:<?php echo $bg_color;?>">
+		  <div class="loader-wrapper">
+			  <div class="visually-hidden loading-message"><?php _e('Loading...','rbn-pw');?></div>
+			  <span></span>
+			  <span></span>
+			  <span></span>
+		  </div><!-- /.loader-wrapper -->
+	  </div><!-- /.rb-loader -->
 	 <div class="label"><?php echo $data['label'];?></div>
    </div>
 <?php else: ?>
- <div class="contributor-grid-card col col-12 col-md-6 col-xl-3 <?php echo $post_name;?>" data-bg="<?php echo $img->url;?>" style="background-color:<?php echo $bg_color;?>;">
+ <div class="contributor-grid-card col col-12 col-md-6 col-xl-3 <?php echo $post_name;?>" >
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
-	 <span role="img" alt="<?php echo $img->alt_text;?>"></span>
-	 <div class="bg-img loading" data-bg="<?php echo $img->url;?>"></div>
+	 <div role="img" alt="<?php echo $img->alt_text;?>" class="bg-img" data-bg="<?php echo $img->url;?>"></div>
+	 <div role="status" class="rb-loader" style="background-color:<?php echo $bg_color;?>">
+		 <div class="loader-wrapper">
+			 <div class="visually-hidden loading-message"><?php _e('Loading...','rbn-pw');?></div>
+			 <span></span>
+			 <span></span>
+			 <span></span>
+		 </div><!-- /.loader-wrapper -->
+	 </div><!-- /.rb-loader -->
 	 <div class="label"><?php echo $data['label'];?></div>
    </div>
  <?php endif; endif;?>
