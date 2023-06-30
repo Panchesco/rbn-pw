@@ -63,12 +63,7 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 	<?php endforeach;?>
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
 	 <div role="status" class="rb-loader" style="background-color:<?php echo $bg_color;?>">
-		  <div class="loader-wrapper">
-			  <div class="visually-hidden loading-message"><?php _e('Loading...','rbn-pw');?></div>
-			  <span></span>
-			  <span></span>
-			  <span></span>
-		  </div><!-- /.loader-wrapper -->
+	 <?php get_template_part('template-parts/loader','loader');?>
 	  </div><!-- /.rb-loader -->
 	  <div role="img" alt="<?php echo $img->alt_text;?>" class="bg-img" data-bg="<?php echo $img->url;?>"></div>
 	   <video class="video-thumb pause" muted>
@@ -81,12 +76,7 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
 	 <div role="img" alt="<?php echo $img->alt_text;?>" class="bg-img" data-bg="<?php echo $img->url;?>"></div>
 	 <div role="status" class="rb-loader" style="background-color:<?php echo $bg_color;?>">
-		 <div class="loader-wrapper">
-			 <div class="visually-hidden loading-message"><?php _e('Loading...','rbn-pw');?></div>
-			 <span></span>
-			 <span></span>
-			 <span></span>
-		 </div><!-- /.loader-wrapper -->
+	 <?php get_template_part('template-parts/loader','loader');?>
 	 </div><!-- /.rb-loader -->
 	 <div class="label"><?php echo $data['label'];?></div>
    </div>

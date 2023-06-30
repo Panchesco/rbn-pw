@@ -74,8 +74,12 @@
 						<?php
 						endif;
 					?>
-					<p class="h6"><a class="has-ivory-buff-color" href="https://lib.arizona.edu/policies/copyright-take-down-request"><?php _e('University of Arizona Libraries copyright take-down request policy','rbn-pw');?></a></p>
 					</div><!-- /.col -->
+				</div>
+				<div class="col d-xl-flex">
+					<p class="h6 has-white-color pt-1 pb-2">&copy; <?php _e('Copyright','rbn-pw');?> <?php echo date('Y');?> &ndash; Arizona Board of Regents For The University of Arizona</p>
+					<span class="h6 pt-1 pb-2 px-3 d-none d-xl-inline-block" role="presentation">|</span>
+					<p class="h6 pt-1 pb-2"><a class="has-ivory-buff-color" href="https://lib.arizona.edu/policies/copyright-take-down-request"><?php _e('University of Arizona Libraries copyright take-down request policy','rbn-pw');?></a></p>
 				</div>
 			</div>
 			<?php endif;?>
