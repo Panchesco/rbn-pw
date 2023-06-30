@@ -70,8 +70,6 @@ reps: 1,
    videoPlaying: function(v) {
 
 	   if( v.readyState > 2 ) {
-
-
 	   		if( v.currentTime > 0 &&  ! v.paused && ! v.ended ) {
 		   		return true;
 	   		}

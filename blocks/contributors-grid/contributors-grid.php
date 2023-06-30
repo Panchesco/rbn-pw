@@ -33,9 +33,7 @@ foreach( $field as  $row ) :
 
 	foreach( $row as $key => $card ) :
 
-
 	$post_id = $row['contributor']->ID;
-
 	$post_status = $row['contributor']->post_status;
 	$post_name = $row['contributor']->post_name;
 	$image = get_field('background_image',$post_id);
@@ -58,15 +56,11 @@ foreach( $field as  $row ) :
 // Display contributor grid card
 if( $post_status == 'publish') :
 if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  ) : ?>
- <div class="contributor-grid-card col col-12 col-md-6 col-xl-3 has-background-video <?php echo $post_name;?>" style="background-color:<?php echo $bg_color;?>;">
-	<span class="visually-hidden" role="img" alt="<?php echo $img->alt_text;?>"></span>
+ <div class="contributor-grid-card col col-12 col-md-6 col-xl-3 has-background-video <?php echo $post_name;?>">
 	<?php foreach( $data['audio_descriptions'] as $desc ) :?>
 	<?php if( isset($desc['language']) && $desc['language'] == $curr_lang )  :?>
 	<?php endif; ?>
 	<?php endforeach;?>
-	 <video class="video-thumb pause" muted>
-		<source src="<?php echo $data['background_video'];?>" type="video/mp4">
-	  </video>
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
 	 <div role="status" class="rb-loader" style="background-color:<?php echo $bg_color;?>">
 		  <div class="loader-wrapper">
@@ -76,6 +70,10 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 			  <span></span>
 		  </div><!-- /.loader-wrapper -->
 	  </div><!-- /.rb-loader -->
+	  <div role="img" alt="<?php echo $img->alt_text;?>" class="bg-img" data-bg="<?php echo $img->url;?>"></div>
+	   <video class="video-thumb pause" muted>
+		  <source src="<?php echo $data['background_video'];?>" type="video/mp4">
+		</video>
 	 <div class="label"><?php echo $data['label'];?></div>
    </div>
 <?php else: ?>

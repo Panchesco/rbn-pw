@@ -19857,23 +19857,6 @@ figcaption, figcaption p {
   width: 100%;
 }
 
-.loader:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0;
-  margin: auto;
-  color: white;
-  content: "";
-  font-size: 1rem;
-  animation-name: loaderAnimation;
-  animation-duration: 3s;
-  background: black;
-  animation-fill-mode: forwards;
-  z-index: 1000;
-  height: auto;
-}
-
 .rb-loader {
   position: absolute;
   top: 0;
