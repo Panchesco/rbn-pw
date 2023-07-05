@@ -28,6 +28,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 	$fields['oembed_aspect_ratio'] = ( isset($fields['oembed_aspect_ratio']) ) ? $fields['oembed_aspect_ratio'] : '';
 	$fields['easy_video_player'] = ( isset($fields['easy_video_player']) ) ? $fields['easy_video_player'] : '';
 	$media_row_count = count($fields['media_gallery']);
+	$fields['media_gallery_align_items'] = ( isset($fields['media_gallery_align_items']) ) ? $fields['media_gallery_align_items'] : "center";
 
 	// Add an array to set some classes for stage column widths.
 	if( $media_row_count ==  1 ) {
@@ -38,7 +39,11 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 		$fields['column_widths'] = ['25', '50','25'];
 	}
 
+
+
 	$post_id = get_the_ID();
+
+
 
 ?>
 <div class="container">
@@ -71,7 +76,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 		</div>
 	</div>
 	<div>
-		<div class="items items-<?php echo $media_row_count;?> py-6">
+		<div class="items items-<?php echo $media_row_count;?> py-6 align-items-<?php echo $fields['media_gallery_align_items'];?>">
 			<?php foreach( $fields['media_gallery'] as $key => $item ) : $item['width'] = $fields['column_widths'][$key]; ?>
 				<div class="w-100 rbn-w-<?php echo $fields['column_widths'][$key];?>">
 			<?php if( $item['type'] == 'embed' ) {
@@ -100,7 +105,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 				<?php if( isset($img->url ) && ! empty( $img->url ) ) :?>
 				<img src="<?php echo $img->url; ?>" alt="<?php echo $img->alt_text;?>" /><?php endif;?>
 			<?php $caption = wp_get_attachment_caption($fields['grantee_headshot']);
-			if( $caption ) :?></div><figcaption class="fs-5 fst-italic pt-2"><?php echo $caption;?></figcaption><?php endif;?>
+			if( $caption ) :?></div><figcaption class="fs-5 pt-2"><?php echo $caption;?></figcaption><?php endif;?>
 			</figure>
 			<?php endif;?>
 			<div class="w-100">

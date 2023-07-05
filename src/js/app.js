@@ -31,11 +31,11 @@ reps: 1,
 			   card.style.backgroundImage = "url(" + card.dataset.bg + ")";
 			   card.classList.add('fade-in');
 		   		});
-				   if( card.classList.contains('has-background-video')) {
-					  app.playVideo(card.querySelector('.video-thumb'),i)
-				   }
 		   	}
 		   }
+	   })
+	   document.querySelectorAll('video').forEach( (video,i) => {
+		   app.playVideo(video)
 	   })
    },
    loadVideos: function() {

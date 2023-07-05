@@ -19338,7 +19338,6 @@ figure .media {
     flex-wrap: nowrap;
     gap: 0 4rem;
     justify-content: center;
-    align-items: center;
   }
   #stage .items figcaption {
     text-align: left;
@@ -19851,10 +19850,15 @@ figcaption, figcaption p {
   transition: all 300ms ease-in-out;
   transform: scale(1);
   width: 100%;
+  transform: scale(1);
 }
 .contributor-grid-card video {
   display: block;
   width: 100%;
+}
+.contributor-grid-card:hover {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
 }
 
 .rb-loader {

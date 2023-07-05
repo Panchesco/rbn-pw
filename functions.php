@@ -687,9 +687,18 @@ $excerpt = (strlen( $excerpt ) > 156 ) ? trim(substr($excerpt,0,156),'.') . '...
  ** @param $post_id int;
  ** @return obj
  */
- function rbn_get_attachment( $post_id,$size='large' ) {
+ function rbn_get_attachment( $post_id ,$size='large' ) {
+
+	 	if( ! $post_id ) {
+		 	return "";
+	 	}
+
  		$locale = get_locale();
 		$img = get_post($post_id);
+
+		if( ! $img ) {
+			return "";
+		}
 	 	$img->url = wp_get_attachment_image_url($img->ID,$size,['class' => 'img-fluid']);
 	 	$img->alt_text = ['en_US' => "",'es_ES' => ""];
 	 	$img->alt_text = ( $locale == 'es_ES' ) ? get_field('es_alt',$img->ID ) : get_post_meta($img->ID, '_wp_attachment_image_alt', TRUE);
