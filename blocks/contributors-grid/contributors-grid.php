@@ -37,7 +37,7 @@ foreach( $field as  $row ) :
 	$post_status = $row['contributor']->post_status;
 	$post_name = $row['contributor']->post_name;
 	$image = get_field('background_image',$post_id);
-	$img = rbn_get_attachment($image['ID'],'rbn-card');
+	$img = ( $image ) ? rbn_get_attachment($image['ID'],'rbn-card') : false;
 	$bg_color = get_field('background_color',$post_id);
 	$bg_color = ( !empty($bg_color) ) ? $bg_color : 'transparent';
 	$video = get_field('background_video',$post_id);
@@ -63,7 +63,7 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 	<?php endforeach;?>
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
 	 <div role="status" class="rb-loader" style="background-color:<?php echo $bg_color;?>">
-	 <?php get_template_part('template-parts/loader','loader');?>
+	 <?php if( $img ) :?><?php get_template_part('template-parts/loader','loader');?><?php endif;?>
 	  </div><!-- /.rb-loader -->
 	  <div role="img" alt="<?php echo $img->alt_text;?>" class="bg-img" data-bg="<?php echo $img->url;?>"></div>
 	   <video class="video-thumb pause" muted>
@@ -74,9 +74,9 @@ if( isset( $data['background_video'] ) && ! empty( $data['background_video'] )  
 <?php else: ?>
  <div class="contributor-grid-card col col-12 col-md-6 col-xl-3 <?php echo $post_name;?>" >
 	 <a href="<?php echo $data['permalink'];?>" class="sr" aria-label="<?php echo $data['label'];?>"></a>
-	 <div role="img" alt="<?php echo $img->alt_text;?>" class="bg-img" data-bg="<?php echo $img->url;?>"></div>
+	 <?php if( $img ) :?><div role="img" alt="<?php echo $img->alt_text;?>" class="bg-img" data-bg="<?php echo $img->url;?>"></div><?php endif; ?>
 	 <div role="status" class="rb-loader" style="background-color:<?php echo $bg_color;?>">
-	 <?php get_template_part('template-parts/loader','loader');?>
+	 <?php if( $img ) :?><?php get_template_part('template-parts/loader','loader');?><?php endif;?>
 	 </div><!-- /.rb-loader -->
 	 <div class="label"><?php echo $data['label'];?></div>
    </div>
