@@ -136,8 +136,8 @@ video.pause {
 
 .contributor-photo {
 	margin: auto;
+	width: 100%;
 }
-
 
 	.contributor-photo img,
 	.contributor-photo figcaption {
@@ -151,10 +151,42 @@ video.pause {
 	.contributor-photo img,
 	.contributor-photo figcaption
 	 {
-		max-width: 40rem;
+		width: 40rem;
 		height: auto;
 	}
 }
+
+
+.soft {
+	opacity: 0;
+}
+
+.remove-blur {
+	animation-name: removeBlur;
+	opacity: 0;
+	animation-duration: 600ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes removeBlur {
+	from {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.media {
+	overflow: clip;
+}
+
+
 
 
 

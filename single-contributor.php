@@ -38,13 +38,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 	} else {
 		$fields['column_widths'] = ['25', '50','25'];
 	}
-
-
-
 	$post_id = get_the_ID();
-
-
-
 ?>
 <div class="container">
 	<div class="row">
@@ -60,7 +54,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 	</div><!-- /.row -->
 </div><!-- /.container -->
 <?php if( isset( $fields['media_gallery'] )  && ! empty( $fields['media_gallery']) ) : // Begin #stage branch ?>
-<div id="stage" class="has-ivory-buff-background-color my-6 px-4 px-xl-6">
+<div id="stage" class="has-ivory-buff-background-color px-6 my-6 py-4 py-xl-6">
 	<div>
 		<div class="row">
 			<h2 class="visually-hidden"><?php _e("Contributor Work","rbn-pw");?></h2>
@@ -76,7 +70,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 		</div>
 	</div>
 	<div>
-		<div class="items items-<?php echo $media_row_count;?> py-6 align-items-<?php echo $fields['media_gallery_align_items'];?>">
+		<div class="items items-<?php echo $media_row_count;?> align-items-<?php echo $fields['media_gallery_align_items'];?>">
 			<?php foreach( $fields['media_gallery'] as $key => $item ) : $item['width'] = $fields['column_widths'][$key]; ?>
 				<div class="w-100 rbn-w-<?php echo $fields['column_widths'][$key];?>">
 			<?php if( $item['type'] == 'embed' ) {
@@ -88,7 +82,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 			} elseif( $item['type'] == 'easyvideo') {
 				get_template_part('template-parts/easyvideo','easyvideo',$item);
 			}?>
-				</div>
+			</div>
 			<?php endforeach; ?>
 		</div>
 	</div><!-- /.container -->
@@ -97,15 +91,26 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="d-xl-flex flex-wrap col-xl-8 justify-content-around pb-5">
-			<h2 class="text-center w-100 pb-6"><?php _e('Contributor Profile','rbn-wp');?></h2>
+			<h2 class="text-center w-100 py-6"><?php _e('Contributor Profile','rbn-wp');?></h2>
 			<?php if( isset( $fields['grantee_headshot'] ) && ! empty( $fields['grantee_headshot'] ) ) : ?>
-			<figure class="d-block contributor-photo pb-4 pb-xl-5">
-				<?php $img = rbn_get_attachment($fields['grantee_headshot'],'large');?>
+			<figure class="d-flex flex-column justify-content-start contributor-photo pb-4 pb-xl-5 overflow-hidden">
+				<?php $start = rbn_get_attachment($fields['grantee_headshot'],'rbn-thumbnail'); $img = rbn_get_attachment($fields['grantee_headshot'],'rbn-large');?>
 				<div class="mx-auto">
 				<?php if( isset($img->url ) && ! empty( $img->url ) ) :?>
-				<img src="<?php echo $img->url; ?>" alt="<?php echo $img->alt_text;?>" /><?php endif;?>
-			<?php $caption = wp_get_attachment_caption($fields['grantee_headshot']);
-			if( $caption ) :?></div><figcaption class="fs-5 pt-2"><?php echo $caption;?></figcaption><?php endif;?>
+				<img class="soft" src="<?php echo $start->url; ?>" alt="<?php echo $img->alt_text;?>" data-src="<?php echo $img->url; ?>" /><?php endif;?>
+			<?php
+				$caption = wp_get_attachment_caption($fields['grantee_headshot']);
+				$title = get_the_title($img->ID);
+				$attribution = get_field('attribution',$img->ID);
+			?>
+				<figcaption class="fs-5 pt-2">
+				<?php if( isset( $img->ID ) )  :?>
+				<div class="d-flex flex-wrap figcaption">
+					<?php if( ! empty($title) ) :?><span><em><?php echo $title;?></em></span><?php endif;?>
+					<?php if( ! empty( $attribution ) ) :?><span class="flex-grow-1 text-end"><?php the_field('attribution',$img->ID);?></span><?php endif; ?>
+				</div><?php endif;?>
+				<?php if( ! empty( $caption )) :?><div class="py-2 figcaption"><?php echo $caption;?></div><?php endif;?>
+				</figcaption>
 			</figure>
 			<?php endif;?>
 			<div class="w-100">

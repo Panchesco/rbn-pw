@@ -169,6 +169,18 @@ reps: 1,
 		}
 	})
 
+/** Blur thumbnail with class of .sort until larger image loads. */
+	const soft = document.querySelectorAll('.soft');
+	soft.forEach( (item,i) => {
+		const src =item.dataset.src;
+		const loadImage = new Image();
+		window.addEventListener( 'load', () => {
+			var isLoaded = loadImage.complete && loadImage.naturalHeight !== 0;
+			item.src = src;
+				item.classList.add('remove-blur')
+		})
+	})
+
 
  })();
 

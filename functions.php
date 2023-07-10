@@ -707,3 +707,6 @@ $excerpt = (strlen( $excerpt ) > 156 ) ? trim(substr($excerpt,0,156),'.') . '...
  }
 
 
+ add_filter('jpeg_quality', function($arg){return 100;});
+
+

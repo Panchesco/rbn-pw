@@ -113,7 +113,8 @@ p,.p {
 	text-align: left;
 }
 
-figcaption p {
+figcaption p,
+.figcaption {
 	font-size: $h5-font-size;
 }
 

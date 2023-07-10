@@ -41,8 +41,10 @@ class Theme {
     }
 
     function image_sizes() {
+		add_image_size('rbn-thumbnail','150','150',[]);
         add_image_size('rbn-card','600','600',['center','center']);
 		add_image_size('rbn-large','690','690',[]);
+		add_image_size('original','1200','1200',[]);
     }
 
     function custom_image_sizes( $sizes ) {
