@@ -607,6 +607,36 @@ function rbn_pw_block_custom_styles( $init_array ) {
 			'block' => 'div',
 			'classes' => 'h2',
 			'wrapper' => false,
+		),
+		array(
+			'title' => '1:1 Aspect Ratio',
+			'block' => 'div',
+			'classes' => 'ratio ratio-1x1',
+			'wrapper' => false,
+		),
+		array(
+			'title' => '16:9 Aspect Ratio',
+			'block' => 'div',
+			'classes' => 'ratio ratio-16x9',
+			'wrapper' => false,
+		),
+		array(
+			'title' => '4:3 Aspect Ratio',
+			'block' => 'div',
+			'classes' => 'ratio ratio-4x3',
+			'wrapper' => false,
+		),
+		array(
+			'title' => '21:9 Aspect Ratio',
+			'block' => 'div',
+			'classes' => 'ratio ratio-21x9',
+			'wrapper' => false,
+		),
+		array(
+			'title' => 'Margin Bottom',
+			'block' => 'div',
+			'classes' => 'mb-4',
+			'wrapper' => false,
 		)
 	);
 	// Insert the array, JSON ENCODED, into 'style_formats'

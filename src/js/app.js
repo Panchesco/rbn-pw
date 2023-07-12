@@ -29,10 +29,12 @@ reps: 1,
 		   img.src = card.dataset.bg;
 		   img.addEventListener('load',() => {
 			   card.style.backgroundImage = "url(" + card.dataset.bg + ")";
-			   card.classList.add('fade-in');
+			   setTimeout( () => {
+				   card.classList.add('fade-in');
+			   }, 300)
 		   		});
 		   	}
-		   }
+		 }
 	   })
 	   document.querySelectorAll('video').forEach( (video,i) => {
 		   app.playVideo(video)

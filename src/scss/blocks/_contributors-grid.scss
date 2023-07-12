@@ -67,6 +67,7 @@ figcaption,figcaption p  {
   }
 
 
+
 .rb-loader {
 	position: absolute;
 	top: 0;
@@ -102,6 +103,10 @@ figcaption,figcaption p  {
 		}
 	}
 }
+
+.fade-in + .rb-loader .loader-wrapper {
+	  display: none;
+ }
 
 @keyframes rbnLoader1{
 

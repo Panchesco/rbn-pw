@@ -6,6 +6,9 @@ foreach( $fields['groups'] as $key => $group ) {
 	$fields['groups'][$key]['group_heading'] = ( isset( $fields['groups'][$key]['group_heading'] ) ) ? $fields['groups'][$key]['group_heading']: "";
 }
 
+$fields['event_embed_code'] = ( ! empty($fields['event_embed_code']) ) ? $fields['event_embed_code'] : false;
+
+
 $footer_col_count = ( ( isset($fields['map_intro']) && !empty($fields['map_intro']) ) ||  (isset( $fields['map'] ) && !empty( $fields['map']) ) )  ? 2 : 1;
 
 ?>
@@ -13,8 +16,18 @@ $footer_col_count = ( ( isset($fields['map_intro']) && !empty($fields['map_intro
 	<div class="row">
 		<div class="event-title">
 			<h1><?php the_title();?></h1>
-		</div><!-- /.col -->
+		</div><!-- /div -->
 	</div><!-- /.row -->
+	<?php if( $fields['event_embed_code'])  :?><div class="row px-0 mx-0 py-4">
+		<figure id="event-embed-code-wrapper">
+			<div  class="<?php echo $fields['event_embed_aspect_ratio'];?> border border-solid border-dark box-shadow">
+			<?php echo $fields['event_embed_code'];?>
+			</div>
+			<figcaption class="fs-5 pt-2">
+				<?php echo $fields['event_embed_caption'];?>
+			</figcaption>
+		</figure>
+	</div><!-- ./row --><?php endif;?>
 	<div class="row archive-event-header g-0">
 		<div class="col-xl-7 ">
 			<?php echo $fields['date_time_heading']; ?>

@@ -19922,6 +19922,10 @@ figcaption, figcaption p {
   animation-name: rbnLoader3;
 }
 
+.fade-in + .rb-loader .loader-wrapper {
+  display: none;
+}
+
 @keyframes rbnLoader1 {
   0% {
     opacity: 0.8;
@@ -24447,4 +24451,7 @@ main:after {
   .w-lg-75 {
     width: 75% !important;
   }
+}
+.box-shadow {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
