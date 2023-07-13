@@ -79,9 +79,8 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 				get_template_part('template-parts/oembed','oembed',$item);
 			} elseif( $item['type'] == 'image') {
 				get_template_part('template-parts/image','image',$item);
-			} elseif( $item['type'] == 'easyvideo') {
-				get_template_part('template-parts/easyvideo','easyvideo',$item);
-			}?>
+			}
+			?>
 			</div>
 			<?php endforeach; ?>
 		</div>

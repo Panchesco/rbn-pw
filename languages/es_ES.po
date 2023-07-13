@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RBN Project Wesite\n"
-"POT-Creation-Date: 2023-06-06 09:49-0700\n"
-"PO-Revision-Date: 2023-06-06 10:23-0700\n"
+"POT-Creation-Date: 2023-07-13 09:20-0700\n"
+"PO-Revision-Date: 2023-07-13 09:27-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -31,6 +31,10 @@ msgstr "No encontrado"
 msgid "It looks like nothing was found at this location."
 msgstr "Parece que no hay nada aquí."
 
+#: archive-news.php:39
+msgid "News number links"
+msgstr ""
+
 #: author-bio.php:14
 #, php-format
 msgid "About %s"
@@ -50,91 +54,91 @@ msgstr "Archivos del autor: %s"
 msgid "Category Archives: %s"
 msgstr "Archivo de Categorías: %s"
 
-#: classes/Theme.php:50
+#: classes/Theme.php:52
 msgid "RBN Card"
 msgstr "Tarjeta RBN"
 
-#: classes/Theme.php:58
+#: classes/Theme.php:60
 msgid "Raw Sienna"
 msgstr ""
 
-#: classes/Theme.php:63
+#: classes/Theme.php:65
 msgid "Mesa"
 msgstr ""
 
-#: classes/Theme.php:68
+#: classes/Theme.php:70
 msgid "Ivory Buff"
 msgstr ""
 
-#: classes/Theme.php:73
+#: classes/Theme.php:75
 msgid "Ivory"
 msgstr ""
 
-#: classes/Theme.php:78
+#: classes/Theme.php:80
 msgid "Deep Grayish Olive"
 msgstr ""
 
-#: classes/Theme.php:83
+#: classes/Theme.php:85
 msgid "Vizcaya Palm"
 msgstr ""
 
-#: classes/Theme.php:88
+#: classes/Theme.php:90
 msgid "Mineral Gray"
 msgstr ""
 
-#: classes/Theme.php:93
+#: classes/Theme.php:95
 msgid "Black"
 msgstr "Negro"
 
-#: classes/Theme.php:98
+#: classes/Theme.php:100
 msgid "Dim Gray"
 msgstr "Grís ligero"
 
-#: classes/Theme.php:103
+#: classes/Theme.php:105
 msgid "60% Black"
 msgstr "60% Negro"
 
-#: classes/Theme.php:108
+#: classes/Theme.php:110
 msgid "Silver Medal"
 msgstr "Medalla plateada"
 
-#: classes/Theme.php:113
+#: classes/Theme.php:115
 msgid "White"
 msgstr "Blanco"
 
-#: classes/Theme.php:118
+#: classes/Theme.php:120
 msgid "Transparent"
 msgstr "Transparente"
 
-#: classes/Theme.php:162
+#: classes/Theme.php:164
 msgid "Footer Area One"
 msgstr "Área de pie de página uno"
 
-#: classes/Theme.php:170
+#: classes/Theme.php:172
 msgid "Footer Area Two"
 msgstr "Área de pie de página dos"
 
-#: classes/Theme.php:179
+#: classes/Theme.php:181
 msgid "Footer Area Three"
 msgstr "Área de pie de página tres"
 
-#: classes/Theme.php:188
+#: classes/Theme.php:190
 msgid "Events Page - Upcoming Events - Intro Copy"
 msgstr "Eventos - Próximamente - Intro"
 
-#: classes/Theme.php:198
+#: classes/Theme.php:200
 msgid "Events Page - Past Events - Intro Copy"
 msgstr "Eventos - Pasados - Intro"
 
-#: classes/Theme.php:207
+#: classes/Theme.php:209
 msgid "Events Archive - Header - Spotlight"
 msgstr ""
 
-#: classes/Theme.php:216
+#: classes/Theme.php:218
 msgid "News Archive - Header - Spotlight"
 msgstr "Noticias - Archivo - Encabezado - Citación enfocado"
 
-#: classes/Theme.php:225
+#: classes/Theme.php:227
 msgid "News Archive - Intro Copy"
 msgstr "Noticias - Archivo - Intro"
 
@@ -200,7 +204,7 @@ msgstr "Nada Encontrado"
 msgid "Apologies, but no results were found for the requested archive."
 msgstr "Disculpe. El archivo solicitado no ha arrojado resultados."
 
-#: content-single.php:34 content.php:113 functions.php:318 functions.php:345
+#: content-single.php:34 content.php:113 functions.php:317 functions.php:344
 #: image.php:57 index.php:17 page-news.php:28 page-nosidebar.php:25
 msgid "Edit"
 msgstr "Editar"
@@ -263,15 +267,23 @@ msgstr "<span class=\"%1$s\">Etiquetado</span> %2$s"
 msgid "Leave a comment"
 msgstr "Deja un comentario"
 
-#: functions.php:210
+#: footer.php:80
+msgid "Copyright"
+msgstr ""
+
+#: footer.php:82
+msgid "University of Arizona Libraries copyright take-down request policy"
+msgstr ""
+
+#: functions.php:209
 msgid "Older posts"
 msgstr "Entradas antiguas"
 
-#: functions.php:211
+#: functions.php:210
 msgid "Newer posts"
 msgstr "Nuevas entradas"
 
-#: functions.php:242
+#: functions.php:241
 #, php-format
 msgid ""
 "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" "
@@ -286,12 +298,12 @@ msgstr ""
 "vcard”><a class=“url fn n” href=“%5$s” title=“%6$s” rel=“author”>%7$s</a></"
 "span></span>"
 
-#: functions.php:248
+#: functions.php:247
 #, php-format
 msgid "View all posts by %s"
 msgstr "Ver todas las publicaciones de %s"
 
-#: functions.php:267
+#: functions.php:266
 msgid ""
 "This content is password protected. To view it please enter your password "
 "below."
@@ -299,61 +311,61 @@ msgstr ""
 "Este contenido está protegido por contraseña. Para verlo introduce tu "
 "contraseña a continuación."
 
-#: functions.php:270
+#: functions.php:269
 msgid "Password"
 msgstr "Contraseña"
 
-#: functions.php:271
+#: functions.php:270
 msgid "Submit"
 msgstr "Enviar"
 
-#: functions.php:316
+#: functions.php:315
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: functions.php:335
+#: functions.php:334
 #, php-format
 msgid "%1$s, %2$s"
 msgstr ""
 
-#: functions.php:341
+#: functions.php:340
 #, php-format
 msgid "%1$s ago"
 msgstr "Hace %1$s"
 
-#: functions.php:351
+#: functions.php:350
 msgid "Your comment is awaiting moderation."
 msgstr "Tu comentario está esperando ser moderado."
 
-#: functions.php:365
+#: functions.php:364
 msgid "Reply"
 msgstr "Responder"
 
-#: functions.php:407 functions.php:408
+#: functions.php:406 functions.php:407
 msgid "Name"
 msgstr "Nombre"
 
-#: functions.php:411 functions.php:412
+#: functions.php:410 functions.php:411
 msgid "Email"
 msgstr "Correo electrónico"
 
-#: functions.php:417
+#: functions.php:416
 msgid ""
 "Save my name, email, and website in this browser for the next time I comment."
 msgstr ""
 "Guardar mi nombre, correo electrónico y sitio web en este navegador para la "
 "próxima vez que haga un comentario."
 
-#: functions.php:424 functions.php:425
+#: functions.php:423 functions.php:424
 msgid "Comment"
 msgstr "Comentario"
 
-#: functions.php:428
+#: functions.php:427
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "Debe estar <a href=\"%s\"> conectado </a> para publicar un comentario."
 
-#: functions.php:430
+#: functions.php:429
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -362,32 +374,32 @@ msgstr ""
 "Conectado como <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Salir de "
 "esta cuenta\">¿Cerrar sesión?</a>"
 
-#: functions.php:431
+#: functions.php:430
 msgid "Your Email address will not be published."
 msgstr "No se publicara su correo electrónico."
 
-#: functions.php:438
+#: functions.php:437
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "Dejar una respuesta a %s"
 
-#: functions.php:439
+#: functions.php:438
 msgid "Cancel reply"
 msgstr "Cancelar respuesta"
 
-#: functions.php:440
+#: functions.php:439
 msgid "Post Comment"
 msgstr "Publicar comentario"
 
-#: functions.php:496
+#: functions.php:495
 msgid "«"
 msgstr ""
 
-#: functions.php:497
+#: functions.php:496
 msgid "»"
 msgstr ""
 
-#: header.php:24
+#: header.php:20
 msgid "Skip to main content"
 msgstr "Saltar al contenido principal"
 
@@ -401,7 +413,7 @@ msgstr "Imagen siguiente"
 
 #: image.php:50 page-news.php:22 page-nosidebar.php:19
 msgid "Page"
-msgstr ""
+msgstr "Página"
 
 #: image.php:70
 msgctxt "Parent post link"
@@ -468,6 +480,10 @@ msgstr "Añadir un menú"
 msgid "Page %"
 msgstr "Página %"
 
+#: page-translations.php:39
+msgid "Add alternative text"
+msgstr ""
+
 #: search.php:11
 #, php-format
 msgid "Search Results for: %s"
@@ -489,15 +505,34 @@ msgstr "Buscar"
 msgid "Contributor Work"
 msgstr "Trabajo de participante"
 
-#: single-contributor.php:92
+#: single-contributor.php:93
 msgid "Contributor Profile"
 msgstr "Perfíl de participante"
 
-#: single-contributor.php:126
+#: single-contributor.php:133 single-contributor.php:145
+#, fuzzy
+#| msgid "View all posts by %s"
+msgid "View all Contributors"
+msgstr "Ver todas las publicaciones de %s"
+
+#: single-contributor.php:152
 msgid "Contibutors Navigation"
 msgstr "Navegación de participantes"
 
 #: single-news.php:29
+msgid "News Item Excerpt Translation"
+msgstr ""
+
+#: single-news.php:30
+msgid ""
+"Note: You are seeing this block because you are logged in and are able to "
+"edit news items. In the block below, please provide the translation for the "
+"news item excerpt. The excerpt is the summary that appears on the cards "
+"linking to the news item. Non-editors will not see this block when they "
+"visit the page."
+msgstr ""
+
+#: single-news.php:36
 msgid "View all News"
 msgstr "Ver todas las Noticias"
 
@@ -507,16 +542,22 @@ msgid "Tag: %s"
 msgstr "Etiqueta: %s"
 
 #: template-parts/archive-news.php:11
-msgid "Read This News Item"
-msgstr "Lea este noticia"
+msgid "Continue reading"
+msgstr "Seguir leyendo"
 
 #: template-parts/global-header.php:3
-msgid "Toggle navigation"
-msgstr "Cambiar modo de Navegación"
+#, fuzzy
+#| msgid "Toggle Mobile Navigation"
+msgid "Toggle global navigation"
+msgstr "Navegación de participantes"
 
 #: template-parts/global-header.php:5
 msgid "Toggle Mobile Navigation"
 msgstr "Navegación de participantes"
+
+#: template-parts/loader.php:2
+msgid "Loading..."
+msgstr "Cargando…"
 
 #. Theme Name of the plugin/theme
 msgid "RBN Project Wesite"
@@ -544,12 +585,18 @@ msgstr "Pagina de destino de Noticias"
 
 #. Template Name of the plugin/theme
 msgid "Page (Default)"
-msgstr "Pagina (por defecto)"
+msgstr "Página (por defecto)"
 
 #. Template Name of the plugin/theme
 msgid "Page (No Sidebar)"
-msgstr "Pagina (sin barra lateral)"
+msgstr "Página (sin barra lateral)"
 
 #. Template Name of the plugin/theme
 msgid "Homepage"
 msgstr "Inicio"
+
+#~ msgid "Read This News Item"
+#~ msgstr "Lea este noticia"
+
+#~ msgid "Toggle navigation"
+#~ msgstr "Cambiar modo de Navegación"

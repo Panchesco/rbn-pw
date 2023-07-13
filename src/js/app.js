@@ -29,9 +29,7 @@ reps: 1,
 		   img.src = card.dataset.bg;
 		   img.addEventListener('load',() => {
 			   card.style.backgroundImage = "url(" + card.dataset.bg + ")";
-			   setTimeout( () => {
 				   card.classList.add('fade-in');
-			   }, 300)
 		   		});
 		   	}
 		 }
