@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RBN Project Wesite\n"
-"POT-Creation-Date: 2023-07-13 09:20-0700\n"
-"PO-Revision-Date: 2023-07-13 09:27-0700\n"
+"POT-Creation-Date: 2023-07-13 11:23-0700\n"
+"PO-Revision-Date: 2023-07-13 11:31-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -251,7 +251,7 @@ msgstr "Destacado"
 
 #: content.php:48
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Seguir leyendo <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continué leyendo <span class=\"meta-nav\">&rarr;</span>"
 
 #: content.php:66
 #, php-format
@@ -543,7 +543,7 @@ msgstr "Etiqueta: %s"
 
 #: template-parts/archive-news.php:11
 msgid "Continue reading"
-msgstr "Seguir leyendo"
+msgstr "Continué leyendo"
 
 #: template-parts/global-header.php:3
 #, fuzzy

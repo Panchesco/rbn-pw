@@ -105,7 +105,7 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 				<figcaption class="fs-5 pt-2">
 				<?php if( isset( $img->ID ) )  :?>
 				<div class="d-flex flex-wrap figcaption">
-					<?php if( ! empty($title) ) :?><span><em><?php echo $title;?></em></span><?php endif;?>
+					<?php if( ! empty($title) ) :?><span class="flex-grow-1" style="max-width:48%;"><em><?php echo $title;?></em></span><?php endif;?>
 					<?php if( ! empty( $attribution ) ) :?><span class="flex-grow-1 text-end"><?php the_field('attribution',$img->ID);?></span><?php endif; ?>
 				</div><?php endif;?>
 				<?php if( ! empty( $caption )) :?><div class="py-2 figcaption"><?php echo $caption;?></div><?php endif;?>
