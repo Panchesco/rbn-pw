@@ -1,68 +1,81 @@
 p a {
-
-	position: relative;
-	&:after {
-		content: none;
-		animation: none;
-		width: 100%;
-	}
+  position: relative;
+  &:after {
+    content: none;
+    animation: none;
+    width: 100%;
+  }
 }
 
 *.arrow-left a,
 *.left-arrow a {
-	justify-content: flex-start;
-	display: flex;
-	background-image: url('../imgs/svg/left-arrow.svg');
-	background-repeat: no-repeat;
-	background-position: center left;
-	padding-left: 8.25rem;
-	margin-top: $margin-normal;
-	@include h3;
-	text-decoration: none;
-	&:hover {
-		color: darken($raw-sienna,10%);
-	}
+  justify-content: flex-start;
+  display: flex;
+  background-image: url("../imgs/svg/left-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 8.25rem;
+  margin-top: $margin-normal;
+  @include h3;
+  text-decoration: none;
+  &:hover {
+    color: darken($raw-sienna, 10%);
+  }
 }
 
-
-*.arrow-right a ,
+*.arrow-right a,
 *.right-arrow a {
-	width: 100%;
-	justify-content: flex-end;
-	text-align: right;
-	display: flex;
-	background-image: url('../imgs/svg/right-arrow.svg');
-	background-repeat: no-repeat;
-	background-position: center right;
-	padding-right: 8.25rem;
-	margin-top: $margin-normal;
-	@include h3;
-	text-decoration: none;
-	&:hover {
-		color: darken($raw-sienna,10%);
-	}
-
+  width: 100%;
+  justify-content: flex-end;
+  text-align: right;
+  display: flex;
+  background-image: url("../imgs/svg/right-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding-right: 8.25rem;
+  margin-top: $margin-normal;
+  @include h3;
+  text-decoration: none;
+  &:hover {
+    color: darken($raw-sienna, 10%);
+  }
 }
 
-@media all and (min-width:768px) {
+.wp-block-button__link.wp-element-button.goto {
+  font-family: $serif;
+  text-transform: none;
+  border: solid 2px transparent;
+  text-shadow: 1px 1px 1px $black;
+  &:after {
+    display: inline-block;
+    content: "";
+    width: 100px;
+    height: 1rem;
+    background-image: url("../imgs/svg/right-arrow-white.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
 
+  &:hover {
+    background-color: transparent !important;
+    color: $black !important;
+    text-shadow: none;
+    border: solid 2px $black;
+    &:after {
+      background-image: url("../imgs/svg/right-arrow-black.svg");
+    }
+  }
+}
 
-	*.left-arrow a {
-		padding-left: 6.25rem;
-	}
+@media all and (min-width: 768px) {
+  *.left-arrow a {
+    padding-left: 6.25rem;
+  }
 
-
-	*.arrow-right a ,
-	*.right-arrow a {
-
-		padding-right: 6.25rem;
-
-	}
-
-
-
-
-
+  *.arrow-right a,
+  *.right-arrow a {
+    padding-right: 6.25rem;
+  }
 }
 
 h1 a,
@@ -71,18 +84,18 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-	font-family: $sans-serif;
-	text-decoration: none;
-	&:hover {
-		color: darken($raw-sienna,10%);
-	}
+  font-family: $sans-serif;
+  text-decoration: none;
+  &:hover {
+    color: darken($raw-sienna, 10%);
+  }
 }
 
 #stage .btn.outline {
-	&:hover {
-		background-color: $raw-sienna;
-		color: $white!important;
-	}
+  &:hover {
+    background-color: $raw-sienna;
+    color: $white !important;
+  }
 }
 
 /*a[target="_blank"] {
@@ -93,4 +106,3 @@ h6 a {
 		margin-bottom: -15px;
 	}
 }*/
-

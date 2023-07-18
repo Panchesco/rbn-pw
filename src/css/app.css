@@ -20372,6 +20372,31 @@ p a:after {
   color: #854400;
 }
 
+.wp-block-button__link.wp-element-button.goto {
+  font-family: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  text-transform: none;
+  border: solid 2px transparent;
+  text-shadow: 1px 1px 1px #222222;
+}
+.wp-block-button__link.wp-element-button.goto:after {
+  display: inline-block;
+  content: "";
+  width: 100px;
+  height: 1rem;
+  background-image: url("../imgs/svg/right-arrow-white.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.wp-block-button__link.wp-element-button.goto:hover {
+  background-color: transparent !important;
+  color: #222222 !important;
+  text-shadow: none;
+  border: solid 2px #222222;
+}
+.wp-block-button__link.wp-element-button.goto:hover:after {
+  background-image: url("../imgs/svg/right-arrow-black.svg");
+}
+
 @media all and (min-width: 768px) {
   *.left-arrow a {
     padding-left: 6.25rem;
