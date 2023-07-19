@@ -19489,7 +19489,8 @@ html {
   border: solid 0 #B85E00;
   border-width: 0 0 3.75rem 0;
 }
-#global-header h1 a, #global-header .h1 a {
+#global-header h1 a,
+#global-header .h1 a {
   color: #222222;
   text-decoration: none;
 }
@@ -19609,10 +19610,10 @@ cite {
   z-index: 40;
   display: block;
   text-decoration: none;
-  color: #B85E00;
+  color: #8c3200 !important;
 }
 #language-switcher a:hover {
-  color: #854400;
+  color: #6a1000 !important;
 }
 
 .navbar-toggler {
