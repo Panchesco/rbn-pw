@@ -1,199 +1,191 @@
 .project-name {
-	font-family: $serif;
+  font-family: $serif;
 }
 
 #stage {
-	box-shadow: inset 0px 6px 6px rgba(0,0,0,.2), inset 0px -6px 6px rgba(0,0,0,.2);
-	overflow: hidden;
+  box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.2),
+    inset 0px -6px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 figure .media {
-	@include site-boxshadow;
+  @include site-boxshadow;
 }
 
 #stage .items {
-	display: block;
-
+  display: block;
 }
 
-	.rbn-w-100 {
-		max-width: 100%;
-	}
-
-	.rbn-w-50 {
-		max-width: 100%;
-	}
-
-	.rbn-w-25 {
-		max-width: 100%;
-	}
-
-	.rbn-w-33 {
-		max-width: 100%;
-	}
-
-	.rbn-w-0 {
-		max-width: 100%;
-	}
-
-	.media img {
-		max-width: 100%;
-	}
-
-
-
-
-
-
-@media all and (min-width:768px) {
-
-.media {
-	max-width: 800px;
-	margin: auto;
+.rbn-w-100 {
+  max-width: 100%;
 }
 
-#stage .items {
-	display: flex;
-	flex-wrap: nowrap;
-	gap: 0 4rem;
-	justify-content: center;
+.rbn-w-50 {
+  max-width: 100%;
 }
 
-#stage .items figcaption {
-	text-align: left;
-	max-width: 800px;
-	margin: auto;
+.rbn-w-25 {
+  max-width: 100%;
 }
 
-	.rbn-w-100 {
-		width: auto;
-	}
-
-.items-3 {
-	.rbn-w-50 {
-		width: 50%;
-	}
+.rbn-w-33 {
+  max-width: 100%;
 }
 
-	.rbn-w-25 {
-		width: 25%;
-	}
+.rbn-w-0 {
+  max-width: 100%;
+}
 
-	.rbn-w-33 {
-		width: 33%;
-	}
+.media img {
+  max-width: 100%;
+}
 
-	.rbn-w-0 {
-		width: 0%;
-	}
+@media all and (min-width: 768px) {
+  .media {
+    max-width: 800px;
+    margin: auto;
+  }
 
-	.media img {
-		width: 100%;
-		height: auto;
-	}
+  #stage .items {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0 4rem;
+    justify-content: center;
+  }
 
+  #stage .items figcaption {
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .rbn-w-100 {
+    width: auto;
+  }
+
+  .items-3 {
+    .rbn-w-50 {
+      width: 50%;
+    }
+  }
+
+  .rbn-w-25 {
+    width: 25%;
+  }
+
+  .rbn-w-33 {
+    width: 33%;
+  }
+
+  .rbn-w-0 {
+    width: 0%;
+  }
+
+  .media img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 video.play {
-	display: none;
-	opacity: 0;
-	animation: playVideo 300ms ease-in;
-	animation-fill-mode: forwards;
+  display: none;
+  opacity: 0;
+  animation: playVideo 300ms ease-in;
+  animation-fill-mode: forwards;
 }
 
 video.pause {
-	display: block;
-	opacity: 1;
-	animation: pauseVideo 300ms ease-in;
-	animation-fill-mode: forwards;
+  display: block;
+  opacity: 1;
+  animation: pauseVideo 300ms ease-in;
+  animation-fill-mode: forwards;
 }
 
 @keyframes playVideo {
-	from {
-		display: block;
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+  from {
+    display: block;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-
 @keyframes pauseVideo {
-	0% {
-		display: block;
-		opacity: 1;
-	}
-	99% {
-		opacity: 0;
-	}
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
 
-	100% {
-		display: none;
-		opacity: 0;
-	}
+  100% {
+    display: none;
+    opacity: 0;
+  }
 }
 
 .contributor-photo {
-	margin: auto;
-	width: 100%;
+  margin: auto;
+  width: 100%;
 }
 
-	.contributor-photo img,
-	.contributor-photo figcaption {
-		max-width: 100%;
-		height: auto;
-		display: block;
-		margin: auto;
-	}
-
-@media all and (min-width:768px) {
-	.contributor-photo img,
-	.contributor-photo figcaption
-	 {
-		width: 40rem;
-		height: auto;
-	}
+.contributor-photo img,
+.contributor-photo figcaption {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
 }
 
+@media all and (min-width: 768px) {
+  .contributor-photo img {
+    display: block;
+  }
+  .contributor-photo figcaption {
+    width: auto;
+    height: auto;
+    padding: 0;
+    span {
+      padding-right: 0.6rem;
+      flex: 0 1 auto;
+      text-align: left;
+      &:nth-child(2) {
+        padding-right: 0;
+        padding-left: 0.6rem;
+        display: inline-block;
+        text-align: right;
+      }
+    }
+  }
+}
 
 .soft {
-	opacity: 0;
+  opacity: 0;
 }
 
 .remove-blur {
-	animation-name: removeBlur;
-	opacity: 0;
-	animation-duration: 600ms;
-	animation-fill-mode: forwards;
+  animation-name: removeBlur;
+  opacity: 0;
+  animation-duration: 600ms;
+  animation-fill-mode: forwards;
 }
 
 @keyframes removeBlur {
-	from {
-		opacity: 0;
-	}
+  from {
+    opacity: 0;
+  }
 
-	50% {
-		opacity: 0;
-	}
+  50% {
+    opacity: 0;
+  }
 
-	to {
-		opacity: 1;
-	}
+  to {
+    opacity: 1;
+  }
 }
 
 .media {
-	overflow: clip;
+  overflow: clip;
 }
-
-
-
-
-
-
-
-
-
-
-
-

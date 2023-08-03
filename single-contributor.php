@@ -171,7 +171,7 @@ get_header(); ?>
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="d-xl-flex flex-wrap col-xl-8 justify-content-around pb-5">
-			<h2 class="text-center w-100 py-6"><?php _e(
+			<h2 class="text-center w-100 py-5"><?php _e(
      "Contributor Profile",
      "rbn-wp"
    ); ?></h2>
@@ -192,15 +192,13 @@ get_header(); ?>
    $title = get_the_title($img->ID);
    $attribution = get_field("attribution", $img->ID);
    ?>
-				<figcaption class="fs-5 pt-2">
+				<figcaption class="pt-2">
 				<?php if (isset($img->ID)): ?>
-				<div class="d-flex flex-wrap figcaption">
+				<div class="d-flex figcaption justify-content-between">
 					<?php if (
        !empty($title)
-     ): ?><span class="flex-grow-1" style="max-width:48%;"><em><?php echo $title; ?></em></span><?php endif; ?>
-					<?php if (
-       !empty($attribution)
-     ): ?><span class="flex-grow-1 text-end"><?php the_field(
+     ): ?><span><em><?php echo $title; ?></em></span><?php endif; ?>
+					<?php if (!empty($attribution)): ?><span><?php the_field(
   "attribution",
   $img->ID
 ); ?></span><?php endif; ?>

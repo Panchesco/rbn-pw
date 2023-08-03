@@ -106,3 +106,13 @@ h6 a {
 		margin-bottom: -15px;
 	}
 }*/
+.contributor-photo a {
+  color: #b05600;
+  text-decoration: none;
+  text-underline-offset: 4px;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}

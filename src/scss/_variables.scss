@@ -1,26 +1,25 @@
 // Variables
 
-$serif: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-$sans-serif:"Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$monospace: system-ui,
- -apple-system, BlinkMacSystemFont,
- "Segoe UI",
- "Roboto",
- "Oxygen",
- "Ubuntu",
- "Cantarell",
- "Fira Sans",
- "Droid Sans",
- "Helvetica Neue",
- Arial, sans-serif;
+$serif: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow",
+  "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua",
+  Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L",
+  "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L",
+  Georgia, serif;
+$sans-serif: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri,
+  "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed",
+  "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue",
+  Helvetica, Arial, sans-serif;
+$monospace: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  Arial, sans-serif;
 
-$raw-sienna: #B85E00;
+$raw-sienna: #b85e00;
 $mesa: #a95c42;
-$ivory-buff: #EBD999;
-$ivory: #F4EDE5;
+$ivory-buff: #ebd999;
+$ivory: #f4ede5;
 $deep-grayish-olive: #505427;
 $vizcaya-palm: #4a634e;
-$mineral-gray: #9FC2B2;
+$mineral-gray: #9fc2b2;
 $black: #222222;
 $dim-gray: #707070;
 $sixty-percent-black: #999999;
@@ -28,145 +27,141 @@ $silver-medal: #d6d6d6;
 $white: #ffffff;
 $transparent: transparent;
 
-$padding-extra-small: .4rem;
-$padding-small: .9rem;
+$padding-extra-small: 0.4rem;
+$padding-small: 0.9rem;
 $padding-normal: 1.5rem;
 $padding-double: 3rem;
-$padding-extra: 5rem;
+$padding-extra: 4rem;
 $padding-mega: 10rem;
 
-$margin-extra-small: .4rem;
-$margin-small: .9rem;
+$margin-extra-small: 0.4rem;
+$margin-small: 0.9rem;
 $margin-normal: 1.5rem;
 $margin-double: 3rem;
 $margin-extra: 5rem;
 $margin-mega: 10rem;
 
 .has-raw-sienna-background-color {
-	background: $raw-sienna;
+  background: $raw-sienna;
 }
 
 .has-mesa-background-color {
-	background: $mesa;
+  background: $mesa;
 }
 
 .has-mesa-background-color {
-	background: $mesa;
+  background: $mesa;
 }
 
 .has-ivory-buff-background-color {
-	background: $ivory-buff;
+  background: $ivory-buff;
 }
 
 .has-ivory-background-color {
-	background: $ivory;
+  background: $ivory;
 }
 
 .has-raw-sienna-background-color {
-	background: $raw-sienna;
+  background: $raw-sienna;
 }
 
 .has-black-background-color {
-	background: $black;
+  background: $black;
 }
 
 .has-deep-grayish-olive-background-color {
-	background: $deep-grayish-olive;
+  background: $deep-grayish-olive;
 }
 
 .has-vizcaya-palm-background-color {
-	background: $vizcaya-palm;
+  background: $vizcaya-palm;
 }
 
 .has-black-background-color {
-	background: $black;
+  background: $black;
 }
 .has-dim-gray-color {
-	background: $dim-gray;
+  background: $dim-gray;
 }
 
 .has-mineral-gray-background-color {
-	background: $mineral-gray;
+  background: $mineral-gray;
 }
 
 .has-sixty-percent-black-background-color {
-	background: $sixty-percent-black;
+  background: $sixty-percent-black;
 }
 .has-silver-medal-background-color {
-	background: $silver-medal;
+  background: $silver-medal;
 }
 
 .has-white-background-color {
-	background: $white;
+  background: $white;
 }
 
 .has-raw-sienna-color {
-	color: $raw-sienna;
-	border-color: $raw-sienna;
+  color: $raw-sienna;
+  border-color: $raw-sienna;
 }
 
-
 .has-mesa-color {
-	color: $mesa;
-	border-color: mesa
+  color: $mesa;
+  border-color: mesa;
 }
 
 .has-ivory-buff-color {
-	color: $ivory-buff;
-	border-color: $ivory-buff;
+  color: $ivory-buff;
+  border-color: $ivory-buff;
 }
 
 .has-ivory-color {
-	color: $ivory;
-	border-color: $ivory;
+  color: $ivory;
+  border-color: $ivory;
 }
 
 .has-deep-grayish-olive-color {
-	color: $deep-grayish-olive;
-	border-color: $deep-grayish-olive;
+  color: $deep-grayish-olive;
+  border-color: $deep-grayish-olive;
 }
 
 .has-vizcaya-palm-color {
-	color: $vizcaya-palm;
-	border-color: $vizcaya-palm;
+  color: $vizcaya-palm;
+  border-color: $vizcaya-palm;
 }
 
 .has-mineral-gray-color {
-	color: $mineral-gray;
-	border-color: $mineral-gray;
+  color: $mineral-gray;
+  border-color: $mineral-gray;
 }
 
 .has-black-color {
-	color: $black;
-	border-color: $black;
+  color: $black;
+  border-color: $black;
 }
 .has-dim-gray-color {
-	color: $dim-gray;
-	border-color: $dim-gray;
+  color: $dim-gray;
+  border-color: $dim-gray;
 }
 
 .has-sixty-percent-black-color {
-	color: $sixty-percent-black;
-	border-color: $sixty-percent-black;
+  color: $sixty-percent-black;
+  border-color: $sixty-percent-black;
 }
 
 .has-silver-medal-color {
-	color: $silver-medal;
-	border-color: $silver-medal;
+  color: $silver-medal;
+  border-color: $silver-medal;
 }
 
 .has-white-color {
-	color: $white;
-	border-color: $white;
+  color: $white;
+  border-color: $white;
 }
 
-
 .sans-serif {
-	font-family: $sans-serif;
+  font-family: $sans-serif;
 }
 
 .serif {
-	font-family: $serif;
+  font-family: $serif;
 }
-
-

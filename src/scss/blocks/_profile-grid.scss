@@ -1,54 +1,53 @@
-
-
-
 figure.headshot {
-	position: relative;
-	aspect-ratio:  1/1;
-	overflow: clip;
-	z-index: 1;
-	max-width: 190px;
-	min-width: 190px;
-	margin: auto;
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: clip;
+  z-index: 1;
+  max-width: 190px;
+  min-width: 190px;
+  margin: auto;
 
-	&:after {
-		z-index: 2;
-		content: "";
-		display: flex;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: url('../imgs/svg/round-mask.svg') center center;
-		background-repeat: no-repeat;
-		background-size: contain;
-	}
+  &:after {
+    z-index: 2;
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../imgs/svg/round-mask.svg") center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
-	img {
-		width: 100%;
-		height: auto;
-	}
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .profile-card {
-	padding: 1.5rem 0;
-	text-align: center;
-	h3 {
-		font-family: $serif;
-	}
+  padding: 1.5rem 0;
+  text-align: center;
+  h3 {
+    font-family: $serif;
+  }
 
-	.body,footer {
-		p {
-			font-size: 1rem;
-		}
-	}
+  .body,
+  footer {
+    p {
+      font-size: 1rem;
+    }
+  }
 
-	footer {
-		padding: 1.5rem 0;
-		border: solid 1px $raw-sienna;
-		border-width: 0 0 1px 0;
-		margin-bottom: $padding-extra;
-
-	}
-
+  footer {
+    //padding: 1.5rem 0;
+    border: solid 1px $raw-sienna;
+    border-width: 0 0 1px 0;
+    margin-bottom: 4rem;
+    p {
+      padding-bottom: 1rem;
+    }
+  }
 }

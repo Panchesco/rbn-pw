@@ -18964,7 +18964,7 @@ textarea.form-control-lg {
 }
 
 .has-raw-sienna-background-color {
-  background: #B85E00;
+  background: #b85e00;
 }
 
 .has-mesa-background-color {
@@ -18976,15 +18976,15 @@ textarea.form-control-lg {
 }
 
 .has-ivory-buff-background-color {
-  background: #EBD999;
+  background: #ebd999;
 }
 
 .has-ivory-background-color {
-  background: #F4EDE5;
+  background: #f4ede5;
 }
 
 .has-raw-sienna-background-color {
-  background: #B85E00;
+  background: #b85e00;
 }
 
 .has-black-background-color {
@@ -19008,7 +19008,7 @@ textarea.form-control-lg {
 }
 
 .has-mineral-gray-background-color {
-  background: #9FC2B2;
+  background: #9fc2b2;
 }
 
 .has-sixty-percent-black-background-color {
@@ -19024,8 +19024,8 @@ textarea.form-control-lg {
 }
 
 .has-raw-sienna-color {
-  color: #B85E00;
-  border-color: #B85E00;
+  color: #b85e00;
+  border-color: #b85e00;
 }
 
 .has-mesa-color {
@@ -19034,13 +19034,13 @@ textarea.form-control-lg {
 }
 
 .has-ivory-buff-color {
-  color: #EBD999;
-  border-color: #EBD999;
+  color: #ebd999;
+  border-color: #ebd999;
 }
 
 .has-ivory-color {
-  color: #F4EDE5;
-  border-color: #F4EDE5;
+  color: #f4ede5;
+  border-color: #f4ede5;
 }
 
 .has-deep-grayish-olive-color {
@@ -19054,8 +19054,8 @@ textarea.form-control-lg {
 }
 
 .has-mineral-gray-color {
-  color: #9FC2B2;
-  border-color: #9FC2B2;
+  color: #9fc2b2;
+  border-color: #9fc2b2;
 }
 
 .has-black-color {
@@ -19107,14 +19107,21 @@ textarea.form-control-lg {
 /* CUSTOM STYLES
 -------------------------------------------------- */
 :root {
-  --serif: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-  --sans-serif:"Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow",
+    "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua",
+    Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L",
+    "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L",
+    Georgia, serif;
+  --sans-serif: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri,
+    "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed",
+    "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
   --black: #212121;
-  --ivory-buff: #EBD999;
+  --ivory-buff: #ebd999;
   --deep-grayish-olive: rgba(80, 84, 39, 1);
-  --deep-grayish-olive-hover: rgba(80, 84, 39, .9);
-  --raw-sienna: #B85E00;
-  --ivory: #F4EDE5;
+  --deep-grayish-olive-hover: rgba(80, 84, 39, 0.9);
+  --raw-sienna: #b85e00;
+  --ivory: #f4ede5;
   --white: #ffffff;
   --bs-link-hover-color: inherit;
 }
@@ -19127,13 +19134,16 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body, .wp-block-post-content {
+html,
+body,
+.wp-block-post-content {
   font-family: var(--serif);
   letter-spacing: 0.03rem;
   background: #ffffff;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 4.6666625rem;
   font-weight: 400;
@@ -19141,22 +19151,37 @@ h1, .h1 {
   line-height: 1;
   margin-bottom: 1.5rem;
 }
+h1.sentence,
+.h1.sentence {
+  text-transform: none;
+}
 
-h2, .h2 {
+h2,
+.h2 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 3.07rem;
   font-weight: 200;
   margin-bottom: 1.5rem;
 }
+h2.sentence,
+.h2.sentence {
+  text-transform: none;
+}
 
-h3, .h3 {
+h3,
+.h3 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.75rem;
   font-weight: 200;
   margin-bottom: 1.5rem;
 }
+h3.sentence,
+.h3.sentence {
+  text-transform: none;
+}
 
-h4, .h4 {
+h4,
+.h4 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 200;
@@ -19164,19 +19189,33 @@ h4, .h4 {
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
 }
+h4.sentence,
+.h4.sentence {
+  text-transform: none;
+}
 
-h5, .h5 {
+h5,
+.h5 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
   margin-bottom: 1.5rem;
 }
+h5.sentence,
+.h5.sentence {
+  text-transform: none;
+}
 
-h6, .h6 {
+h6,
+.h6 {
   font-family: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
   margin-bottom: 1.5rem;
+}
+h6.sentence,
+.h6.sentence {
+  text-transform: none;
 }
 
 code {
@@ -19184,7 +19223,8 @@ code {
   color: #a95c42;
 }
 
-em, dfn {
+em,
+dfn {
   text-transform: italic;
 }
 
@@ -19212,12 +19252,17 @@ em, dfn {
   font-size: 1rem;
 }
 
-div, p, ul, ol, dl {
+div,
+p,
+ul,
+ol,
+dl {
   font-size: 1.75rem;
   font-weight: 400;
 }
 
-p, .p {
+p,
+.p {
   padding-bottom: 1.5rem;
 }
 
@@ -19230,10 +19275,12 @@ figcaption p,
   font-size: 1.25rem;
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: 2rem;
 }
-ul li, ol li {
+ul li,
+ol li {
   margin-bottom: 0.4rem;
 }
 
@@ -19278,13 +19325,13 @@ p a:hover {
 
 .spotlight {
   box-sizing: border-box;
-  background-color: #EBD999;
+  background-color: #ebd999;
   background-image: url("/wp-content/themes/rbn-pw/dist/imgs/svg/open-quotes.svg"), url("/wp-content/themes/rbn-pw/dist/imgs/svg/close-quotes.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: top left, right bottom;
   background-size: 8rem;
   padding: 1rem 0.35rem;
-  border: solid 1.5rem #EBD999;
+  border: solid 1.5rem #ebd999;
   border-width: 1.5rem 1.5rem 1.5rem 5rem;
 }
 
@@ -19408,17 +19455,31 @@ video.pause {
 
 .contributor-photo img,
 .contributor-photo figcaption {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
   margin: auto;
 }
 
 @media all and (min-width: 768px) {
-  .contributor-photo img,
+  .contributor-photo img {
+    display: block;
+  }
   .contributor-photo figcaption {
-    width: 40rem;
+    width: auto;
     height: auto;
+    padding: 0;
+  }
+  .contributor-photo figcaption span {
+    padding-right: 0.6rem;
+    flex: 0 1 auto;
+    text-align: left;
+  }
+  .contributor-photo figcaption span:nth-child(2) {
+    padding-right: 0;
+    padding-left: 0.6rem;
+    display: inline-block;
+    text-align: right;
   }
 }
 .soft {
@@ -19467,7 +19528,7 @@ video.pause {
   margin: 1rem;
 }
 .pagination ul li a.current, .pagination ul li a:hover, .pagination ul li span.current, .pagination ul li span:hover {
-  background: #B85E00;
+  background: #b85e00;
   color: #ffffff;
 }
 
@@ -19486,7 +19547,7 @@ html {
 #global-header:after {
   display: block;
   content: "";
-  border: solid 0 #B85E00;
+  border: solid 0 #b85e00;
   border-width: 0 0 3.75rem 0;
 }
 #global-header h1 a,
@@ -19537,7 +19598,7 @@ cite {
   #global-header:after {
     display: block;
     content: "";
-    border: solid 0 #B85E00;
+    border: solid 0 #b85e00;
     border-width: 0 0 4.6875rem 0;
   }
   #global-header .menu-item .nav-link {
@@ -19583,7 +19644,7 @@ cite {
 }
 #menu-global-nav .menu-item .nav-link:hover, #menu-global-nav .menu-item .nav-link.active {
   text-decoration: none;
-  border-color: #B85E00;
+  border-color: #b85e00;
   border-width: 0 0 5px 0;
 }
 
@@ -19687,7 +19748,7 @@ cite {
 
 .dropdown-menu {
   position: relative;
-  background: #EBD999;
+  background: #ebd999;
   border: none;
   border-radius: 0;
   box-shadow: 2px 2px 20px black;
@@ -19696,36 +19757,39 @@ cite {
 footer#footer {
   background-color: #222222;
 }
-footer#footer div, footer#footer p {
+footer#footer div,
+footer#footer p {
   color: #ffffff;
 }
 footer#footer ul {
   list-style: none;
 }
 footer#footer a {
-  color: #B85E00;
+  color: #b85e00;
 }
 footer#footer a:hover {
   text-decoration: underline;
 }
 footer#footer .menu-item .nav-link {
-  color: #B85E00;
+  color: #cc7214;
   padding: 0;
   box-sizing: border-box;
   border: solid 5px transparent;
   border-width: 0 0 5px 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 255, 0.2);
   display: inline-block;
   margin-bottom: 0.65rem;
+  letter-spacing: 1px;
 }
 footer#footer .menu-item .nav-link:hover, footer#footer .menu-item .nav-link.active {
   text-decoration: none;
-  border-color: #B85E00;
+  border-color: #cc7214;
   border-width: 0 0 5px 0;
 }
 footer#footer .menu-item.current_page_item .nav-link,
 footer#footer .menu-item.current-menu-item .nav-link,
 footer#footer .menu-item.current-menu-item.active {
-  border-color: #B85E00;
+  border-color: #b85e00;
 }
 
 .wp-block-image {
@@ -19806,9 +19870,9 @@ footer#footer .menu-item.current-menu-item.active {
 }
 
 .wp-block-button.is-style-outline.has-raw-sienna-color a:hover {
-  background-color: #B85E00 !important;
+  background-color: #b85e00 !important;
   color: #fff;
-  border-color: #B85E00;
+  border-color: #b85e00;
 }
 
 @media all and (max-width: 420px) {
@@ -20436,7 +20500,7 @@ h6 a:hover,
 }
 
 #stage .btn.outline:hover {
-  background-color: #B85E00;
+  background-color: #b85e00;
   color: #ffffff !important;
 }
 
@@ -20448,6 +20512,15 @@ h6 a:hover,
 		margin-bottom: -15px;
 	}
 }*/
+.contributor-photo a {
+  color: #b05600;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+.contributor-photo a:hover, .contributor-photo a:active, .contributor-photo a:focus {
+  text-decoration: underline;
+}
+
 .archive-news-wrapper {
   height: 100%;
   position: relative;
@@ -20464,7 +20537,7 @@ h6 a:hover,
   left: 0;
   text-decoration: none;
   margin-top: auto;
-  color: #B85E00;
+  color: #b85e00;
 }
 .archive-news-wrapper .readmore:hover {
   color: #854400;
@@ -20520,14 +20593,17 @@ figure.headshot img {
 .profile-card h3, .profile-card .h3 {
   font-family: "EB Garamond", Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
-.profile-card .body p, .profile-card footer p {
+.profile-card .body p,
+.profile-card footer p {
   font-size: 1rem;
 }
 .profile-card footer {
-  padding: 1.5rem 0;
-  border: solid 1px #B85E00;
+  border: solid 1px #b85e00;
   border-width: 0 0 1px 0;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
+}
+.profile-card footer p {
+  padding-bottom: 1rem;
 }
 
 .event-metadata {
@@ -20560,7 +20636,7 @@ iframe {
   content: "";
   width: 8.3125rem;
   height: 0.325rem;
-  background: #B85E00;
+  background: #b85e00;
   margin-top: 0.6rem;
 }
 .archive-event figcaption p {
@@ -20651,7 +20727,7 @@ iframe {
     content: "";
     width: 13.3125rem;
     height: 0.325rem;
-    background: #B85E00;
+    background: #b85e00;
     margin-top: 0.8rem;
   }
   .archive-event .grouping figure p {
@@ -24347,7 +24423,7 @@ html :where(.is-position-sticky) {
 }
 .frm_forms label span {
   font-weight: 200 !important;
-  color: #B85E00;
+  color: #b85e00;
 }
 
 .frm_style_formidable-style.with_frm_style .form-field {
@@ -24436,7 +24512,7 @@ h1.wp-block-heading,
 .wp-block-heading.h1,
 h2.wp-block-heading,
 .wp-block-heading.h2 {
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 /*
@@ -24461,7 +24537,7 @@ footer h3.wp-block-heading, footer .wp-block-heading.h3 {
 }
 
 h3.wp-block-heading, .wp-block-heading.h3 {
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 main:after {

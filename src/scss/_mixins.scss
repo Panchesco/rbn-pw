@@ -1,7 +1,5 @@
 // Mixins
 
-
-
 @mixin h1 {
   font-family: $sans-serif;
   font-size: $h1-font-size;
@@ -48,50 +46,46 @@
   margin-bottom: $padding-normal;
 }
 
-
 @mixin code {
-	font-family: $monospace;
-	color: $mesa;
+  font-family: $monospace;
+  color: $mesa;
 }
 
 @mixin italic {
-	text-transform: italic;
+  text-transform: italic;
 }
 
 @mixin btn {
-	font-family: $sans-serif;
-	font-size: 1.5rem;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	border: solid;
-	border-radius: 0;
-	color: $white;
+  font-family: $sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: solid;
+  border-radius: 0;
+  color: $white;
 }
 
 .btn {
-	@include btn;
+  @include btn;
 
-	&:hover {
-		background: $black;
-
-	}
-
+  &:hover {
+    background: $black;
+  }
 }
 
 @mixin blockquote {
-	box-sizing: border-box;
-	background-color: $ivory-buff;
-	background-image: url('/wp-content/themes/rbn-pw/dist/imgs/svg/open-quotes.svg'),url('/wp-content/themes/rbn-pw/dist/imgs/svg/close-quotes.svg');
-	background-repeat: no-repeat, no-repeat;
-	background-position: top left,right bottom;
-	background-size: 8rem;
-	padding: 1rem .35rem;
-	border: solid 1.5rem $ivory-buff;
-	border-width: 1.5rem 1.5rem 1.5rem 5rem;
+  box-sizing: border-box;
+  background-color: $ivory-buff;
+  background-image: url("/wp-content/themes/rbn-pw/dist/imgs/svg/open-quotes.svg"),
+    url("/wp-content/themes/rbn-pw/dist/imgs/svg/close-quotes.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, right bottom;
+  background-size: 8rem;
+  padding: 1rem 0.35rem;
+  border: solid 1.5rem $ivory-buff;
+  border-width: 1.5rem 1.5rem 1.5rem 5rem;
 }
 
 @mixin site-boxshadow {
-	box-shadow: 3px 3px 10px rgba(0,0,0,.4);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
 }
-
-
