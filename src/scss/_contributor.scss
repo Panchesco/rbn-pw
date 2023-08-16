@@ -128,7 +128,7 @@ video.pause {
 
 .contributor-photo {
   margin: auto;
-  width: 100%;
+  width: 600px;
 }
 
 .contributor-photo img,
@@ -142,6 +142,7 @@ video.pause {
 @media all and (min-width: 768px) {
   .contributor-photo img {
     display: block;
+    width: 100%;
   }
   .contributor-photo figcaption {
     width: auto;
