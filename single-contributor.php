@@ -120,7 +120,7 @@ get_header(); ?>
   !empty($fields["media_gallery"])
 ):// Begin #stage branch
    ?>
-<div id="stage" class="has-ivory-buff-background-color px-6 my-6 py-4 py-xl-6">
+<div id="stage" class="has-ivory-buff-background-color px-4 px-xl-6 my-6 py-4 py-xl-6">
 	<div>
 		<div class="row">
 			<h2 class="visually-hidden"><?php _e("Contributor Work", "rbn-pw"); ?></h2>
@@ -194,11 +194,11 @@ get_header(); ?>
    ?>
 				<figcaption class="pt-2">
 				<?php if (isset($img->ID)): ?>
-				<div class="d-flex figcaption justify-content-between">
+				<div class="d-md-flex figcaption justify-content-between">
 					<?php if (
        !empty($title)
-     ): ?><span><em><?php echo $title; ?></em></span><?php endif; ?>
-					<?php if (!empty($attribution)): ?><span><?php the_field(
+     ): ?><span class="d-block"><em><?php echo $title; ?></em></span><?php endif; ?>
+					<?php if (!empty($attribution)): ?><span class="d-block"><?php the_field(
   "attribution",
   $img->ID
 ); ?></span><?php endif; ?>
