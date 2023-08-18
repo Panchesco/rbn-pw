@@ -85,6 +85,11 @@ figure .media {
     width: 100%;
     height: auto;
   }
+
+  .contributor-photo {
+    margin: auto;
+    width: 600px;
+  }
 }
 
 video.play {
@@ -124,11 +129,6 @@ video.pause {
     display: none;
     opacity: 0;
   }
-}
-
-.contributor-photo {
-  margin: auto;
-  width: 600px;
 }
 
 .contributor-photo img,
