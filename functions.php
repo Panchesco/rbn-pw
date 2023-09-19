@@ -693,6 +693,12 @@ function rbn_pw_block_custom_styles($init_array)
      * Wrapper whether or not to add a new block-level element around any selected elements
      */
     [
+      "title" => "Small",
+      "block" => "p",
+      "classes" => "small",
+      "wrapper" => false,
+    ],
+    [
       "title" => "Arrow Left",
       "block" => "div",
       "classes" => "arrow-left",
